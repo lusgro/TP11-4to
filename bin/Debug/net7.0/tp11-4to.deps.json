@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "tp11-4to/1.0.0": {
+        "runtime": {
+          "tp11-4to.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "tp11-4to/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
