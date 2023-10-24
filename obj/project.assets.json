@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47866545\\Desktop\\TP11-4to\\tp11-4to.csproj",
-      "projectName": "tp11-4to",
-      "projectPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\tp11-4to.csproj",
+      "projectUniqueName": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
+      "projectName": "TP11",
+      "projectPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
       "packagesPath": "C:\\Users\\47866545\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\",
       "projectStyle": "PackageReference",
