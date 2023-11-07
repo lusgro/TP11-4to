@@ -1,4 +1,3 @@
-
 using Dapper;
 using System.Data.SqlClient;
 

@@ -11,7 +11,9 @@ html {
 }
 
 body {
-  margin: 20px 60px 0px 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 footer {
