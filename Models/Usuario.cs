@@ -1,7 +1,7 @@
 namespace TP11.Models;
 public class Usuario {
-    public string username { get; set; }
-    public string password { get; set; }
-    public string email { get; set; }
-    public string preguntaSeguridad { get; set; }
+    public string Usuario { get; set; }
+    public string Contraseña { get; set; }
+    public string Email { get; set; }
+    public string PreguntaSeguridad { get; set; }
 }
