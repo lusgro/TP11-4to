@@ -21,7 +21,19 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult Comunidad() {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Perfil(int Id) {
+        return View();
+    }
 
+    [HttpPost]
+    public IActionResult Index() {
+        return View();
+    }
 
     public IActionResult Index() {
         return View();
