@@ -2,4 +2,15 @@
     ViewData["Title"] = "LogIn";
 }
 <!-- LOGIN -->
-<h1>TP XX - Index</h1>
+<form method="post" action='@Url.Action("VerificarLogin")'>
+    <div>
+        <label class="" for="userInput" class="form-label">Usuario</label>
+        <input clas="" type="text" class="form-control" id="userInput" name="user">
+    </div>
+    <div>
+        <label for="passwordInput">Contraseña</label>
+        <input type="password" id="passwordInput" aria-describedby="olvidoPassword" name="password">
+    </div>
+    <button type="submit">Iniciar Sesion</button>
+    <a href='@Url.Action("Registro")'><button type="button" class="">¿Eres Nuevo? Registrate</button></a>
+</form>

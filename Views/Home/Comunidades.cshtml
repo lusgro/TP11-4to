@@ -2,4 +2,31 @@
     ViewData["Title"] = "Comunidades";
 }
 <!-- LOGIN -->
-<h1>TP XX - Index</h1>
+<div class="comunidades__top-navigation">
+    @foreach(var artista in ViewBag.Artistas){
+        <div class="card">
+            <img src="@artista.img" alt="">
+            <h3>@artista.name</h3>
+        </div>
+    }
+</div>
+<div class="comunidades__lowerSearch">
+    <div class="comunidades__lowerSearch-buscador">
+        <form action="">
+            <input type="text">
+            <button type="submit"><img src="" alt=""></button>
+        </form>
+    </div>
+    <div class="comunidades__lowerSearch-sugerencias">
+        @foreach(var InfoArtistas in ViewBag.ArtistasClasificados){
+            <h2>@InfoArtistas.Name</h2>
+            @foreach(var artista in InfoArtistas){
+                <div class="card">
+                    <img src="@artista.img" alt="">
+                    <h3>@artista.name</h3>
+                </div>
+            }
+        }
+    </div>
+</div>
+

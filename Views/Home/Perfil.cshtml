@@ -1,4 +1,49 @@
 @{
     ViewData["Title"] = "Mi Perfil";
 }
+
+<!-- mi perfil -->
+<!-- nombre -->
+<!-- ft perfil -->
+<!-- info abajo -->
+
+
+<!-- carruseles  (IMG dentro)     favoritos, los de siemmpre , mas esuchados -->
+
+
+<div class="Perfil">   
+<h3> Editar Perfil </h3>
+<img src="" class="imagenUsuario">
+<h3> albumes favoritos </h3>  <!-- for each -->
+<h3> ubicacion </h3>   <!-- for each -->
+</div>
+
+<section class="FavoritosCarrusel">
+@foreach (img item in ViewBag.ArtistaFavoritoCarrusel)
+{
+    <div class="ArtistaCarrusel"> 
+    <img src="" class="card">
+    </div>
+}
+</section>
+<section class="LosDeSiempreCarrusel">
+@foreach (img item in ViewBag.LosDeSiempreCarrusel)
+{
+    <div class="ArtistaCarrusel"> 
+    <img src="" class="card">
+    </div>
+}
+</section>
+<section class="MasEscuchadosCarrusel">
+@foreach (img item in ViewBag.MasEscuchadosCarrusel)
+{
+    <div class="ArtistaCarrusel"> 
+    <img src="" class="card">
+    </div>
+}
+</section>
+
+
+
+
 <h1>TP XX - Index</h1>
