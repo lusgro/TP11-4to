@@ -23,4 +23,13 @@ public static class BD
             connection.Execute(query, usuario);
         }
     }
+
+    public static List<Artista> ObtenerArtistas()
+    {
+        string query = "SELECT * FROM Artistas";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Artista>(query).ToList();
+        }
+    }
 }
