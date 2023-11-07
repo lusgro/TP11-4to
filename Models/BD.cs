@@ -17,19 +17,10 @@ public static class BD
 
     public static void RegistrarUsuario(Usuario usuario)
     {
-        string query = "INSERT INTO Usuarios (username, password, nombre, apellido, email, preguntaSeguridad) VALUES (@Username, @Password, @Nombre, @Apellido, @Email, @PreguntaSeguridad)";
+        string query = "INSERT INTO Usuarios (username, password, email) VALUES (@Username, @Password, @Email)";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(query, usuario);
-        }
-    }
-
-    public static string RecuperarContraseña(string email, string preguntaSeguridad)
-    {
-        string query = "SELECT password FROM Usuarios WHERE email = @Mail AND preguntaSeguridad = @PreguntaSeguridad";
-        using(SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            return connection.QueryFirstOrDefault<string>(query, new { Mail = email, PreguntaSeguridad = preguntaSeguridad });
         }
     }
 }

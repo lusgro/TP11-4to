@@ -36,16 +36,4 @@ public class HomeController : Controller
     public IActionResult Olvide() {
         return View();
     }
-
-    [HttpPost]
-    public IActionResult RecuperarContraseña(string email, string preguntaSeguridad) {
-        string password = BD.RecuperarContraseña(email, preguntaSeguridad);
-        if (password != null) {
-            ViewBag.Resultado = $"La contraseña es {password}";
-            return View("Olvide");
-        } else {
-            ViewBag.Resultado = "No se encontró el usuario";
-            return View("Olvide");
-        }
-    }
 }
