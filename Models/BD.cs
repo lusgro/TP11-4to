@@ -1,6 +1,8 @@
-namespace TP11.Models;
+
 using Dapper;
 using System.Data.SqlClient;
+
+namespace TP11.Models;
 
 public static class BD
 {
