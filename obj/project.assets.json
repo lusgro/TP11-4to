@@ -584,23 +584,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
+    "C:\\Users\\47866545\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\Downloads\\TP11-4to\\TP11.csproj",
+      "projectUniqueName": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
       "projectName": "TP11",
-      "projectPath": "C:\\Users\\Lucas\\Downloads\\TP11-4to\\TP11.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Downloads\\TP11-4to\\obj\\",
+      "projectPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
+      "packagesPath": "C:\\Users\\47866545\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\47866545\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -659,7 +659,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

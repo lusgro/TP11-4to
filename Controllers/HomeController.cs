@@ -21,6 +21,12 @@ public class HomeController : Controller
         return View();
     }
 
+
+
+    public IActionResult Index() {
+        return View();
+    }
+
     [HttpPost]
     public IActionResult RegistrarUsuario(Usuario usuario) {
         BD.RegistrarUsuario(usuario);
