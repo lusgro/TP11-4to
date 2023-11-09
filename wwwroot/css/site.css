@@ -97,7 +97,7 @@ form {
   grid-row-gap: 15px;
 }
 
-button {
+.btn-1 {
   padding: 10px 15px;
   border-style:solid;
   border-radius: 5px;
@@ -107,7 +107,7 @@ button {
   color: var(--white);
 }
 
-button:hover{
+.btn-1:hover{
   background-color: var(--dark-green);
   cursor: pointer;
 }
@@ -320,4 +320,17 @@ nav .logo h1{
 
 .menu-desplegado.open li:hover{
   background-color: #045022;
+}
+
+/* Estilo Boton 2 */
+
+.btn-2{
+  padding: 15px 45px;
+  border-style:solid;
+  border-radius: 100px;
+  background-color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--black);
+  cursor: pointer;
 }
