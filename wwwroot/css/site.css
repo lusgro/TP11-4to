@@ -59,7 +59,7 @@ h2 {
   padding: 10px 0;
 }
 
-input[type=text], input[type=password] {
+input{
   padding: 10px 15px;
   font-size: 1rem;
   border-style:solid;
@@ -86,6 +86,14 @@ form {
   border: 0;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
 button {
   padding: 10px 15px;
   border-style:solid;
@@ -104,4 +112,15 @@ button:hover{
 .Login__main-login-form-little_text {
   margin: 0;
   text-align: center;
+}
+
+#botonEnviar, #signup-little_text {
+  grid-column: span 2;  
+}
+
+i {
+  position: absolute;
+  margin-top:28px;
+  margin-left:18rem;
+  padding: 5px;
 }

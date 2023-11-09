@@ -1,19 +1,35 @@
 @{
-    ViewData["Title"] = "LogIn";
+    ViewData["Title"] = "Sign Up";
 }
 <!-- Registro -->
-<form method="post" action='@Url.Action("RegistrarUsuario")'>
-    <div class="mb-3">
-        <label for="usuarioInput" class="form-label">Usuario</label>
-        <input type="text" class="form-control" id="usuarioInput" name="usuario">
+<main class="main__top-margin">
+    <div id="signup-container">
+        <h2>Registrarse</h2>
+        <form method="post" class="form-grid" action='@Url.Action("RegistrarUsuario")'>
+            <div class="label-input">
+                <label for="usuarioInput" class="form-label">Creá tu usuario</label>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="text" class="larger-inputs" placeholder="myAwesomeUser" id="usuarioInput" name="usuario">
+            </div>
+           
+            <div class="label-input">
+                <label for="emailInput" class="form-label">Ingresá tu email</label>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="email" class="larger-inputs" placeholder="myname123@email.com" id="emailInput" name="email">
+            </div>
+             <div class="label-input">
+                <label for="contraseñaInput" class="form-label">Creá una contraseña</label>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput" name="contraseña">
+            </div>
+            <div class="label-input">
+                <label for="contraseñaInput" class="form-label">Confirmá tu contraseña</label>
+                <i class="fa-solid fa-circle-info"></i>
+                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput" name="contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="botonEnviar">Registrarse</button>
+            <p class="Login__main-login-form-little_text" id="signup-little_text">¿Ya tenes cuenta?&nbsp;<a href='@Url.Action("Registro")'>Inicia sesion</a></p>
+        </form>
     </div>
-    <div class="mb-3">
-        <label for="contraseñaInput" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="contraseñaInput" name="contraseña">
-    </div>
-    <div class="mb-3">
-        <label for="emailInput" class="form-label">Email</label>
-        <input type="email" class="form-control" id="emailInput" name="email">
-    </div>
-    <button type="submit" class="btn btn-primary" id="botonEnviar">Registrarse</button>
-</form>
+</main>
