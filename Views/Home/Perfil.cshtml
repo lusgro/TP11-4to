@@ -1,38 +1,36 @@
-@{
-    ViewData["Title"] = "Mi Perfil";
-}
-
-<!-- mi perfil -->
-<!-- nombre -->
-<!-- ft perfil -->
-<!-- info abajo -->
-
-
-<!-- carruseles  (IMG dentro)     favoritos, los de siemmpre , mas esuchados -->
+<!-- Perfil -->
 
 
 <div class="Perfil">   
-<h3> Editar Perfil </h3>
-<img src="" class="imagenUsuario">
-<h3> albumes favoritos </h3>  <!-- for each -->
-<h3> ubicacion </h3>   <!-- for each -->
+    <h3> Editar Perfil </h3> 
+    @foreach (var item in ViewBag.UsuarioINFO)
+    {
+        <img src="@item.Username" class="imagenUsuario">
+    }
+    @foreach (var item in ViewBag.AlbumesUsuarioMejores)
+    {
+        <h3> @item.Nombre </h3>
+    }
+    @foreach (var item in ViewBag.UsuarioINFO)
+    {
+        <h3> @item.Pais </h3>
+    }
 </div>
 
 <section class="FavoritosCarrusel">
 @foreach (var item in ViewBag.ArtistaFavoritoCarrusel)
 {
     <div class="ArtistaCarrusel"> 
-        <img src="@item.FotoPerfil" class="card">
+    <a href="" class=""> <img src="@item.FotoPerfil" class="IMGArtista"> </a>
     </div>
 }
 </section>
 
 
-<section class="LosDeSiempreCarrusel">
 @foreach (var item in ViewBag.LosDeSiempreCarrusel)
 {
     <div class="ArtistaCarrusel"> 
-    <img src="@item.FotoPerfil" class="card">
+    <a href="" class=""> <img src="@item.FotoPerfil" class="IMGArtista"> </a>
     </div>
 }
 </section>
@@ -42,7 +40,7 @@
 @foreach (var item in ViewBag.MasEscuchadosCarrusel)
 {
     <div class="ArtistaCarrusel"> 
-    <img src="@item.FotoPerfil" class="card">
+    <a href='@UrlAction("Comunidad")' class="Link"> <img src="@item.FotoPerfil" class="IMGArtista"> </a>
     </div>
 }
 </section>
