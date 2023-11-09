@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\data\\BD_TP11.sql",
+      "PackagePath": "staticwebassets\\data\\BD_TP11.sql"
+    },
+    {
       "Id": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

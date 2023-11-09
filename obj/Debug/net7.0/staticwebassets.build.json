@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nmcy4jXa2/TT+uR8K57OxIDujzXM+x4BltomWL4hWGA=",
+  "Hash": "5E1YcJflRu+DIlaf+QMc/QsCUpQulaFNOKOURd/qKNM=",
   "Source": "TP11",
   "BasePath": "_content/TP11",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\data\\BD_TP11.sql",
+      "SourceId": "TP11",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "BasePath": "_content/TP11",
+      "RelativePath": "data/BD_TP11.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\BD_TP11.sql"
     },
     {
       "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\favicon.ico",
