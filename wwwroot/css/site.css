@@ -1,7 +1,7 @@
 :root {
   --black: #1b1717;
   --white: #ffffff;
-  --green: rgb(45, 201, 84);
+  --green: #2dc954;
   --dark-green: rgb(53, 143, 75);
   --margin-top: 15em;
 }
@@ -123,4 +123,51 @@ i {
   margin-top:28px;
   margin-left:18rem;
   padding: 5px;
+}
+
+
+
+/* Divider */
+
+.custom-shape-divider-top-1699555634 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1699555634 svg {
+  position: relative;
+  display: block;
+  width: calc(194% + 1.3px);
+  height: 161px;
+}
+
+.custom-shape-divider-top-1699555634 .shape-fill {
+  fill: #2DC954;
+}
+
+header {
+  height: 40px;
+  width: 100%;
+  background-color: #2DC954;
+}
+
+h1 {
+  text-align: center;
+}
+
+#index-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3{
+  width: 25rem;
+  text-align: center;
 }
