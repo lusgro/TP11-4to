@@ -13,7 +13,7 @@ public class HomeController : Controller
             return View("Perfil");
         } else {
             ViewBag.Usuario = usuario;
-            return View("Index");
+            return View("Login");
         }
     }
 
@@ -22,7 +22,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad(int id) {
+    public IActionResult Comunidad() {
         return View();
     }
 
@@ -32,9 +32,7 @@ public class HomeController : Controller
         return View();
     }
 
-
-    [HttpPost]
-    public IActionResult Perfil(int Id) {
+    public IActionResult Perfil() {
         return View();
     }
 
