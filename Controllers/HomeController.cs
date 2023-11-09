@@ -41,8 +41,8 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult RegistrarUsuario(Usuario usuario) {
-        BD.RegistrarUsuario(usuario);
+    public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {
+        BD.RegistrarUsuario(usuario, contraseña, email);
         return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
