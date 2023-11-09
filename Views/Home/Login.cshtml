@@ -2,16 +2,18 @@
     ViewData["Title"] = "LogIn";
 }
 <!-- LOGIN -->
-<h2>Iniciar Sesion</h2>
-<form method="post" action='@Url.Action("VerificarLogin")'>
-    <div>
-        <label class="" for="userInput" class="form-label">Usuario</label>
-        <input clas="" type="text" class="form-control" id="userInput" name="user">
-    </div>
-    <div>
-        <label for="passwordInput">Contraseña</label>
-        <input type="password" id="passwordInput" aria-describedby="olvidoPassword" name="password">
-    </div>
-    <button type="submit">Iniciar Sesion</button>
-    <a href='@Url.Action("Registro")'><button type="button" class="">¿Eres Nuevo? Registrate</button></a>
-</form>
+<main class="main__top-margin">
+    <h2>Iniciar Sesion</h2>
+    <form method="post" action='@Url.Action("VerificarLogin")'>
+        <div class="label-input">
+            <label class="" for="userInput" class="form-label">Usuario</label>
+            <input class="larger-inputs" type="text" class="form-control" placeholder="myAwesomeUser" id="userInput" name="user">
+        </div>
+        <div class="label-input">
+            <label for="passwordInput">Contraseña</label>
+            <input type="password" class="larger-inputs" id="passwordInput" placeholder="••••••••••" aria-describedby="olvidoPassword" name="password">
+        </div>
+        <button type="submit">Iniciar Sesion</button>
+        <a href='@Url.Action("Registro")'><button type="button" class="">¿Eres Nuevo? Registrate</button></a>
+    </form>
+</main>
