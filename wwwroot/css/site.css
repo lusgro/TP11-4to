@@ -1,6 +1,7 @@
 :root {
   --black: #1b1717;
   --white: #ffffff;
+  --green: rgb(45, 201, 84);
   --margin-top: 15em;
 }
 
@@ -44,6 +45,7 @@ main{
 
 h2 {
   font-size: 2.5rem;
+  margin: 1rem 0;
 }
 
 .main__top-margin {
@@ -56,8 +58,6 @@ h2 {
   padding: 10px 0;
 }
 
-.label-input::firs
-
 input[type=text], input[type=password] {
   padding: 10px 15px;
   font-size: 1rem;
@@ -67,7 +67,7 @@ input[type=text], input[type=password] {
 
 input:focus {
   outline: none;
-  border:1px solid rgb(45, 201, 84);
+  border:2px solid var(--green);
   box-shadow: 0 0 10px #719ECE;
 }
 
