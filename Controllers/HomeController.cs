@@ -27,7 +27,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidades() {
+    public IActionResult Comunidades(Usuario usuario) {
         ViewBag.Artistas = BD.ObtenerArtistas();
         return View();
     }
@@ -43,7 +43,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult RegistrarUsuario(Usuario usuario) {
         BD.RegistrarUsuario(usuario);
-        return RedirectToAction("Bienvenido", new { user = usuario });
+        return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
     public IActionResult Olvide() {
