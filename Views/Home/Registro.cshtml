@@ -1,5 +1,23 @@
 @{
     ViewData["Title"] = "LogIn";
 }
-<!-- LOGIN -->
-<h1>TP XX - Index</h1>
+<!-- Registro -->
+<form method="post" action='@Url.Action("RegistrarUsuario")'>
+    <div class="mb-3">
+        <label for="usuarioInput" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="usuarioInput" name="usuario">
+    </div>
+    <div class="mb-3">
+        <label for="contraseñaInput" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contraseñaInput" name="contraseña">
+    </div>
+    <div class="mb-3">
+        <label for="nombreInput" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombreInput" name="nombre">
+    </div>
+    <div class="mb-3">
+        <label for="emailInput" class="form-label">Email</label>
+        <input type="email" class="form-control" id="emailInput" name="email">
+    </div>
+    <button type="submit" class="btn btn-primary" id="botonEnviar">Registrarse</button>
+</form>
