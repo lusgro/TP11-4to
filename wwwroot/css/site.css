@@ -2,6 +2,7 @@
   --black: #1b1717;
   --white: #ffffff;
   --green: rgb(45, 201, 84);
+  --dark-green: rgb(53, 143, 75);
   --margin-top: 15em;
 }
 
@@ -83,4 +84,24 @@ form {
   display: flex;
   flex-direction: column;
   border: 0;
+}
+
+button {
+  padding: 10px 15px;
+  border-style:solid;
+  border-radius: 5px;
+  background-color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+button:hover{
+  background-color: var(--dark-green);
+  cursor: pointer;
+}
+
+.Login__main-login-form-little_text {
+  margin: 0;
+  text-align: center;
 }
