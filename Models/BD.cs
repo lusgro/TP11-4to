@@ -9,7 +9,7 @@ public static class BD
 
     public static Usuario Login(string usuario, string password)
     {
-        string query = "SELECT * FROM Usuarios WHERE username = @Usuario AND password = @Password";
+        string query = "SELECT * FROM Usuarios WHERE Username = @Usuario AND Contraseña = @Password";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             return connection.QueryFirstOrDefault<Usuario>(query, new { Usuario = usuario, Password = password });
@@ -18,10 +18,10 @@ public static class BD
 
     public static void RegistrarUsuario(Usuario usuario)
     {
-        string query = "INSERT INTO Usuarios (username, password, email) VALUES (@Username, @Password, @Email)";
+        string query = "INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@Username, @Password, @Email)";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            connection.Execute(query, usuario);
+            connection.Execute(query, new { Username = usuario.Username, Contraseña = usuario.Contraseña, Email = usuario.Email } );
         }
     }
 
