@@ -13,7 +13,7 @@ public class HomeController : Controller
             return View("Perfil");
         } else {
             ViewBag.Usuario = usuario;
-            return View("Index");
+            return View("Login");
         }
     }
 
@@ -22,19 +22,17 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad(int id) {
+    public IActionResult Comunidad() {
         return View();
     }
 
     [HttpPost]
-    public IActionResult Comunidades() {
+    public IActionResult Comunidades(Usuario usuario) {
         ViewBag.Artistas = BD.ObtenerArtistas();
         return View();
     }
 
-
-    [HttpPost]
-    public IActionResult Perfil(int Id) {
+    public IActionResult Perfil() {
         return View();
     }
 
@@ -43,9 +41,9 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult RegistrarUsuario(Usuario usuario) {
-        BD.RegistrarUsuario(usuario);
-        return RedirectToAction("Bienvenido", new { user = usuario });
+    public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {
+        BD.RegistrarUsuario(usuario, contraseña, email);
+        return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
     public IActionResult Olvide() {
