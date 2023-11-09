@@ -2,22 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>@ViewData["Title"] - StayConnected</title>
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <header>
+            <nav>
+                <div class="logo"><h1>Titulo</h1></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Comunidades</a></li>
+                    <li><a href="#">Perfil</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                </div>
+            </nav>
+
+            <div class="menu-desplegado">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Comunidades</a></li>
+                <li><a href="#">Perfil</a></li>
+            </div>
         </header>
         <div>
             @RenderBody()
         </div>
 
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
         @await RenderSectionAsync("Scripts", required: false)
     </body>
