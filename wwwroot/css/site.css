@@ -1,3 +1,16 @@
+:root {
+  --black: #1b1717;
+  --white: #ffffff;
+  --margin-top: 15em;
+}
+
+
+*{
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Arimo';
+}
+
 html {
   font-size: 14px;
   position: relative;
@@ -20,4 +33,33 @@ footer {
   position: fixed; 
   bottom: 0; 
   margin: 10px 0px 20px 0px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.main__top-margin {
+  margin-top: var(--margin-top);
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text], input[type=password] {
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1.1rem;
 }

@@ -51,4 +51,8 @@ public class HomeController : Controller
     public IActionResult Olvide() {
         return View();
     }
+
+    public IActionResult Login() {
+        return View();
+    }
 }
