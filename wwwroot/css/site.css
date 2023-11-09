@@ -53,13 +53,34 @@ h2 {
 .label-input {
   display: flex;
   flex-direction: column;
+  padding: 10px 0;
 }
+
+.label-input::firs
 
 input[type=text], input[type=password] {
   padding: 10px 15px;
   font-size: 1rem;
+  border-style:solid;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border:1px solid rgb(45, 201, 84);
+  box-shadow: 0 0 10px #719ECE;
 }
 
 label {
   font-size: 1.1rem;
+}
+
+.larger-inputs {
+  width: 18rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: 0;
 }
