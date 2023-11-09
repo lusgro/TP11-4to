@@ -22,7 +22,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad() {
+    public IActionResult Comunidad(int id) {
         return View();
     }
 
