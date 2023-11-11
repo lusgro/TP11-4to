@@ -59,6 +59,8 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
+// JS para el Menu
+
 const toggleBtn = document.querySelector('.toggle_btn');
 const toggleBtnIcon = document.querySelector('.toggle_btn i');
 const dropDownMenu = document.querySelector('.menu-desplegado');
