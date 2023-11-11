@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FQVx1xEeLq4gaIgMamBAGFVtdEbbwyZ35GHhJ1J7Zwg=",
+  "Hash": "NYnC5EBPzWRjBzHE17VhMBPei6DCB5E8WQcJjojirnM=",
   "Source": "TP11",
   "BasePath": "_content/TP11",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\favicon-stayCo.jpg",
+      "SourceId": "TP11",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
+      "BasePath": "_content/TP11",
+      "RelativePath": "img/favicon-stayCo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\favicon-stayCo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\Logo-StayCo.jpg",
+      "SourceId": "TP11",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
+      "BasePath": "_content/TP11",
+      "RelativePath": "img/Logo-StayCo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo-StayCo.jpg"
     },
     {
       "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\site.js",

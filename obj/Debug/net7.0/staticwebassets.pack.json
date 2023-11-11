@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\Logo-StayCo.jpg",
+      "PackagePath": "staticwebassets\\img\\Logo-StayCo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\favicon-stayCo.jpg",
+      "PackagePath": "staticwebassets\\img\\favicon-stayCo.jpg"
+    },
+    {
       "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

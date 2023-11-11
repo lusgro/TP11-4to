@@ -97,21 +97,6 @@ form {
   grid-row-gap: 15px;
 }
 
-.btn-1 {
-  padding: 10px 15px;
-  border-style:solid;
-  border-radius: 5px;
-  background-color: var(--green);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--white);
-}
-
-.btn-1:hover{
-  background-color: var(--dark-green);
-  cursor: pointer;
-}
-
 .Login__main-login-form-little_text {
   margin: 0;
   text-align: center;
@@ -127,7 +112,6 @@ form {
   margin-left:18rem;
   padding: 5px;
 }
-
 
 
 /* Divider */
@@ -149,12 +133,12 @@ form {
 }
 
 .custom-shape-divider-top-1699555634 .shape-fill {
-  fill: #2DC954;
+  fill: var(--green);;
 }
 
 header {
   width: 100%;
-  background-color: #2DC954;
+  background-color: var(--green);;
 }
 
 h1 {
@@ -174,164 +158,32 @@ h3{
   text-align: center;
 }
 
-/* Menu */
+/* Estilo Boton 1 */
 
-nav ul li:hover{
-  transform: scale(1.1);
+.btn-1 {
+  padding: 10px 15px;
+  border-style:solid;
+  border-radius: 5px;
+  background-color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
 }
 
-nav li{
-  padding: 1%;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-li{
-  list-style: none;
-}
-
-nav a, .menu-desplegado a{
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-}
-
-header{
-  position: relative;
-  padding: 0 2%;
-  width: 100%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-nav{
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-nav ul{
-  list-style: none;
-  justify-content: space-around;
-  margin-right: 2%;
-}
-
-nav li a{
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
-
-nav li a:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -4px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background: #e9e0d2; /* Color subrayado */
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-}
-nav li a:hover:after {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
-nav ul{
-  display: flex;
-  gap: 2.5rem;
-}
-
-nav .toggle_btn{
-  color: white;
-  font-size: 1.5rem;
+.btn-1:hover{
+  background-color: var(--dark-green);
   cursor: pointer;
-  display: none;
-}
-
-.logo a{
-  display: flex;
-  align-items: center;
-}
-
-.logo img{
-  width: 100px;
-  border-radius: 10px;
-  margin-right: 10px;
-}
-
-nav .logo h1{
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-left: 2%;
-}
-
-.menu-desplegado{
-  display: none;
-  position: absolute;
-  right: 2rem;
-  top: 100px;
-  height: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.menu-desplegado.open{
-  height: 123px;
-}
-
-.menu-desplegado li{
-  padding: 0.7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-@media (max-width: 890px){
-  nav ul{
-    display: none;
-  }
-
-  nav .toggle_btn{
-    display: block;
-  }
-
-  .menu-desplegado{
-    display: block;
-  }
-}
-
-@media (max-width: 890px){
-  .menu-desplegado{
-    left: 2rem;
-    width: unset;
-  }
-}
-
-.menu-desplegado.open li:hover{
-  background-color: #045022;
 }
 
 /* Estilo Boton 2 */
 
 .btn-2{
   padding: 15px 45px;
-  border-style:solid;
   border-radius: 100px;
   background-color: var(--white);
   font-weight: 700;
   font-size: 1rem;
   color: var(--black);
   cursor: pointer;
+  text-decoration: none;
 }
