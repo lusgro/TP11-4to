@@ -5,7 +5,7 @@
   --white: #ffffff;
   --green: #2dc954;
   --dark-green: rgb(53, 143, 75);
-  --margin-top: 15em;
+  --margin-top: 10.625em;
 }
 
 
@@ -68,6 +68,7 @@ input{
   border-style:solid;
   border-radius: 5px;
   color: var(--black);
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 input:focus {
@@ -176,6 +177,7 @@ h3{
   font-size: 1rem;
   color: var(--white);
   border: none;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-1:hover{
@@ -194,4 +196,26 @@ h3{
   color: var(--black);
   cursor: pointer;
   text-decoration: none;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  width: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav .logo h1{
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.logo-alternativo{
+  margin-left: 15px;
+  margin-top: 10px;
 }

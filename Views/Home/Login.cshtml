@@ -1,7 +1,13 @@
 @{
-    ViewData["Title"] = "LogIn";
+    ViewData["Title"] = "Iniciar Sesión";
 }
 <!-- LOGIN -->
+
+<div class="logo logo-alternativo">
+    <img src="/img/Logo-StayCo.jpg" alt="logo">
+    <h1>Stay-Co</h1>
+</div>
+
 <main class="main__top-margin">
     <div id="login-cantainer">
         <h2>Iniciar Sesion</h2>
@@ -13,9 +19,10 @@
             <div class="label-input">
                 <label for="passwordInput">Contraseña</label>
                 <input type="password" class="larger-inputs" id="passwordInput" placeholder="••••••••••" aria-describedby="olvidoPassword" name="password">
+                <p class="Login__main-login-form-little_text" style="margin-top: 7px; text-align: start;"><a href='@Url.Action("Olvide")'>¿Olvidaste tu contraseña?&nbsp;</a></p>
             </div>
-            <button class="btn-1" type="submit">Iniciar Sesion</button>
-            <p class="Login__main-login-form-little_text">¿Eres Nuevo?&nbsp;<a href='@Url.Action("Registro")'>Registrate</a></p>
+            <button class="btn-1" type="submit" style="margin-top: 7px;">Iniciar Sesion</button>
+            <p class="Login__main-login-form-little_text" style="margin-top: 15px;">¿Eres Nuevo?&nbsp;<a href='@Url.Action("Registro")'>Registrate</a></p>
         </form>
     </div>
 </main>

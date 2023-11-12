@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\TP11.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\menuRegistroStyle.css",
+      "PackagePath": "staticwebassets\\css\\menuRegistroStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\menuRegularStyle.css",
+      "PackagePath": "staticwebassets\\css\\menuRegularStyle.css"
+    },
+    {
       "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -21,8 +29,8 @@
       "PackagePath": "staticwebassets\\img\\Logo-StayCo.jpg"
     },
     {
-      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\favicon-stayCo.jpg",
-      "PackagePath": "staticwebassets\\img\\favicon-stayCo.jpg"
+      "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\favicon-stayCo.png",
+      "PackagePath": "staticwebassets\\img\\favicon-stayCo.png"
     },
     {
       "Id": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\site.js",
