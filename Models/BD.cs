@@ -18,7 +18,7 @@ public static class BD
 
     public static void RegistrarUsuario(string usuario, string password, string email)
     {
-        string query = "INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@Username, @Password, @Email)";
+        string query = "INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@Username, @Contraseña, @Email)";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(query, new { Username = usuario, Contraseña = password, Email = email } );
