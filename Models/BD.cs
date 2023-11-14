@@ -9,28 +9,51 @@ public static class BD
 
     public static Usuario Login(string usuario, string password)
     {
-        string query = "SELECT * FROM Usuarios WHERE Username = @Usuario AND Contraseña = @Password";
+        string sp = "sp_login";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            return connection.QueryFirstOrDefault<Usuario>(query, new { Usuario = usuario, Password = password });
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsuario = usuario, pContraseña = password },
+                commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 
     public static void RegistrarUsuario(string usuario, string password, string email)
     {
-        string query = "INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@Username, @Contraseña, @Email)";
+        string sp = "sp_registroUsuario";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            connection.Execute(query, new { Username = usuario, Contraseña = password, Email = email } );
+            connection.Execute(sp, new { pUsuario = usuario, pContraseña = password, pEmail = email },
+                commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 
-    public static List<Artista> ObtenerArtistas()
+    public static List<Comunidad> ObtenerComunidades()
     {
-        string query = "SELECT * FROM Artistas";
+        string sp = "sp_obtenerTodasComunidades";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            return connection.Query<Artista>(query).ToList();
+            return connection.Query<Comunidad>(sp ,
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
+
+    public static Comunidad ObtenerComunidad(int id)
+    {
+        string sp = "sp_obtenerComunidad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Comunidad>(sp, new { pIDComunidad = id },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static Usuario ObtenerUsuario(int id)
+    {
+        string sp = "sp_obtenerPerfil";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pIDUsuario = id },
+            commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 }
