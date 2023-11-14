@@ -123,28 +123,7 @@ form {
 }
 
 
-/* Divider */
-
-.custom-shape-divider-top-1699555634 {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1699555634 svg {
-  position: relative;
-  display: block;
-  width: calc(194% + 1.3px);
-  height: 161px;
-}
-
-.custom-shape-divider-top-1699555634 .shape-fill {
-  fill: var(--green);;
-}
-
+/* Nav */
 header {
   width: 100%;
   background-color: var(--green);;
@@ -155,7 +134,7 @@ h1 {
 }
 
 #index-container {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,4 +197,68 @@ nav .logo h1{
 .logo-alternativo{
   margin-left: 15px;
   margin-top: 10px;
+}
+
+/* INDEX */
+.index__elements-margin {
+  margin: 1rem 0;
+}
+
+.index__more-info {
+  background-color: var(--white);
+  min-width: 99vw;
+  height: 60em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.index__more-info_cards {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+}
+
+.card {
+  height: 30rem;
+  width: 22rem;
+  border-radius: 80px;
+  
+  background-color: var(--black);
+  margin: 0 3rem;
+}
+
+.index__banner_last-child {
+  margin-bottom: 5rem;
+}
+
+
+/* Divider */
+.custom-shape-divider-top-1699961446 {
+  position: absolute;
+  top: 554px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1699961446 svg {
+  position: relative;
+  display: block;
+  width: calc(121% + 1.3px);
+  height: 121px;
+}
+
+.custom-shape-divider-top-1699961446 .shape-fill {
+  fill: #1B1717;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.index__h3 {
+  font-size: 1.5em;
 }
