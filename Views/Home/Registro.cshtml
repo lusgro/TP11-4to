@@ -10,27 +10,27 @@
 <main class="main__top-margin">
     <div id="signup-container">
         <h2>Registrarse</h2>
-        <form method="post" class="form-grid" action='@Url.Action("RegistrarUsuario")'>
+        <form method="post" class="form-grid" action='@Url.Action("RegistrarUsuario")' onsubmit="return verificarPassword()">
             <div class="label-input">
                 <label for="usuarioInput" class="form-label">Creá tu usuario</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="text" class="larger-inputs" placeholder="myAwesomeUser" id="usuarioInput" name="usuario">
+                <input type="text" class="larger-inputs" placeholder="myAwesomeUser" id="usuarioInput" name="usuario" required>
             </div>
            
             <div class="label-input">
                 <label for="emailInput" class="form-label">Ingresá tu email</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="email" class="larger-inputs" placeholder="myname123@email.com" id="emailInput" name="email">
+                <input type="email" class="larger-inputs" placeholder="myname123@email.com" id="emailInput" name="email" required>
             </div>
              <div class="label-input">
                 <label for="contraseñaInput" class="form-label">Creá una contraseña</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput" name="contraseña">
+                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput" name="contraseña" required>
             </div>
             <div class="label-input">
                 <label for="contraseñaInput" class="form-label">Confirmá tu contraseña</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput">
+                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput2" required>
             </div>
 
             <button type="submit" class="btn-1 btn-primary" id="botonEnviar">Registrarse</button>
@@ -38,3 +38,5 @@
         </form>
     </div>
 </main>
+
+<script src="~/js/registro.js"></script>
