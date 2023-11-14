@@ -2,15 +2,15 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Dapper/2.1.15": {
+      "Dapper/2.1.21": {
         "type": "package",
         "compile": {
-          "lib/net5.0/Dapper.dll": {
+          "lib/net7.0/Dapper.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Dapper.dll": {
+          "lib/net7.0/Dapper.dll": {
             "related": ".xml"
           }
         }
@@ -163,20 +163,22 @@
     }
   },
   "libraries": {
-    "Dapper/2.1.15": {
-      "sha512": "1aWSAosZymEM+mRwfrXteRIN74/JTUjqj9B/KqEbanH6vfUKy9D9cemRN0q1ZOEfSB7d1PpFTpVOCbf2Uv70Og==",
+    "Dapper/2.1.21": {
+      "sha512": "EaTXNZX60/k9snRsLxFhD2XmoSKubc+VOeL3hBM6/R8j2MT8/81xOc2V8EEhwr8Mu3Sf951PJPxjlXN4FznH0w==",
       "type": "package",
-      "path": "dapper/2.1.15",
+      "path": "dapper/2.1.21",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Dapper.png",
-        "dapper.2.1.15.nupkg.sha512",
+        "dapper.2.1.21.nupkg.sha512",
         "dapper.nuspec",
         "lib/net461/Dapper.dll",
         "lib/net461/Dapper.xml",
         "lib/net5.0/Dapper.dll",
         "lib/net5.0/Dapper.xml",
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml",
         "readme.md"
@@ -498,27 +500,29 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Dapper >= 2.1.15",
+      "Dapper >= 2.1.21",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ramak\\.nuget\\packages\\": {}
+    "C:\\Users\\47866545\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\TP11.csproj",
+      "projectUniqueName": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
       "projectName": "TP11",
-      "projectPath": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\TP11.csproj",
-      "packagesPath": "C:\\Users\\ramak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\",
+      "projectPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\TP11.csproj",
+      "packagesPath": "C:\\Users\\47866545\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ramak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\47866545\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -546,7 +550,7 @@
         "dependencies": {
           "Dapper": {
             "target": "Package",
-            "version": "[2.1.15, )"
+            "version": "[2.1.21, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",
