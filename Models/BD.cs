@@ -5,7 +5,7 @@ namespace TP11.Models;
 
 public static class BD
 {
-    private static string _connectionString { get; set; } = @"Server=DESKTOP-3DKDU00\SQLEXPRESS;DataBase=BD_TP11;Trusted_Connection=True;";
+    private static string _connectionString { get; set; } = @"Server=localhost;DataBase=BD_TP11;Trusted_Connection=True;";
 
     public static Usuario Login(string usuario, string password)
     {
@@ -37,7 +37,7 @@ public static class BD
         }
     }
 
-    public static List<Comunidad> ObtenerComunidadesAjenas()
+    public static List<Comunidad> ObtenerTodasComunidades()
     {
         string sp = "sp_obtenerTodasComunidades";
         using(SqlConnection connection = new SqlConnection(_connectionString))

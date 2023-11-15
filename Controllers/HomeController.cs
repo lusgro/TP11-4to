@@ -7,12 +7,13 @@ public class HomeController : Controller
 {
     [HttpPost]
     public IActionResult VerificarLogin(string user, string password) {
-        Usuario usuario = BD.Login(user, password);
-        if (usuario != null) {
-            ViewBag.Usuario = usuario;
-            return RedirectToAction("Comunidades", new { pUsuario = usuario });
+        Usuario Usuario = BD.Login(user, password);
+        if (Usuario != null) {
+            ViewBag.Usuario = Usuario;
+            return RedirectToAction("Comunidades", new { usuario = Usuario });
         } else {
-            ViewBag.Usuario = usuario;
+            ViewBag.Usuario = Usuario;
+            ViewBag.Error = "Ocurrió un error. Fijate que hayas ingresado correctamente tus datos.";
             return View("Login");
         }
     }
@@ -27,7 +28,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Comunidades(Usuario usuario) {
-        ViewBag.ComunidadesAjenas = BD.ObtenerComunidadesAjenas();
+        ViewBag.TodasComunidades = BD.ObtenerTodasComunidades();
         ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(usuario.ID_Usuario);
         return View();
     }

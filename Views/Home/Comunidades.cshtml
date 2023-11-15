@@ -57,9 +57,17 @@
     </div>
 </div> *@
 
-<h1>Nuevas Comunidades</h1>
+<h1>Mis comunidades</h1>
 
-@foreach(var item in ViewBag.ComunidadesAjenas){
+@foreach(var item in ViewBag.ComunidadesPertenecientes){
+    <div class="card">
+        <h3>@item.Nombre</h3>
+    </div>
+}
+
+<h1>Todas las Comunidades</h1>
+
+@foreach(var item in ViewBag.TodasComunidades){
     <div class="card">
         <h3>@item.Nombre</h3>
     </div>
