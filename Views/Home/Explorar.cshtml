@@ -28,44 +28,7 @@
 </header>
 
 
-<h1>@ViewBag.Comunidad.Nombre</h1>
 
-<div >
-
-</div>
-
-<div>
-    <h2>Todo sobre</h2>
-    <h2><i>@ViewBag.Comunidad.Nombre</i></h2>
-
-    @* Aca va el carousel de imagenes. Vamos a usar este: https://codepen.io/Raddy/pen/GRjYjKY *@
-</div>
-
-<div class="comentarios">
-    @foreach(var item in ViewBag.Comentarios){
-        <div class="comentario">
-            <div>
-                <div>
-                    <h3>@ViewBag.UsuarioActual.Username</h3>
-                </div>
-                <div>
-                    @* Icono Editar *@
-                    @* Icono Eliminar *@
-                </div>
-            </div>
-            <div>
-                <p>@ViewBag.Comentario.Contenido</p>
-            </div>
-        </div>
-    }
-
-    <form>
-        <input type="text">
-        <div>
-            <input type="submit">
-        </div>
-    </form>
-</div>
 
 
 <script src="~/js/menu.js" asp-append-version="true"></script>

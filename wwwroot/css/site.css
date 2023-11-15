@@ -189,14 +189,16 @@ h3{
 }
 
 nav .logo h1{
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   width: 100%;
 }
 
 .logo-alternativo{
+  text-decoration: none;
   margin-left: 15px;
   margin-top: 10px;
+  width: 241px;
 }
 
 /* INDEX */

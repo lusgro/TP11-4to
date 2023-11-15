@@ -2,8 +2,31 @@
     ViewData["Title"] = "Perfil";
 }
 
-<!-- Perfil -->
+<link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
 
+<!-- Perfil -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="/img/Logo-StayCo.jpg" alt="logo">
+            <h1>Stay-Co</h1>
+        </div>
+        <ul>
+            <li><a href='@Url.Action("Comunidades")'>Comunidades</a></li>
+            <li><a href='@Url.Action("Explorar")'>Explorar</a></li>
+            <li><a href='@Url.Action("Perfil")'>Perfil</a></li>
+        </ul>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </div>
+    </nav>
+
+    <div class="menu-desplegado">
+        <li><a href='@Url.Action("Comunidades")'>Comunidades</a></li>
+        <li><a href='@Url.Action("Explorar")'>Explorar</a></li>
+        <li><a href='@Url.Action("Perfil")'>Perfil</a></li>
+    </div>
+</header>
 
 @* <div class="Perfil">   
     <h3> Editar Perfil </h3> 
@@ -40,3 +63,6 @@
 </section>
 
 <h1>TP XX - Index</h1> *@
+
+
+<script src="~/js/menu.js" asp-append-version="true"></script>

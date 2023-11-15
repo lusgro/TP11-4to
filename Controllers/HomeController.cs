@@ -10,7 +10,7 @@ public class HomeController : Controller
         Usuario usuario = BD.Login(user, password);
         if (usuario != null) {
             ViewBag.Usuario = usuario;
-            return View("Perfil");
+            return RedirectToAction("Comunidades", new { pUsuario = usuario });
         } else {
             ViewBag.Usuario = usuario;
             return View("Login");
@@ -26,9 +26,9 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost]
     public IActionResult Comunidades(Usuario usuario) {
-        ViewBag.Artistas = BD.ObtenerArtistas();
+        ViewBag.ComunidadesAjenas = BD.ObtenerComunidadesAjenas();
+        ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(usuario.ID_Usuario);
         return View();
     }
 
@@ -51,6 +51,9 @@ public class HomeController : Controller
     }
 
     public IActionResult Login() {
+        return View();
+    }
+    public IActionResult Explorar() {
         return View();
     }
 }

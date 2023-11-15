@@ -88,12 +88,6 @@ nav .toggle_btn{
   margin-right: 10px;
 }
 
-nav .logo h1{
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
-}
-
 .menu-desplegado{
   display: none;
   position: absolute;

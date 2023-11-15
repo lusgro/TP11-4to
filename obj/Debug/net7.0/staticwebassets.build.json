@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8Kz6c6MEaioB/4X3k+8Eg7D32B3tdTW15ouoLroJ56w=",
+  "Hash": "6u/Ic2vQPOIkZKgAVIONZ5sC0qy0sggqrc7FUzFgaak=",
   "Source": "TP11",
   "BasePath": "_content/TP11",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TP11\\wwwroot",
       "Source": "TP11",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP11.styles.css",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP11.styles.css",
       "SourceId": "TP11",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TP11",
       "RelativePath": "TP11.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP11.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP11.styles.css"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP11.bundle.scp.css",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP11.bundle.scp.css",
       "SourceId": "TP11",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TP11",
       "RelativePath": "TP11.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\47866545\\Desktop\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP11.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP11.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\css\\menuRegistroStyle.css",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\menuRegistroStyle.css",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "css/menuRegistroStyle.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\menuRegistroStyle.css"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\css\\menuRegularStyle.css",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\menuRegularStyle.css",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "css/menuRegularStyle.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\menuRegularStyle.css"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\css\\site.css",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\data\\BD_TP11.sql",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\data\\BD_TP11.sql",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "data/BD_TP11.sql",
       "AssetKind": "All",
@@ -119,10 +119,27 @@
       "OriginalItemSpec": "wwwroot\\data\\BD_TP11.sql"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\data\\Query Stored Procedures.sql",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
+      "BasePath": "_content/TP11",
+      "RelativePath": "data/Query Stored Procedures.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\Query Stored Procedures.sql"
+    },
+    {
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\favicon.ico",
+      "SourceId": "TP11",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -136,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\img\\favicon-stayCo.png",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\favicon-stayCo.png",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "img/favicon-stayCo.png",
       "AssetKind": "All",
@@ -153,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\img\\favicon-stayCo.png"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\img\\Logo-StayCo.jpg",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\img\\Logo-StayCo.jpg",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "img/Logo-StayCo.jpg",
       "AssetKind": "All",
@@ -170,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\img\\Logo-StayCo.jpg"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\js\\menu.js",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\menu.js",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "js/menu.js",
       "AssetKind": "All",
@@ -187,10 +204,27 @@
       "OriginalItemSpec": "wwwroot\\js\\menu.js"
     },
     {
-      "Identity": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\registro.js",
       "SourceId": "TP11",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\47866545\\Desktop\\TP11-4to\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
+      "BasePath": "_content/TP11",
+      "RelativePath": "js/registro.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\registro.js"
+    },
+    {
+      "Identity": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\js\\site.js",
+      "SourceId": "TP11",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ramak\\OneDrive\\Documentos\\Ramiro\\Escuela\\4to Año\\Programacion\\TP11-4to\\wwwroot\\",
       "BasePath": "_content/TP11",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
