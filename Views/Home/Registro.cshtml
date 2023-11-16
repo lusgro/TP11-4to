@@ -16,25 +16,38 @@
             <div class="label-input">
                 <label for="usuarioInput" class="form-label">Creá tu usuario</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="text" class="larger-inputs" placeholder="myAwesomeUser" id="usuarioInput" name="usuario" required>
+                <input type="text" class="larger-inputs-signup" placeholder="myAwesomeUser" id="usuarioInput" name="usuario" required>
             </div>
            
             <div class="label-input">
                 <label for="emailInput" class="form-label">Ingresá tu email</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="email" class="larger-inputs" placeholder="myname123@email.com" id="emailInput" name="email" required>
+                <input type="email" class="larger-inputs-signup" placeholder="myname123@email.com" id="emailInput" name="email" required>
             </div>
              <div class="label-input">
                 <label for="contraseñaInput" class="form-label">Creá una contraseña</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput" name="contraseña" required>
+                <input type="password" class="larger-inputs-signup" placeholder="••••••••••" id="contraseñaInput" name="contraseña" required>
             </div>
             <div class="label-input">
                 <label for="contraseñaInput" class="form-label">Confirmá tu contraseña</label>
                 <i class="fa-solid fa-circle-info"></i>
-                <input type="password" class="larger-inputs" placeholder="••••••••••" id="contraseñaInput2" required>
+                <input type="password" class="larger-inputs-signup" placeholder="••••••••••" id="contraseñaInput2" required>
             </div>
 
+            <div class="label-input" id="selector-pregunta">
+                <label for="contraseñaInput" class="form-label">Respondé una pregunta para recuperar tu cuenta</label>
+                <select class="form-label" id="pregunta-recuperacion" required>
+                    <option value="books">¿Cómo se llamó tu primer mascota?</option>
+                    <option value="html">¿A qué primaria fuiste?</option>
+                    <option value="css">¿Quién era tu mejor amigo de la infancia?</option>
+                </select>
+                <div id="respuesta-pregunta">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <input type="password" class="larger-inputs-signup" placeholder="Mi respuesta..." id="contraseñaInput2" required>
+                    
+                </div>
+            </div>
             <button type="submit" class="btn-1 btn-primary" id="botonEnviar">Registrarse</button>
             <p class="Login__main-login-form-little_text" id="signup-little_text">¿Ya tenes una cuenta?&nbsp;<a href='@Url.Action("Login")'>Iniciá sesión</a></p>
         </form>

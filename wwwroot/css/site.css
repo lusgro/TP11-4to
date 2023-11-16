@@ -6,6 +6,7 @@
   --green: #2dc954;
   --dark-green: rgb(53, 143, 75);
   --margin-top: 10.625em;
+  ---larger-inputs-width: 30rem;
 }
 
 
@@ -62,16 +63,17 @@ h2 {
   padding: 10px 0;
 }
 
-input{
+input, select{
   padding: 10px 15px;
   font-size: 1rem;
+  border:2px solid;
   border-style:solid;
   border-radius: 5px;
   color: var(--black);
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-input:focus {
+input:focus, select:focus {
   outline: none;
   border:2px solid var(--green);
   box-shadow: 0 0 10px #719ECE;
@@ -83,7 +85,11 @@ label {
 }
 
 .larger-inputs {
-  width: 30rem;
+  width: var(---larger-inputs-width);
+}
+
+.larger-inputs-signup {
+  width: 20rem;
 }
 
 form {
@@ -110,16 +116,43 @@ form {
   text-decoration: none;
 }
 
-#botonEnviar, #signup-little_text {
+#botonEnviar, #signup-little_text, #selector-pregunta {
   grid-column: span 2;  
 }
+
+#selector-pregunta input {
+  width: 100%;
+}
+
+#respuesta-pregunta i {
+  margin-left:calc(var(---larger-inputs-width)*2 + 10px - 22rem);
+  margin-top: 9px;
+}
+
+select {
+  padding-right: 5rem;
+}
+
+select option {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 15px;
+  padding: 5px 0;
+}
+
+#pregunta-recuperacion.selector option:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
 
 .label-input i {
   position: absolute;
   margin-top: 38px;
-  margin-left:16rem;
+  margin-left:calc(var(---larger-inputs-width) - 12rem);
   padding: 5.5px;
   color: var(--black);
+  background-color: var(--white);
 }
 
 
