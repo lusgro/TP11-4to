@@ -271,7 +271,24 @@ nav .logo h1{
   height: auto;
 }
 
+.PArt
+{
+  margin-top: 50px;
+}
 
+/*  Perfil  */
+
+.IMGPerfil
+{
+  width: 8rem;
+  height:auto;
+  /* Subir un poco la imagen */
+}
+
+.PA
+{
+  margin-top: 17px;
+}
 
 .index__banner_last-child {
   margin-bottom: 5rem;
