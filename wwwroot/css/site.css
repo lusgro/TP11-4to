@@ -229,6 +229,15 @@ nav .logo h1{
   text-align: center;
   background-color: var(--black);
   margin: 0 3rem;
+  padding: 3rem;
+}
+
+.card-icon {
+  font-size:2.5rem;
+}
+
+.card-title {
+  font-size: 200%;
 }
 
 @media (max-width: 1310px) {
@@ -244,11 +253,6 @@ nav .logo h1{
     text-align: center;
   }
 }
-
-.card-icon {
-  width:3rem;
-}
-
 .index__banner_last-child {
   margin-bottom: 5rem;
 }
