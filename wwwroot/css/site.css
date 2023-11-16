@@ -245,49 +245,8 @@ nav .logo h1{
   }
 }
 
-
-/* Comunidades */
-
-.IMGindex
-{
-  width: 7rem;
-  height: auto;
-}
-
-.Pindex
-{
-  width: 20rem;
-  height: 10rem;
-  text-align: center;
-  margin-left: 1rem;
-  margin-top: 40px;
-}
-
-/* Artistas  */
-
-.IMGArt
-{
-  width: 8rem;
-  height: auto;
-}
-
-.PArt
-{
-  margin-top: 50px;
-}
-
-/*  Perfil  */
-
-.IMGPerfil
-{
-  width: 8rem;
-  height:auto;
-  /* Subir un poco la imagen */
-}
-
-.PA
-{
-  margin-top: 17px;
+.card-icon {
+  width:3rem;
 }
 
 .index__banner_last-child {
