@@ -5,6 +5,7 @@
   --white: #ffffff;
   --green: #2dc954;
   --dark-green: rgb(53, 143, 75);
+  --darker-green: #045022;
   --margin-top: 10.625em;
 }
 
@@ -283,6 +284,11 @@ h1 {
   font-size: 1.5em;
 }
 
+.mis-comunidades{
+  background-color: var(--darker-green);
+  padding-top:30px
+}
 
-
-
+.contenedor-carrousel h2{
+  font-size: 1.7rem;
+}

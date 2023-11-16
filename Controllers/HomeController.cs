@@ -22,7 +22,8 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad() {
+    public IActionResult Comunidad(int id) {
+        ViewBag.Comunidad = BD.ObtenerComunidad(id);
         return View();
     }
 
