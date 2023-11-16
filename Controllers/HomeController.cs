@@ -9,8 +9,7 @@ public class HomeController : Controller
     public IActionResult VerificarLogin(string user, string password) {
         Usuario usuario = BD.Login(user, password);
         if (usuario != null) {
-            ViewBag.Usuario = usuario;
-            return RedirectToAction("Comunidades", new { usuario = usuario });
+            return RedirectToAction("Comunidades", new { id = usuario.ID_Usuario });
         } else {
             ViewBag.Usuario = usuario;
             ViewBag.Error = "Ocurrió un error. Fijate que hayas ingresado correctamente tus datos.";
@@ -27,10 +26,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Comunidades(Usuario usuario) {
+    public IActionResult Comunidades(int id) {
+        Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
         ViewBag.TodasComunidades = BD.ObtenerTodasComunidades();
-        ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(usuario.ID_Usuario);
+        ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(id);
         return View();
     }
 
@@ -49,19 +49,8 @@ public class HomeController : Controller
         return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
-    public IActionResult Olvide(int IDUsuario) {
-        ViewBag.idUser = IDUsuario;
+    public IActionResult Olvide() {
         return View();
-    }
-
-    [HttpPost]
-    public IActionResult VerificarExsistenciaUsuario(string username) {
-        Usuario user = BD.ObtenerUsuarioByUser(username);
-        if(user != null){
-            return RedirectToAction("Olvide", new {IDUsuario = user.ID_Usuario});
-        }else {
-            return RedirectToAction("Olvide", new {IDUsuario = -1});
-        }
     }
 
     public IActionResult Login() {
