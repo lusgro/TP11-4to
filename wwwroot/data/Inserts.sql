@@ -27,8 +27,8 @@ insert [dbo].[Mensajes]([ID_Mensaje],[ID_Comunidad],[ID_Usuario],[Contenido],[Fe
 
 -- Usuarios --
 
-
-insert [dbo].[Usuarios] ([ID_Usuario],[Username],[Contraseña],[Email],[FotoPerfil]) Values ('','','','','','')
+-- Cambiar --
+insert [dbo].[Usuarios] ([ID_Usuario],[Username],[Contraseï¿½a],[Email],[FotoPerfil]) Values ('','','','','','')
 
 
 -- UsuariosXComunidades --
