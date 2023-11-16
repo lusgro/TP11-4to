@@ -96,7 +96,7 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
-    
+
     public static Usuario ObtenerUsuarioByUser(string name)
     {
         string sp = "sp_usuarioByUsername";
@@ -104,6 +104,16 @@ public static class BD
         {
             return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsername = name },
             commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static List<Mensaje> ObtenerMensajesDeUser(int id)
+    {
+        string sp = "sp_obtenerMensajesDeUser";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Mensaje>(sp, new { pIDUsuario = id },
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
 }

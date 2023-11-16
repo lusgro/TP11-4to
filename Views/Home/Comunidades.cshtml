@@ -29,48 +29,31 @@
     </div>
 </header>
 
-@* <div class="comunidades__top-navigation">
-    @foreach(var artista in ViewBag.Artistas){
-        <div class="card">
-            <img src="@artista.img" alt="">
-            <h3>@artista.name</h3>
-        </div>
-    }
-</div>
-<div class="comunidades__lowerSearch">
-    <div class="comunidades__lowerSearch-buscador">
-        <form action="">
-            <input type="text">
-            <button type="submit"><img src="" alt=""></button>
-        </form>
-    </div>
-    <div class="comunidades__lowerSearch-sugerencias">
-        @foreach(var InfoArtistas in ViewBag.ArtistasClasificados){
-            <h2>@InfoArtistas.Name</h2>
-            @foreach(var artista in InfoArtistas){
-                <div class="card">
-                    <img src="@artista.img" alt="">
-                    <h3>@artista.name</h3>
-                </div>
-            }
+<div class="mis-comunidades">
+    @if(@ViewBag.ComunidadesPertenecientes.Count > 0){
+        <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
+
+        @foreach(var item in ViewBag.ComunidadesPertenecientes){
+            <form action='@Url.Action("Comunidad")' method="post">
+                <input type="hidden" value="@item.ID_Comunidad" name="id">
+                <input type="submit" value="@item.Nombre">
+            </form>
         }
-    </div>
-</div> *@
+    }
+    else{
+        <h1>Empezá a unirte a comunidades.</h1>
+    }
 
-<h1>Mis comunidades</h1>
+</div>
 
-@foreach(var item in ViewBag.ComunidadesPertenecientes){
-    <div class="card">
-        <h3>@item.Nombre</h3>
-    </div>
-}
+<div class="contenedor-carrousel">
+    <h2><i>Más populares</i></h2>
+    @* carrousel *@
+</div>
 
-<h1>Todas las Comunidades</h1>
-
-@foreach(var item in ViewBag.TodasComunidades){
-    <div class="card">
-        <h3>@item.Nombre</h3>
-    </div>
-}
+<div class="contenedor-carrousel">
+    <h2><i>Otras comunidades</i></h2>
+    @* carrousel *@
+</div>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>

@@ -22,7 +22,8 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad() {
+    public IActionResult Comunidad(int id) {
+        ViewBag.Comunidad = BD.ObtenerComunidad(id);
         return View();
     }
 
@@ -53,7 +54,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Login() {
+    public IActionResult Login(int id) {
+        Usuario usuario = BD.ObtenerUsuarioByID(id);
+        ViewBag.Usuario = usuario;
+        ViewBag.Mensajes = BD.ObtenerMensajesDeUser(id);
         return View();
     }
     public IActionResult Explorar() {

@@ -121,3 +121,10 @@ AS
 BEGIN
 	SELECT * FROM Usuarios WHERE ID_Usuario = @pIDUsuario
 END
+
+CREATE PROCEDURE sp_obtenerMensajesDeUser
+	@pIDUsuario int
+AS
+BEGIN
+	SELECT * FROM Mensajes WHERE ID_Usuario = @pIDUsuario
+END
