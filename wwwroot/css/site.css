@@ -228,7 +228,27 @@ nav .logo h1{
   border-radius: 80px;
   
   background-color: var(--black);
-  margin: 0 3rem;
+  margin: 0 3rem; ;
+}
+
+.IMGindex
+{
+  width: 7rem;
+  height: auto;
+  margin-left: 110px;
+}
+
+.C
+{
+  margin-left: 30px;
+}
+
+.Pindex
+{
+  width: 20rem;
+  height: 10rem;
+  text-align: center;
+  margin-left: 1rem;
 }
 
 .index__banner_last-child {
@@ -264,3 +284,7 @@ h1 {
 .index__h3 {
   font-size: 1.5em;
 }
+
+
+
+
