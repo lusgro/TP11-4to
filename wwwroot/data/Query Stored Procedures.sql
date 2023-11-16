@@ -88,3 +88,13 @@ as
 begin
 	Delete from Mensajes where ID_Mensaje = @pIDMensaje
 end
+
+--Obtener usuario por nombre
+
+go
+create procedure sp_usuarioByUsername
+	@pUsername varchar(50)
+as
+begin
+	SELECT * FROM Usuarios WHERE username = @pUsername
+end
