@@ -52,7 +52,7 @@ public static class BD
         string sp = "sp_listarComunidadesPertenecientes";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            return connection.Query<Comunidad>(sp , new { pIDUsuario = id },
+            return connection.Query<Comunidad>(sp, new { pIDUsuario = id },
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
@@ -87,6 +87,16 @@ public static class BD
         }
     }
 
+    public static Usuario ObtenerUsuarioByID(int id)
+    {
+        string sp = "sp_obtenerUsuarioByID";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pIDUsuario = id },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+    
     public static Usuario ObtenerUsuarioByUser(string name)
     {
         string sp = "sp_usuarioByUsername";

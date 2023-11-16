@@ -209,11 +209,11 @@ nav .logo h1{
 .index__more-info {
   background-color: var(--white);
   min-width: 99vw;
-  height: 60em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 15em;
 }
 
 .index__more-info_cards {
@@ -228,8 +228,23 @@ nav .logo h1{
   border-radius: 80px;
   text-align: center;
   background-color: var(--black);
-  margin: 0 3rem; ;
+  margin: 0 3rem;
 }
+
+@media (max-width: 1310px) {
+  .index__more-info_cards {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 3rem 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
 
 /* Comunidades */
 
