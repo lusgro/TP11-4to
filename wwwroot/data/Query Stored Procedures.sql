@@ -114,3 +114,10 @@ AS
 BEGIN
 	UPDATE Usuarios SET Contraseña = @pNuevaContraseña WHERE ID_Usuario = @pIDUsuario
 END
+
+CREATE PROCEDURE sp_obtenerUsuarioByID
+	@pIDUsuario int
+AS
+BEGIN
+	SELECT * FROM Usuarios WHERE ID_Usuario = @pIDUsuario
+END
