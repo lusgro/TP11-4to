@@ -89,10 +89,10 @@ public static class BD
 
     public static Usuario ObtenerUsuarioByUser(string name)
     {
-        string sp = "sp_obtenerPerfil";
+        string sp = "sp_usuarioByUsername";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            return connection.QueryFirstOrDefault<Usuario>(sp, new { pIDUsuario = id },
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsername = name },
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }

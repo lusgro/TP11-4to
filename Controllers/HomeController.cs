@@ -54,10 +54,10 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult VerificarExsistenciaUsuario(int idUsuario) {
-        Usuario user = BD.ObtenerUsuario(idUsuario);
+    public IActionResult VerificarExsistenciaUsuario(string username) {
+        Usuario user = BD.ObtenerUsuarioByUser(username);
         if(user != null){
-            return RedirectToAction("Olvide", new {IDUsuario = user});
+            return RedirectToAction("Olvide", new {IDUsuario = user.ID_Usuario});
         }else {
             return RedirectToAction("Olvide", new {IDUsuario = -1});
         }
