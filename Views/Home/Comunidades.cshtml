@@ -59,6 +59,9 @@
 
 <h1>Mis comunidades</h1>
 
+        <p>@ViewBag.Usuario.Nombre</p>
+        <p>@ViewBag.ComunidadesPertenecientes.Count</p>
+
 @foreach(var item in ViewBag.ComunidadesPertenecientes){
     <div class="card">
         <h3>@item.Nombre</h3>
