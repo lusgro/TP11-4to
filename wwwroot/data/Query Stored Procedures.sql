@@ -98,3 +98,19 @@ as
 begin
 	SELECT * FROM Usuarios WHERE username = @pUsername
 end
+
+go
+CREATE PROCEDURE sp_ObtenerRespuestaSeguridad
+	@pIDUsuario int
+as
+begin
+	SELECT RespuestaSeguridad FROM Usuarios WHERE ID_Usuario = @pIDUsuario
+END
+
+go
+CREATE PROCEDURE sp_CambiarContraseña
+	@pIDUsuario int, @pNuevaContraseña varchar(max)
+AS
+BEGIN
+	UPDATE Usuarios SET Contraseña = @pNuevaContraseña WHERE ID_Usuario = @pIDUsuario
+END

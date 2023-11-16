@@ -34,6 +34,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Perfil() {
+        
         return View();
     }
 
