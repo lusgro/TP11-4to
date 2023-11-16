@@ -89,6 +89,17 @@ begin
 	Delete from Mensajes where ID_Mensaje = @pIDMensaje
 end
 
+--Obtener usuario por nombre
+
+go
+create procedure sp_usuarioByUsername
+	@pUsername varchar(50)
+as
+begin
+	SELECT * FROM Usuarios WHERE username = @pUsername
+end
+
+go
 CREATE PROCEDURE sp_ObtenerRespuestaSeguridad
 	@pIDUsuario int
 as
@@ -96,6 +107,7 @@ begin
 	SELECT RespuestaSeguridad FROM Usuarios WHERE ID_Usuario = @pIDUsuario
 END
 
+go
 CREATE PROCEDURE sp_CambiarContraseña
 	@pIDUsuario int, @pNuevaContraseña varchar(max)
 AS
