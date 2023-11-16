@@ -96,4 +96,14 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
+    
+    public static Usuario ObtenerUsuarioByUser(string name)
+    {
+        string sp = "sp_usuarioByUsername";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsername = name },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }

@@ -49,8 +49,19 @@ public class HomeController : Controller
         return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
-    public IActionResult Olvide() {
+    public IActionResult Olvide(int IDUsuario) {
+        ViewBag.idUser = IDUsuario;
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult VerificarExsistenciaUsuario(string username) {
+        Usuario user = BD.ObtenerUsuarioByUser(username);
+        if(user != null){
+            return RedirectToAction("Olvide", new {IDUsuario = user.ID_Usuario});
+        }else {
+            return RedirectToAction("Olvide", new {IDUsuario = -1});
+        }
     }
 
     public IActionResult Login() {

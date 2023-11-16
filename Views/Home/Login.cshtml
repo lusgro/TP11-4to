@@ -21,7 +21,8 @@
             <div class="label-input">
                 <label for="passwordInput">Contraseña</label>
                 <input type="password" class="larger-inputs" id="passwordInput" placeholder="••••••••••" aria-describedby="olvidoPassword" name="password" required>
-                <p class="Login__main-login-form-little_text" style="margin-top: 7px; text-align: start;"><a href='@Url.Action("Olvide")'>¿Olvidaste tu contraseña?&nbsp;</a></p>
+                
+                <p class="Login__main-login-form-little_text" style="margin-top: 7px; text-align: start;"><a href='@Url.Action("Olvide", new { IDUsuario = -1 })' method="POST">¿Olvidaste tu contraseña?&nbsp;</a></p>
             </div>
             <button class="btn-1" type="submit" style="margin-top: 7px;">Iniciar Sesión</button>
             <p class="Login__main-login-form-little_text" style="margin-top: 15px;">¿Eres Nuevo?&nbsp;<a href='@Url.Action("Registro")'>Registrate</a></p>

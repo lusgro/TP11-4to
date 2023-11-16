@@ -83,7 +83,7 @@ label {
 }
 
 .larger-inputs {
-  width: 18rem;
+  width: 30rem;
 }
 
 form {
@@ -209,11 +209,11 @@ nav .logo h1{
 .index__more-info {
   background-color: var(--white);
   min-width: 99vw;
-  height: 60em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 15em;
 }
 
 .index__more-info_cards {
@@ -226,21 +226,32 @@ nav .logo h1{
   height: 30rem;
   width: 22rem;
   border-radius: 80px;
-  
+  text-align: center;
   background-color: var(--black);
-  margin: 0 3rem; ;
+  margin: 0 3rem;
 }
+
+@media (max-width: 1310px) {
+  .index__more-info_cards {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 3rem 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+
+/* Comunidades */
 
 .IMGindex
 {
   width: 7rem;
   height: auto;
-  margin-left: 110px;
-}
-
-.C
-{
-  margin-left: 30px;
 }
 
 .Pindex
@@ -249,7 +260,18 @@ nav .logo h1{
   height: 10rem;
   text-align: center;
   margin-left: 1rem;
+  margin-top: 40px;
 }
+
+/* Artistas  */
+
+.IMGArt
+{
+  width: 8rem;
+  height: auto;
+}
+
+
 
 .index__banner_last-child {
   margin-bottom: 5rem;
