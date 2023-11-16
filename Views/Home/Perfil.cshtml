@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
 
-<!-- Perfil -->
+<!-- NavBar -->
 <header>
     <nav>
         <div class="logo">
@@ -22,47 +22,19 @@
     </nav>
 
     <div class="menu-desplegado">
-        <li><a href='@Url.Action("Comunidades", new {usuario = ViewBag.Usuario})'>Comunidades</a></li>
+        <li><a href='@Url.Action("Comunidades", new {id = ViewBag.Usuario.ID})'>Comunidades</a></li>
         <li><a href='@Url.Action("Explorar", new {usuario = ViewBag.Usuario})'>Explorar</a></li>
         <li><a href='@Url.Action("Perfil", new {usuario = ViewBag.Usuario})'>Perfil</a></li>
     </div>
 </header>
 
-@* <div class="Perfil">   
-    <h3> Editar Perfil </h3> 
-    @foreach (var item in ViewBag.UsuarioINFO)
-    {
-        <img src="@item.Username" class="imagenUsuario">
-    }
-    @foreach (var item in ViewBag.AlbumesUsuarioMejores)
-    {
-        <h3> @item.Nombre </h3>
-    }
-    @foreach (var item in ViewBag.UsuarioINFO)
-    {
-        <h3> @item.Pais </h3>
-    }
-</div>
+<!-- Perfil -->
 
-<section class="FavoritosCarrusel">
-@foreach (var item in ViewBag.ArtistaFavoritoCarrusel)
-{
-    <div class="ArtistaCarrusel"> 
-    <a href="" class=""> <img src="@item.FotoPerfil" class="IMGArtista"> </a>
-    </div>
-}
-</section>
+<img src="@ViewBag.Usuario.FotoPerfil" alt="">
+<h1>@ViewBag.Usuario.Username</h1>
+<h3>@ViewBag.Usuario.Email</h3>
 
-
-@foreach (var item in ViewBag.LosDeSiempreCarrusel)
-{
-    <div class="ArtistaCarrusel"> 
-    <a href="" class=""> <img src="@item.FotoPerfil" class="IMGArtista"> </a>
-    </div>
-}
-</section>
-
-<h1>TP XX - Index</h1> *@
+<!-- Falta implementar funcionalidad de artistas favoritos, etc. -->
 
 
 <script src="~/js/menu.js" asp-append-version="true"></script>
