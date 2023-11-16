@@ -88,3 +88,17 @@ as
 begin
 	Delete from Mensajes where ID_Mensaje = @pIDMensaje
 end
+
+CREATE PROCEDURE sp_ObtenerRespuestaSeguridad
+	@pIDUsuario int
+as
+begin
+	SELECT RespuestaSeguridad FROM Usuarios WHERE ID_Usuario = @pIDUsuario
+END
+
+CREATE PROCEDURE sp_CambiarContraseña
+	@pIDUsuario int, @pNuevaContraseña varchar(max)
+AS
+BEGIN
+	UPDATE Usuarios SET Contraseña = @pNuevaContraseña WHERE ID_Usuario = @pIDUsuario
+END

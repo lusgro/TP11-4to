@@ -27,6 +27,26 @@ public static class BD
         }
     }
 
+    public static string ObtenerRespuestaSeguridad(int id)
+    {
+        string sp = "sp_ObtenerRespuestaSeguridad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<string>(sp, new { pIDUsuario = id },
+                commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void CambiarContraseña(int id, string contraseña)
+    {
+        string sp = "sp_CambiarContraseña";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIDUsuario = id, pContraseña = contraseña },
+                commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
     public static List<Comunidad> ObtenerComunidadesPertenecientes(int id)
     {
         string sp = "sp_listarComunidadesPertenecientes";
