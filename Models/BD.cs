@@ -77,6 +77,16 @@ public static class BD
         }
     }
 
+    public static List<Mensaje> ObtenerMensajesComunidad(int id)
+    {
+        string sp = "sp_obtenerMensajesComunidad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Mensaje>(sp, new { pIDComunidad = id },
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
+
     public static Usuario ObtenerUsuario(int id)
     {
         string sp = "sp_obtenerPerfil";

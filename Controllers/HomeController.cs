@@ -24,6 +24,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Comunidad(int id) {
         ViewBag.Comunidad = BD.ObtenerComunidad(id);
+        ViewBag.Comentarios = BD.ObtenerMensajesComunidad(id);
         return View();
     }
 

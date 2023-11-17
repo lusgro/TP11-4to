@@ -99,6 +99,7 @@ begin
 	SELECT * FROM Usuarios WHERE username = @pUsername
 end
 
+--Obtener respuesta de seguridad
 go
 CREATE PROCEDURE sp_ObtenerRespuestaSeguridad
 	@pIDUsuario int
@@ -107,6 +108,7 @@ begin
 	SELECT RespuestaSeguridad FROM Usuarios WHERE ID_Usuario = @pIDUsuario
 END
 
+--Cambiar contraseña de un usuario
 go
 CREATE PROCEDURE sp_CambiarContraseña
 	@pIDUsuario int, @pNuevaContraseña varchar(max)
@@ -115,6 +117,8 @@ BEGIN
 	UPDATE Usuarios SET Contraseña = @pNuevaContraseña WHERE ID_Usuario = @pIDUsuario
 END
 
+--Obtener usuario por su id
+
 CREATE PROCEDURE sp_obtenerUsuarioByID
 	@pIDUsuario int
 AS
@@ -122,9 +126,21 @@ BEGIN
 	SELECT * FROM Usuarios WHERE ID_Usuario = @pIDUsuario
 END
 
+--Obtener mensajes del usuario
+
 CREATE PROCEDURE sp_obtenerMensajesDeUser
 	@pIDUsuario int
 AS
 BEGIN
 	SELECT * FROM Mensajes WHERE ID_Usuario = @pIDUsuario
+END
+
+
+--Obtener mensajes de una comunidad
+
+CREATE PROCEDURE sp_obtenerMensajesComunidad
+	@pIDComunidad int
+AS
+BEGIN
+	SELECT * FROM Mensajes WHERE ID_Comunidad = @pIDComunidad order by Fecha
 END
