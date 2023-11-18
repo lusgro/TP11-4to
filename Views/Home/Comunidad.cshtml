@@ -11,9 +11,9 @@
             <h1>Stay-Co</h1>
         </div>
         <ul>
-            <li><a href='@Url.Action("Comunidades", new {usuario = ViewBag.Usuario})'>Comunidades</a></li>
-            <li><a href='@Url.Action("Explorar", new {usuario = ViewBag.Usuario})'>Explorar</a></li>
-            <li><a href='@Url.Action("Perfil", new {usuario = ViewBag.Usuario})'>Perfil</a></li>
+            <li><a href='@Url.Action("Comunidades", new {id = ViewBag.Usuario.ID_Usuario})'>Comunidades</a></li>
+            <li><a href='@Url.Action("Explorar", new {id = ViewBag.Usuario.ID_Usuario})'>Explorar</a></li>
+            <li><a href='@Url.Action("Perfil", new {id = ViewBag.Usuario.ID_Usuario})'>Perfil</a></li>
         </ul>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
@@ -21,9 +21,9 @@
     </nav>
 
     <div class="menu-desplegado">
-        <li><a href='@Url.Action("Comunidades", new {usuario = ViewBag.Usuario})'>Comunidades</a></li>
-        <li><a href='@Url.Action("Explorar", new {usuario = ViewBag.Usuario})'>Explorar</a></li>
-        <li><a href='@Url.Action("Perfil", new {usuario = ViewBag.Usuario})'>Perfil</a></li>
+        <li><a href='@Url.Action("Comunidades", new {id = ViewBag.Usuario.ID_Usuario})'>Comunidades</a></li>
+        <li><a href='@Url.Action("Explorar", new {id = ViewBag.Usuario.ID_Usuario})'>Explorar</a></li>
+        <li><a href='@Url.Action("Perfil", new {id = ViewBag.Usuario.ID_Usuario})'>Perfil</a></li>
     </div>
 </header>
 

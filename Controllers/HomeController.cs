@@ -22,9 +22,10 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Comunidad(int id) {
-        ViewBag.Comunidad = BD.ObtenerComunidad(id);
-        ViewBag.Comentarios = BD.ObtenerMensajesComunidad(id);
+    public IActionResult Comunidad(int id, int idComunidad) {
+        ViewBag.Usuario = BD.ObtenerUsuarioByID(id);
+        ViewBag.Comunidad = BD.ObtenerComunidad(idComunidad);
+        ViewBag.Comentarios = BD.ObtenerMensajesComunidad(idComunidad);
         return View();
     }
 
@@ -36,8 +37,9 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Perfil() {
-        
+    public IActionResult Perfil(int id) {
+        Usuario usuario = BD.ObtenerUsuarioByID(id);
+        ViewBag.Usuario = usuario;
         return View();
     }
 
@@ -61,7 +63,9 @@ public class HomeController : Controller
         ViewBag.Mensajes = BD.ObtenerMensajesDeUser(id);
         return View();
     }
-    public IActionResult Explorar() {
+    public IActionResult Explorar(int id) {
+        Usuario usuario = BD.ObtenerUsuarioByID(id);
+        ViewBag.Usuario = usuario;
         return View();
     }
 }

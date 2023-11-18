@@ -14,9 +14,9 @@
             <h1>Stay-Co</h1>
         </div>
         <ul>
-            <li><a href='@Url.Action("Comunidades", new {usuario = ViewBag.Usuario})'>Comunidades</a></li>
-            <li><a href='@Url.Action("Explorar", new {usuario = ViewBag.Usuario})'>Explorar</a></li>
-            <li><a href='@Url.Action("Perfil", new {usuario = ViewBag.Usuario})'>Perfil</a></li>
+            <li><a href='@Url.Action("Comunidades", new {id = ViewBag.Usuario.ID_Usuario})'>Comunidades</a></li>
+            <li><a href='@Url.Action("Explorar", new {id = ViewBag.Usuario.ID_Usuario})'>Explorar</a></li>
+            <li><a href='@Url.Action("Perfil", new {id = ViewBag.Usuario.ID_Usuario})'>Perfil</a></li>
         </ul>
         <div class="toggle_btn">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
@@ -24,9 +24,9 @@
     </nav>
 
     <div class="menu-desplegado">
-        <li><a href='@Url.Action("Comunidades", new {usuario = ViewBag.Usuario})'>Comunidades</a></li>
-        <li><a href='@Url.Action("Explorar", new {usuario = ViewBag.Usuario})'>Explorar</a></li>
-        <li><a href='@Url.Action("Perfil", new {usuario = ViewBag.Usuario})'>Perfil</a></li>
+        <li><a href='@Url.Action("Comunidades", new {id = ViewBag.Usuario.ID_Usuario})'>Comunidades</a></li>
+        <li><a href='@Url.Action("Explorar", new {id = ViewBag.Usuario.ID_Usuario})'>Explorar</a></li>
+        <li><a href='@Url.Action("Perfil", new {id = ViewBag.Usuario.ID_Usuario})'>Perfil</a></li>
     </div>
 </header>
 
@@ -35,8 +35,8 @@
         <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
 
         @foreach(var item in ViewBag.ComunidadesPertenecientes){
-            <form action='@Url.Action("Comunidad")' method="post">
-                <input type="hidden" name="id" value="@item.ID_Comunidad" >
+            <form action='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario})' method="post">
+                <input type="hidden" name="idComunidad" value="@item.ID_Comunidad" >
                 <input type="submit" value="@item.Nombre">
             </form>
         }
