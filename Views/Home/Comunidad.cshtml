@@ -31,7 +31,7 @@
 <h1>@ViewBag.Comunidad.Nombre</h1>
 
 <div >
-
+    <img src="ViewBag.Comunidad.FotoPerfil" alt="fotocomunidad">
 </div>
 
 <div>
@@ -44,23 +44,25 @@
 <div class="comentarios">
     @foreach(var item in ViewBag.Comentarios){
         <div class="comentario">
-            <div>
+            <div class="perfil">
                 <div>
-                    <h3>@item.ID_Usuario</h3>
+                    <p>@item.ID_Usuario</p>
                 </div>
                 <div>
-                    @* Icono Editar *@
-                    @* Icono Eliminar *@
+                    <span class="material-symbols-outlined lapiz">edit</span>
+                    <span class="material-symbols-outlined" style="margin-left: 5px; color: darkred;">delete</span>
                 </div>
             </div>
-            <div>
+            <div class="contenido">
                 <p>@item.Contenido</p>
             </div>
         </div>
     }
 
-    <form>
-        <input type="text">
+    <form action='@Url.Action("PublicarMensaje")' method="post">
+        <input type="text" name="contenido">
+        <input type="hidden" name="id" value="@ViewBag.Usuario.ID_Usuario">
+        <input type="hidden" name="idComunidad" value="@ViewBag.Comunidad.ID_Comunidad">
         <div>
             <input type="submit">
         </div>

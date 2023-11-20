@@ -58,3 +58,16 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+
+function PublicarMensaje(IDU, IDC, cont) {
+    $.ajax(
+        {
+            url: '/Home/PublicarMensajeAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: { id: IDU, idComunidad: IDC, contenido: cont},
+            success: function (response) {
+                }
+        });
+}

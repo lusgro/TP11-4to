@@ -1,3 +1,5 @@
+/* Carrousel */
+
 .media-container {
     position: relative;
 }
@@ -125,4 +127,8 @@
 
 .media-group:nth-child(4):target ~ .navigation-indicators > *:nth-child(4) {
     opacity: 1;
+}
+
+.comunidad{
+    width: 30%;
 }

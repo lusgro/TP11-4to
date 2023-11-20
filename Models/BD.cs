@@ -126,4 +126,33 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
+    public static void InsertarMensaje(int id, int idcomu, string contenido)
+    {
+        string sp = "sp_publicarMensaje";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIDComunidad = idcomu, pIDUsuario = id, pContenido = contenido},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void EditarMensaje(int idMensaje, string contenido)
+    {
+        string sp = "sp_editarMensaje";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIDMensaje = idMensaje, pContenido = contenido},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void EliminarMensaje(int idMensaje)
+    {
+        string sp = "sp_editarMensaje";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIDMensaje = idMensaje},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }

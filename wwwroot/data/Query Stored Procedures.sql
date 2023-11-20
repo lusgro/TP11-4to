@@ -62,7 +62,7 @@ end
 --Publicar mensaje en la comunidad
 
 go
-create procedure sp_publicarMensaje
+alter procedure sp_publicarMensaje
 	@pIDComunidad int, @pIDUsuario int, @pContenido varchar(max)
 as
 begin
@@ -72,7 +72,7 @@ end
 --Editar mensaje en la comunidad
 
 go
-create procedure sp_editarMensaje
+alter procedure sp_editarMensaje
 	@pIDMensaje int, @pContenido varchar(max)
 as
 begin
@@ -82,7 +82,7 @@ end
 --Eliminar mensaje en la comunidad
 
 go
-create procedure sp_eliminarMensaje
+alter procedure sp_eliminarMensaje
 	@pIDMensaje int
 as
 begin

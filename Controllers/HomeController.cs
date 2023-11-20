@@ -21,7 +21,6 @@ public class HomeController : Controller
         return View();
     }
 
-    [HttpPost]
     public IActionResult Comunidad(int id, int idComunidad) {
         ViewBag.Usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Comunidad = BD.ObtenerComunidad(idComunidad);
@@ -67,5 +66,9 @@ public class HomeController : Controller
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
         return View();
+    }
+    public IActionResult PublicarMensaje(int id, int idComunidad, string contenido) {
+        BD.InsertarMensaje(id, idComunidad, contenido);
+        return RedirectToAction("Comunidad", new { id = id, idComunidad = idComunidad});;
     }
 }

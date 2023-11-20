@@ -335,3 +335,30 @@ h1 {
 .contenedor-carrousel h2{
   font-size: 1.7rem;
 }
+
+
+.comentarios{
+  width: 74%;
+  margin-inline: 13%;
+}
+
+.comentario .perfil{
+  display: flex;
+  justify-content: space-between;
+}
+
+.comentario{
+  padding: 2%;
+  border: 2px solid var(--white);
+  border-radius: 25px;
+  margin-bottom: 22px;
+}
+
+.comentario .contenido{
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.material-symbols-outlined{
+  color: var(--dark-green);
+}
