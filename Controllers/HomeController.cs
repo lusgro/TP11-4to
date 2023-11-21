@@ -18,6 +18,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Registro() {
+        ViewBag.PreguntasDeRecuperacion = BD.ObtenerPreguntasDeRecuperacion();
         return View();
     }
 
@@ -50,6 +51,7 @@ public class HomeController : Controller
         ViewBag.idUser = idUsuario;
         if(ViewBag.idUser != -1){
             ViewBag.Usuario = BD.ObtenerUsuarioByID(idUsuario);
+            ViewBag.PreguntaRecu = BD.ObtenerPreguntaDeRecuperacion(ViewBag.Usuario.ID_Pregunta);
         }
         return View();
     }
@@ -63,9 +65,7 @@ public class HomeController : Controller
         }else {
             return RedirectToAction("Olvide", new {idUsuario = -1});
         }
-        
     }
-
 
     [HttpPost]
     public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {

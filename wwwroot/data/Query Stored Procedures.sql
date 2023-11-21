@@ -144,3 +144,23 @@ AS
 BEGIN
 	SELECT * FROM Mensajes WHERE ID_Comunidad = @pIDComunidad order by Fecha
 END
+
+
+--Obtener todas las preguntas de recuperacion 
+
+CREATE PROCEDURE sp_obtenerPreguntasDeRecuperacion
+AS
+BEGIN
+	SELECT * FROM PreguntasDeRecuperacion
+END
+
+exec sp_obtenerPreguntasDeRecuperacion
+
+--Obtener todas una pregunta de recuperacion 
+
+CREATE PROCEDURE sp_obtenerPreguntaDeRecuperacion
+	@idPregunta INT
+AS
+BEGIN
+	SELECT * FROM PreguntasDeRecuperacion WHERE ID_Pregunta = @idPregunta
+END

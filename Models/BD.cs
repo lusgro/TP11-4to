@@ -154,4 +154,24 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
+
+    public static List<PreguntasDeRecuperacion> ObtenerPreguntasDeRecuperacion()
+    {
+        string sp = "sp_obtenerPreguntasDeRecuperacion";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<PreguntasDeRecuperacion>(sp,
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
+
+    public static PreguntasDeRecuperacion ObtenerPreguntaDeRecuperacion(int id)
+    {
+        string sp = "sp_obtenerPreguntaDeRecuperacion";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<PreguntasDeRecuperacion>(sp, new { idPregunta = id },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }

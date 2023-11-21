@@ -37,14 +37,14 @@
 
             <div class="label-input" id="selector-pregunta">
                 <label for="contraseñaInput" class="form-label">Respondé una pregunta para recuperar tu cuenta en un futuro</label>
-                <select class="form-label" id="pregunta-recuperacion" required>
-                    <option value="books">¿Cómo se llamó tu primer mascota?</option>
-                    <option value="html">¿A qué primaria fuiste?</option>
-                    <option value="css">¿Quién era tu mejor amigo de la infancia?</option>
+                <select class="form-label" name="pregunta-recuperacion" id="pregunta-recuperacion" required>
+                    @foreach(PreguntasDeRecuperacion pregunta in ViewBag.PreguntasDeRecuperacion){
+                        <option value="@pregunta.ID_Pregunta">@pregunta.Contenido</option>
+                    }
                 </select>
                 <div id="respuesta-pregunta">
                     <i class="fa-solid fa-circle-info"></i>
-                    <input type="password" class="larger-inputs-signup" placeholder="Mi respuesta..." id="contraseñaInput2" required>
+                    <input type="text" name="respuesta-pregunta" class="larger-inputs-signup" placeholder="Mi respuesta..." id="contraseñaInput2" required>
                     
                 </div>
             </div>
