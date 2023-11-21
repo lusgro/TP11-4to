@@ -46,15 +46,33 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Olvide(int idUsuario) {
+        ViewBag.idUser = idUsuario;
+        if(ViewBag.idUser != -1){
+            ViewBag.Usuario = BD.ObtenerUsuarioByID(idUsuario);
+        }
+        return View();
+    }
+
+
+    [HttpPost]
+    public IActionResult VerificarExsistenciaUsuario(string username) {
+        Usuario user = BD.ObtenerUsuarioByUser(username);
+        if(user != null){
+            return RedirectToAction("Olvide", new {idUsuario = user.ID_Usuario});
+        }else {
+            return RedirectToAction("Olvide", new {idUsuario = -1});
+        }
+        
+    }
+
+
     [HttpPost]
     public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {
         BD.RegistrarUsuario(usuario, contraseña, email);
         return RedirectToAction("Comunidades", new { usuario = usuario });
     }
 
-    public IActionResult Olvide() {
-        return View();
-    }
 
     public IActionResult Login() {
         return View();

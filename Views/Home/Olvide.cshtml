@@ -12,19 +12,19 @@
 <main class="main__top-margin">
     <div id="login-cantainer">
         <h2>Olvide mi contraseña</h2>
-        @if(ViewBag.idUser == -1) {
+        @if(ViewBag.idUser != -1) {
             <form method="post" action='@Url.Action("VerificarExsistenciaUsuario")'>
                 <div class="label-input">
-                    <label class="" for="userInput" class="form-label">Usuario</label>
+                    <label class="" for="userInput" class="form-label">Responda esta pregunta</label>
                     <input class="larger-inputs" name="username" autocomplete="off" type="text" class="form-control" placeholder="myAwesomeUser" id="userInput" required>
                 </div>
                 <button class="btn-1" type="submit" style="margin-top: 15px;">Obtener contraseña</button>
             </form>
-        } else {
+        } else if(ViewBag.idUser == -1 || ViewBag.idUser == null) {
             <form method="post" action='@Url.Action("VerificarExsistenciaUsuario")'>
                 <div class="label-input">
-                    <label class="" for="userInput" class="form-label">Responda esta pregunta</label>
-                    <input class="larger-inputs" name="idUsuario" autocomplete="off" type="text" class="form-control" placeholder="myAwesomeUser" id="userInput" name="user" required>
+                    <label class="" for="userInput" class="form-label">Ingresá tu nombre de usuario</label>
+                    <input class="larger-inputs" name="username" autocomplete="off" type="text" class="form-control" placeholder="myAwesomeUser" id="userInput" name="user" required>
                 </div>
                 <button class="btn-1" type="submit" style="margin-top: 15px;">Obtener contraseña</button>
             </form>
