@@ -12,8 +12,7 @@ public static class BD
         string sp = "sp_login";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsuario = usuario, pContraseña = password },
-                commandType: System.Data.CommandType.StoredProcedure);
+            return connection.QueryFirstOrDefault<Usuario>(sp, new { pUsuario = usuario, pContraseña = password }, commandType: System.Data.CommandType.StoredProcedure);
         }
     }
 
