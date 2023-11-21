@@ -93,7 +93,7 @@ end
 
 go
 create procedure sp_usuarioByUsername
-	@pUsername varchar(50)
+	@pUsername varchar(MAX)
 as
 begin
 	SELECT * FROM Usuarios WHERE username = @pUsername

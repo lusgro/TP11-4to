@@ -1,14 +1,15 @@
-function VerificarExistenciaDeUsuario(name)
+function VerificarExistenciaDeUsuario(user)
 {
     $.ajax(
         {
             type: 'POST',
             dataType: 'JSON',
-            url: '/Home/getActores',
-            data: { IdSerie: IdS },
+            url: '/Home/VerificarExsistenciaUser',
+            data: { username: $(user).val() },
             success:
-                function (actores)
+                function (preguntar)
                 {
+                    console.log("exito");
                     $("#NombreSerie").html("Serie "+title);
                     let listActores = "";
                     for (let index = 0; index < actores.length; index++) {

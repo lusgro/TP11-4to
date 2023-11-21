@@ -67,6 +67,22 @@ public class HomeController : Controller
         }
     }
 
+
+    public IActionResult CambiarContra(int id) {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult VerificarRespuestaRecuperacion(int id, string content) {
+        Usuario user = BD.ObtenerUsuarioByID(id);
+        if(user.RespuestaSeguridad.ToLower() == content.ToLower()){
+            return RedirectToAction("CambiarContra", new {id = user.ID_Usuario});
+        } else {
+            Console.WriteLine(user.ID_Usuario);
+            return RedirectToAction("Olvide", new {idUsuario = user.ID_Usuario});
+        }
+    }
+
     [HttpPost]
     public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {
         BD.RegistrarUsuario(usuario, contraseña, email);
