@@ -56,10 +56,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Login(int id) {
-        Usuario usuario = BD.ObtenerUsuarioByID(id);
-        ViewBag.Usuario = usuario;
-        ViewBag.Mensajes = BD.ObtenerMensajesDeUser(id);
+    public IActionResult Login() {
         return View();
     }
     public IActionResult Explorar(int id) {
