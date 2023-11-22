@@ -174,3 +174,12 @@ AS
 BEGIN
 	UPDATE Usuarios SET [Contraseña] = @pContraseña WHERE ID_Usuario = @pIDUsuario
 END
+
+--Obtener todos los albumes de un artista
+
+CREATE PROCEDURE sp_obtenerAlbumes
+	@pIdArtista INT
+AS
+BEGIN
+	SELECT * FROM Albumes WHERE ID_Artista = @pIdArtista
+END

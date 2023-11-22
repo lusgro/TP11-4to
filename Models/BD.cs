@@ -5,7 +5,7 @@ namespace TP11.Models;
 
 public static class BD
 {
-    private static string _connectionString { get; set; } = @"Server=localhost;DataBase=BD_TP11;Trusted_Connection=True;";
+    private static string _connectionString { get; set; } = @"Server=DESKTOP-3DKDU00\SQLEXPRESS;DataBase=BD_TP11;Trusted_Connection=True;";
 
     public static Usuario Login(string usuario, string password)
     {
@@ -175,4 +175,13 @@ public static class BD
         }
     }
 
+    public static List<Album> ObtenerAlbumes(int idAr)
+    {
+        string sp = "sp_obtenerAlbumes";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Album>(sp, new { pIdArtista = idAr },
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
 }
