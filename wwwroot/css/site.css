@@ -362,3 +362,23 @@ h1 {
 .material-symbols-outlined{
   color: var(--dark-green);
 }
+
+.searcher {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 7rem;
+  background-color: var(--darker-green);
+  width: 30rem;
+  margin: 0 auto;
+}
+.search_bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.search-icon {
+  font-size: 2rem;
+  position: absolute;
+  left:60rem;
+}
