@@ -164,3 +164,13 @@ AS
 BEGIN
 	SELECT * FROM PreguntasDeRecuperacion WHERE ID_Pregunta = @idPregunta
 END
+
+--Cambiar contraseña
+
+ALTER PROCEDURE sp_CambiarContraseña
+	@pIDUsuario INT,
+	@pContraseña Varchar(MAX)
+AS
+BEGIN
+	UPDATE Usuarios SET [Contraseña] = @pContraseña WHERE ID_Usuario = @pIDUsuario
+END

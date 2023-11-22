@@ -174,4 +174,5 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
+
 }

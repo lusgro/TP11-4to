@@ -47,40 +47,44 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Olvide(int idUsuario) {
+
+    public IActionResult OlvideMiContra(int idUsuario) {
         ViewBag.idUser = idUsuario;
         if(ViewBag.idUser != -1){
             ViewBag.Usuario = BD.ObtenerUsuarioByID(idUsuario);
             ViewBag.PreguntaRecu = BD.ObtenerPreguntaDeRecuperacion(ViewBag.Usuario.ID_Pregunta);
         }
-        return View();
+        return View("Olvide");
     }
 
 
     [HttpPost]
-    public IActionResult VerificarExsistenciaUsuario(string username) {
+    public IActionResult PreguntaDeRecuperacion(string username) {
         Usuario user = BD.ObtenerUsuarioByUser(username);
         if(user != null){
-            return RedirectToAction("Olvide", new {idUsuario = user.ID_Usuario});
+            ViewBag.idUser = user.ID_Usuario;
+            ViewBag.Usuario = BD.ObtenerUsuarioByID(user.ID_Usuario);
+            ViewBag.PreguntaRecu = BD.ObtenerPreguntaDeRecuperacion(user.ID_Pregunta);
+            return View();
         }else {
-            return RedirectToAction("Olvide", new {idUsuario = -1});
+            return RedirectToAction("OlvideMiContra", new {idUsuario = -1});
         }
     }
 
-
+    [HttpPost]
     public IActionResult CambiarContra(int id) {
+        ViewBag.id = id;
         return View();
     }
 
     [HttpPost]
-    public IActionResult VerificarRespuestaRecuperacion(int id, string content) {
-        Usuario user = BD.ObtenerUsuarioByID(id);
-        if(user.RespuestaSeguridad.ToLower() == content.ToLower()){
-            return RedirectToAction("CambiarContra", new {id = user.ID_Usuario});
-        } else {
-            Console.WriteLine(user.ID_Usuario);
-            return RedirectToAction("Olvide", new {idUsuario = user.ID_Usuario});
-        }
+    public IActionResult ActualizacionDeContra(int id, string newPass){
+        BD.CambiarContraseña(id, newPass);
+        return RedirectToAction("Login");
+    }
+
+    public string VerificarRespuestaRecuperacion(int id, string content) {
+        return BD.ObtenerUsuarioByID(id).RespuestaSeguridad;
     }
 
     [HttpPost]
@@ -88,7 +92,6 @@ public class HomeController : Controller
         BD.RegistrarUsuario(usuario, contraseña, email);
         return RedirectToAction("Comunidades", new { usuario = usuario });
     }
-
 
     public IActionResult Login() {
         return View();

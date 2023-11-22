@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Olvide Mi Contraseña";
+}
+
+<div>
+    <a class="logo logo-alternativo" href='@Url.Action("Index")'>
+        <img src="/img/Logo-StayCo.jpg" alt="logo">
+        <h1>Stay-Co</h1>
+    </a>
+</div>
+
+<main class="main__top-margin">
+    <div id="login-cantainer">
+        <h2>Olvide mi contraseña</h2>
+            <form method="post" action='@Url.Action("CambiarContra", new {id = @ViewBag.idUser})'>
+                <div class="label-input">
+                    <label class="" class="form-label">@ViewBag.PreguntaRecu.Contenido</label>
+                    <input class="larger-inputs" name="content" autocomplete="off" type="text" class="form-control" placeholder="Yo... " id="userInput" required>
+                    <input type="hidden" id="id_User" value="@ViewBag.idUser">
+                </div>
+                <button class="btn-1" type="submit" style="margin-top: 15px;" onclick="return VerificarRespuestaDeRecu('id_User', 'userInput')">Obtener contraseña</button>
+            </form>
+    </div>
+</main>

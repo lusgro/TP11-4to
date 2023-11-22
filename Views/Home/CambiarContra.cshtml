@@ -12,16 +12,16 @@
 <main class="main__top-margin">
  <div id="login-cantainer">
         <h2>Olvide mi contraseña</h2>
-        <form method="post" action='@Url.Action("VerificarExsistenciaUsuario")' onsubmit="return verificarPassword()">
+        <form method="post" action='@Url.Action("ActualizacionDeContra", new {id = @ViewBag.id})' onsubmit="return verificarPassword()">
                 <div class="label-input">
                     <label class="" for="userInput" class="form-label">Creá tu nueva contraseña</label>
-                    <input class="larger-inputs" name="password" autocomplete="off" id="contraseñaInput" type="password" class="form-control" placeholder="••••••••••" required>
+                    <input class="larger-inputs" name="newPass" autocomplete="off" id="contraseñaInput" type="password" class="form-control" placeholder="••••••••••" required>
                 </div>
                 <div class="label-input">
                     <label class="" for="userInput" class="form-label">Confirmá tu contraseña</label>
                     <input class="larger-inputs" name="password" autocomplete="off" id="contraseñaInput2" type="password" class="form-control" placeholder="••••••••••" required>
                 </div>
-                <button class="btn-1" type="submit" style="margin-top: 15px;">Actualizar mi contraseña</button>
+                <button class="btn-1" type="submit" style="margin-top: 15px;" >Actualizar mi contraseña</button>
         </form>
     </div>
 </main>
