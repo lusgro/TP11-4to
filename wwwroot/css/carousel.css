@@ -1,0 +1,142 @@
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: #045022;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.canciones-recomendadas {
+	margin-bottom: 70px;
+    margin-left: 30px;
+}
+
+.canciones-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.canciones-recomendadas .contenedor-principal .flecha-izquierda,
+.canciones-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+    background: none;
+	font-size: 40px;
+	height: 80%;
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.canciones-recomendadas .contenedor-principal:hover .flecha-izquierda,
+.canciones-recomendadas .contenedor-principal:hover .flecha-derecha {
+	background: rgba(0,0,0,0.3);
+}
+
+.canciones-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.canciones-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.canciones-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.canciones-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.canciones-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.canciones-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.canciones-recomendadas .contenedor-carousel .carousel .cancion {
+	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.canciones-recomendadas .contenedor-carousel .carousel .cancion.hover {
+	transform: scale(1.1);
+	transform-origin: center;
+}
+
+.canciones-recomendadas .contenedor-carousel .carousel .cancion img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.cancion-principal {
+		font-size: 14px;
+	}
+
+	.cancion-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.canciones-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.canciones-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.canciones-recomendadas .indicadores,
+	.canciones-recomendadas .flecha-izquierda,
+	.canciones-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
+
+.cancion button{
+    width: 100%;
+    cursor: pointer;
+}

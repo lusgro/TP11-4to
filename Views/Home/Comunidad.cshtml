@@ -34,12 +34,42 @@
     <img src="ViewBag.Comunidad.FotoPerfil" alt="fotocomunidad">
 </div>
 
-<div>
-    <h2>Todo sobre</h2>
-    <h2><i>@ViewBag.Comunidad.Nombre</i></h2>
+@* Aca va el carousel de imagenes. Vamos a usar este: https://codepen.io/Raddy/pen/GRjYjKY *@
 
-    @* Aca va el carousel de imagenes. Vamos a usar este: https://codepen.io/Raddy/pen/GRjYjKY *@
-</div>
+@* Estructura del carousel *@
+@* <div class="canciones-recomendadas contenedor">
+    <div class="contenedor-titulo-controles">
+        <div>
+            <h2>Todo sobre</h2>
+            <h2><i>@ViewBag.Comunidad.Nombre</i></h2>
+        </div>
+        <div class="indicadores"></div>
+    </div>
+
+    <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel">
+            <div class="carousel">
+                @foreach(var item in ViewBag.Albumes){
+                    <div class="cancion">
+                        <button><img src="@item.FotoPortada" alt=""></button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+</div> *@
+
+@foreach(var item in ViewBag.Albumes){
+    <div class="album">
+        <img src="@item.FotoPortada" alt="">
+
+    </div>
+}
+
 
 <div class="comentarios">
     @foreach(var item in ViewBag.Comentarios){
@@ -69,5 +99,5 @@
     </form>
 </div>
 
-
+@* <script src="~/js/carousel.js" asp-append-version="true"></script> *@
 <script src="~/js/menu.js" asp-append-version="true"></script>

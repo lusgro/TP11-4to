@@ -24,6 +24,12 @@
                 
                 <p class="Login__main-login-form-little_text" style="margin-top: 7px; text-align: start;"><a href='@Url.Action("OlvideMiContra", new {idUsuario = -1})' method="POST">¿Olvidaste tu contraseña?&nbsp;</a></p>
             </div>
+
+            @if(ViewBag.Error != ""){
+                <p class="mensaje-error">@ViewBag.Error</p>
+                <p class="mensaje-error" style="margin-bottom: 10px;">@ViewBag.Error2</p>
+            }
+            
             <button class="btn-1" type="submit" style="margin-top: 7px;">Iniciar Sesión</button>
             <p class="Login__main-login-form-little_text" style="margin-top: 15px;">¿Eres Nuevo?&nbsp;<a href='@Url.Action("Registro")'>Registrate</a></p>
         </form>

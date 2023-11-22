@@ -12,7 +12,8 @@ public class HomeController : Controller
             return RedirectToAction("Comunidades", new { id = usuario.ID_Usuario });
         } else {
             ViewBag.Usuario = usuario;
-            ViewBag.Error = "Ocurrió un error. Fijate que hayas ingresado correctamente tus datos.";
+            ViewBag.Error = "Ocurrió un error.";
+            ViewBag.Error2 = "Fijate que hayas ingresado correctamente tus datos.";
             return View("Login");
         }
     }
@@ -26,6 +27,7 @@ public class HomeController : Controller
         ViewBag.Usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Comunidad = BD.ObtenerComunidad(idComunidad);
         ViewBag.Comentarios = BD.ObtenerMensajesComunidad(idComunidad);
+        ViewBag.Albumes = BD.ObtenerAlbumes(ViewBag.Comunidad.ID_Artista);
         return View();
     }
 
