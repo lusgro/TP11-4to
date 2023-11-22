@@ -184,4 +184,14 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
+
+    public static List<Cancion> ObtenerCanciones(int idA)
+    {
+        string sp = "sp_obtenerCanciones";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Cancion>(sp, new { pIdAlbum = idA },
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
 }

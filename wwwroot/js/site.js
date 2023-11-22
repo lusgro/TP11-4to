@@ -60,14 +60,23 @@ window.onload = function() {
 };
 
 
-function PublicarMensaje(IDU, IDC, cont) {
+function VerCanciones(IDA) {
+    let Temp = "";
+
     $.ajax(
         {
-            url: '/Home/PublicarMensajeAjax',
+            url: '/Home/VerCancionesAjax',
             type: 'POST',
             dataType: 'JSON',
-            data: { id: IDU, idComunidad: IDC, contenido: cont},
+            data: { id: IDA},
             success: function (response) {
-                }
+                response.forEach(element => {
+                    Temp += element.nombre + "<br>";
+                    Temp += element.duracion + "<br>";
+                    Temp += element.fechaPublicacion + "<br>";
+                    Temp += element.cantReproduccion + "<br>" + "<br>";
+                    $("#Canciones").html(Temp);
+                });
+            }
         });
 }

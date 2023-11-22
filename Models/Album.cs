@@ -12,4 +12,5 @@ public class Album {
     public float DuracionTotal { get; set; }
     public string? FotoPortada { get; set; }
     public int CantReproducciones { get; set; }
+    public int Año { get; set; }
 }

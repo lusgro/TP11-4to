@@ -376,5 +376,41 @@ h1 {
 .search-icon {
   font-size: 2rem;
   position: absolute;
-  left:60rem;
+  left: 60rem;
+}
+
+.album img{
+  width: 100%;
+  size: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.album{
+  background-color: var(--black);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+  transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.album p{
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.albumes{
+  display: flex;
+  width: 90%;
+  margin-inline: 5%;
+  margin-bottom: 30px;
+}
+
+.album:hover{
+  transform: scale(1.05);
 }

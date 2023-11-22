@@ -107,4 +107,10 @@ public class HomeController : Controller
         BD.InsertarMensaje(id, idComunidad, contenido);
         return RedirectToAction("Comunidad", new { id = id, idComunidad = idComunidad});;
     }
+
+    [HttpPost]
+    public List<Cancion> VerCancionesAjax(int idA) {
+        ViewBag.Canciones = BD.ObtenerCanciones(idA);
+        return ViewBag.Canciones;
+    }
 }

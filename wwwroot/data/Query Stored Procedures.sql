@@ -183,3 +183,12 @@ AS
 BEGIN
 	SELECT * FROM Albumes WHERE ID_Artista = @pIdArtista
 END
+
+--Obtener todas las canciones de un album
+
+CREATE PROCEDURE sp_obtenerCanciones
+	@pIdAlbum INT
+AS
+BEGIN
+	SELECT * FROM Canciones WHERE ID_Album = @pIdAlbum
+END
