@@ -42,6 +42,7 @@ public class HomeController : Controller
     public IActionResult Perfil(int id) {
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
+        ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(id);
         return View();
     }
 

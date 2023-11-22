@@ -34,6 +34,14 @@
 <h1>@ViewBag.Usuario.Username</h1>
 <h3>@ViewBag.Usuario.Email</h3>
 
+@foreach (var item in ViewBag.ComunidadesPertenecientes)
+{
+    <div>
+        <img src="@item.FotoPerfil" alt="">
+        <h3>@item.Nombre</h3>
+    </div>
+}
+
 <!-- Carrusel Favs -->
 
 
