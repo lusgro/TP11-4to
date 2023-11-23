@@ -3,6 +3,7 @@
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/Perfil.css" asp-append-version="true"/>
 
 <!-- NavBar -->
 <header>
@@ -30,10 +31,16 @@
 
 <!-- Perfil -->
 
-<img src="@ViewBag.Usuario.FotoPerfil" alt="">
-<h1>@ViewBag.Usuario.Username</h1>
-<h3>@ViewBag.Usuario.Email</h3>
-
+<div class="perfil__header">
+    <div class="perfil__personal_info">
+        <img class="perfil__profile_picture" src="@ViewBag.Usuario.FotoPerfil" alt="">
+        <div class="perfil__personal_info__names">
+            <span class="span-title">@ViewBag.Usuario.Username🧉 &#127462&#127479</span>
+            <span class="span-subtitle">@ViewBag.Usuario.Email</span>
+        </div>
+    </div>
+    <button type="submit" class="little-btn">Editar perfil</button>
+</div>
 @foreach (var item in ViewBag.ComunidadesPertenecientes)
 {
     <div>
