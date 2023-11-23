@@ -3,6 +3,7 @@
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/Perfil.css" asp-append-version="true"/>
 
 <!-- NavBar -->
 <header>
@@ -30,17 +31,31 @@
 
 <!-- Perfil -->
 
-<img src="@ViewBag.Usuario.FotoPerfil" alt="">
-<h1>@ViewBag.Usuario.Username</h1>
-<h3>@ViewBag.Usuario.Email</h3>
-
-@foreach (var item in ViewBag.ComunidadesPertenecientes)
-{
-    <div>
-        <img src="@item.FotoPerfil" alt="">
-        <h3>@item.Nombre</h3>
+<div class="perfil__header">
+    <div class="perfil__personal_info">
+        <img class="perfil__profile_picture" src="@ViewBag.Usuario.FotoPerfil" alt="">
+        <div class="perfil__personal_info__names">
+            <span class="span-title">@ViewBag.Usuario.Username🧉 &#127462&#127479</span>
+            <span class="span-subtitle">@ViewBag.Usuario.Email</span>
+        </div>
     </div>
-}
+    <button type="submit" class="little-btn">Editar perfil</button>
+</div>
+
+
+
+<div class="perfil__comunidades-favs">
+    <h2>Mis Comunidades</h2>
+    <div class="perfil__comunidades-cards">
+        @foreach (var item in ViewBag.ComunidadesPertenecientes)
+        {
+            <div class="perfil__card">
+                <img class="perfil__card-foto" src="@item.FotoPerfil" alt="">
+                <span class="card-title">@item.Nombre</span>
+            </div>
+        }
+    <div>
+</div>
 
 <!-- Carrusel Favs -->
 

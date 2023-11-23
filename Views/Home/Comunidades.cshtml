@@ -33,10 +33,12 @@
 <div class="mis-comunidades">
     @if(ViewBag.ComunidadesPertenecientes.Count > 0){
         <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
-    
-        @foreach(var item in ViewBag.ComunidadesPertenecientes){
-            <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
+       <div class="row"> 
+        @foreach(var item in ViewBag.ComunidadesPertenecientes)
+        {
+                <a class="ComuPer" href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
         }
+        </div>
     }
     else{
         <h1>Empezá a unirte a comunidades.</h1>
