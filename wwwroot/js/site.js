@@ -68,7 +68,7 @@ function VerCanciones(IDA) {
             url: '/Home/VerCancionesAjax',
             type: 'POST',
             dataType: 'JSON',
-            data: { id: IDA},
+            data: { idA: IDA},
             success: function (response) {
                 response.forEach(element => {
                     Temp += element.nombre + "<br>";
