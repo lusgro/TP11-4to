@@ -5,7 +5,7 @@ namespace TP11.Models;
 
 public static class BD
 {
-    private static string _connectionString { get; set; } = @"Server=DESKTOP-3DKDU00\SQLEXPRESS;DataBase=BD_TP11;Trusted_Connection=True;";
+    private static string _connectionString { get; set; } = @"Server=PC-LUCAS\SQLEXPRESS01;DataBase=BD_TP11;Trusted_Connection=True;";
 
     public static Usuario Login(string usuario, string password)
     {
@@ -194,4 +194,15 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
+
+    public static Dictionary<int, int> ObtenerUsuariosXComunidad()
+    {
+        string sp = "sp_obtenerUsuariosXComunidad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query(sp,
+            commandType: System.Data.CommandType.StoredProcedure)
+            .ToDictionary(x => (int)x.ID_Comunidad, x => (int)x.CantidadUsuarios);
+        }
+    } 
 }
