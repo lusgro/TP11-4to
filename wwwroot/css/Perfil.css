@@ -1,0 +1,64 @@
+:root {
+    --black: #1b1717;
+    --white: #ffffff;
+    --green: #2dc954;
+    --dark-green: rgb(53, 143, 75);
+    --darker-green: #045022;
+    --margin-top: 10.625em;
+    ---larger-inputs-width: 30rem;
+  }
+  
+  
+  *{
+    color: var(--white);
+    /* font-family: 'Arimo'; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+.perfil__personal_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.perfil__profile_picture {
+    width: 30%;
+}
+
+.perfil__personal_info__names {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.span-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.span-subtitle {
+    font-size: 1rem;
+}
+
+.perfil__personal_info__names span {
+    margin: 10px 0;
+}
+
+.perfil__header{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.little-btn {
+    background-color: var(--black);
+    border: 2px solid var(--green);
+    padding: 10px 15px;
+    border-radius: 10rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
