@@ -115,4 +115,10 @@ public class HomeController : Controller
         ViewBag.Canciones = BD.ObtenerCanciones(idA);
         return ViewBag.Canciones;
     }
+
+    [HttpPost]
+    public Album VerDetalleAlbumAjax(int idA) {
+        ViewBag.Album = BD.ObtenerAlbum(idA);
+        return ViewBag.Album;
+    }
 }

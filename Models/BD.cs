@@ -194,4 +194,14 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
+
+    public static Album ObtenerAlbum(int idA)
+    {
+        string sp = "sp_obtenerAlbum";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Album>(sp, new { pIdAlbum = idA },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
 }

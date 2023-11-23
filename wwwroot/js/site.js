@@ -71,13 +71,30 @@ function VerCanciones(IDA) {
             data: { idA: IDA},
             success: function (response) {
                 response.forEach(element => {
-                    Temp += element.nombre + "<br>";
-                    Temp += element.duracion + "<br>";
-                    Temp += element.fechaPublicacion + "<br>";
-                    Temp += element.cantReproduccion + "<br>" + "<br>";
-                    $("#Canciones").html(Temp);
+                    $("#Nombre").append('<p>' + element.nombre + '</p>');
+                    $("#Duracion").append('<p>' + element.duracion + '</p>');
+                    $("#Fecha").append('<p>' + element.fechaPublicacion.slice(0, 10) + '</p>');
+                    $("#Reproducciones").append('<p>' + element.cantReproducciones + '</p>');
                 });
-                console.log(response)
             }
         });
+    
+    $.ajax(
+        {
+            url: '/Home/VerDetalleAlbumAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: { idA: IDA},
+            success: function (response) {
+                $("#titulo-album").html(response.nombre);
+                $("#imagen-album").attr("src", response.fotoPortada);
+            }
+        });
+}
+
+function VaciarCanciones() {
+    $("#Nombre").empty();
+    $("#Duracion").empty();
+    $("#Fecha").empty();
+    $("#Reproducciones").empty();
 }

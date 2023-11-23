@@ -82,12 +82,26 @@
 
 <section class="modal">
     <div class="modal__container">
-        <img src="images/modal.svg" class="modal__img">
-        <h2 class="modal__title"></h2>
-        <div class="modal__paragraph">
-            <div id="Canciones"></div>
+        <div class="modal__upper">
+            <img id="imagen-album" src="" alt="">
+            <h2 class="modal__title" id="titulo-album"></h2>
         </div>
-        <a href="#" class="modal__close">Cerrar Modal</a>
+        <div class="nombres-columnas">
+            <p>Titulo</p>
+            <p>Reproducciones</p>
+            <span class="material-symbols-outlined">calendar_month</span>
+            <span class="material-symbols-outlined">schedule</span>
+        </div>
+
+        <div class="modal__paragraph">
+            <div id="Canciones">
+                <div id="Nombre"></div>
+                <div id="Reproducciones"></div>
+                <div id="Fecha"></div>
+                <div id="Duracion"></div>
+            </div>
+        </div>
+        <button href="#" class="modal__close" onclick="VaciarCanciones()">Cerrar Modal</button>
     </div>
 </section>
 
@@ -102,7 +116,7 @@
                 @if(item.ID_Usuario == ViewBag.Usuario.ID_Usuario){
                     <div>
                         <span class="material-symbols-outlined lapiz">edit</span>
-                        <span class="material-symbols-outlined" style="margin-left: 5px; color: darkred;">delete</span>
+                        <span class="material-symbols-outlined" style="margin-left: 5px; color: rgb(155, 22, 22);">delete</span>
                     </div>
                 }
             </div>

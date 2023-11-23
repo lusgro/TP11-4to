@@ -192,3 +192,12 @@ AS
 BEGIN
 	SELECT * FROM Canciones WHERE ID_Album = @pIdAlbum
 END
+
+--Obtener album por su id
+
+CREATE PROCEDURE sp_obtenerAlbum
+	@pIdAlbum INT
+AS
+BEGIN
+	SELECT * FROM Albumes WHERE ID_Album = @pIdAlbum
+END
