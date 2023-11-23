@@ -34,10 +34,12 @@
 <div class="mis-comunidades">
     @if(ViewBag.ComunidadesPertenecientes.Count > 0){
         <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
-    
-        @foreach(var item in ViewBag.ComunidadesPertenecientes){
-            <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
+       <div class="row"> 
+        @foreach(var item in ViewBag.ComunidadesPertenecientes)
+        {
+                <a class="ComuPer" href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
         }
+        </div>
     }
     else{
         <h1>Empezá a unirte a comunidades.</h1>
@@ -61,6 +63,7 @@
                 @for(int i = 0; i < 4; i++){
                     <div class="media-element">
                         <p>@ViewBag.TodasComunidades[i].Nombre</p>
+                        <img class="imgCarrusel" src=@ViewBag.TodasComunidades[i].FotoPerfil>
                     </div>
                     incrementador = i;
                 }
@@ -81,6 +84,7 @@
                     @for(int i = 4; i < 8; i++){
                         <div class="media-element">
                             <p>@ViewBag.TodasComunidades[i].Nombre</p>
+                            <img class="imgCarrusel" src=@ViewBag.TodasComunidades[i].FotoPerfil>
                         </div>
                         incrementador = i;
                     }
@@ -101,6 +105,7 @@
                 @for(int i = 8; i < 12; i++){
                         <div class="media-element">
                             <p>@ViewBag.TodasComunidades[i].Nombre</p>
+                            <img class="imgCarrusel" src=@ViewBag.TodasComunidades[i].FotoPerfil>
                         </div>
                         incrementador = i;
                 }
@@ -121,6 +126,7 @@
                 @for(int i = 12; i < 16; i++){
                     <div class="media-element">
                         <p>@ViewBag.TodasComunidades[i].Nombre</p>
+                        <img class="imgCarrusel"src=@ViewBag.TodasComunidades[i].FotoPerfil>
                     </div>
                     incrementador = i;
                 }

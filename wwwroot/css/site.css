@@ -526,3 +526,23 @@ h1 {
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.row
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.ComuPer
+{
+  margin-top: 1%;
+  font-size: 20px;
+  text-decoration:none; 
+}
+
+
+.imgCarrusel
+{
+  width: 100%;
+  height: auto;
+}
