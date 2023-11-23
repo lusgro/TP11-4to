@@ -587,3 +587,23 @@ h1 {
 #Fecha{
   margin-left: 17px;
 }
+
+.row
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.ComuPer
+{
+  margin-top: 1%;
+  font-size: 20px;
+  text-decoration:none; 
+}
+
+
+.imgCarrusel
+{
+  width: 100%;
+  height: auto;
+}

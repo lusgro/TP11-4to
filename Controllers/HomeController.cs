@@ -34,8 +34,12 @@ public class HomeController : Controller
     public IActionResult Comunidades(int id) {
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
-        ViewBag.TodasComunidades = BD.ObtenerTodasComunidades();
+        List<Comunidad> TodasComunidades = BD.ObtenerTodasComunidades();
         ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(id);
+        Dictionary<int, int> UsuariosXComunidad = BD.ObtenerUsuariosXComunidad();
+        ViewBag.TodasComunidades = TodasComunidades
+        .OrderByDescending(c => UsuariosXComunidad.ContainsKey(c.ID_Comunidad) ? UsuariosXComunidad[c.ID_Comunidad] : 0)
+        .ToList();
         return View();
     }
 

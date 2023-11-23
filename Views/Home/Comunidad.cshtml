@@ -3,8 +3,6 @@
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
-@* Linkear css de carousel *@
-@* <link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true"/> *@
 
 <header>
     <nav>
@@ -112,7 +110,7 @@
             <div class="perfil">
                 <div>
                     <p>@item.ID_Usuario</p>
-                </div> 
+                </div>
                 @if(item.ID_Usuario == ViewBag.Usuario.ID_Usuario){
                     <div>
                         <span class="material-symbols-outlined lapiz">edit</span>
@@ -136,8 +134,5 @@
     </form>
 </div>
 
-
-@* Javascript Carousel *@
-@* <script src="~/js/carousel.js" asp-append-version="true"></script> *@
 <script src="~/js/menu.js" asp-append-version="true"></script>
 <script src="~/js/modal.js" asp-append-version="true"></script>

@@ -1,11 +1,10 @@
 @{
     ViewData["Title"] = "Comunidades";
-    int incrementador = 0;
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
 <link rel="stylesheet" href="~/css/comunidadesStyle.css">
-
+<link rel="stylesheet" href="~/css/carousel.css">
 <!-- Comunidades -->
 
 <header>
@@ -34,110 +33,48 @@
 <div class="mis-comunidades">
     @if(ViewBag.ComunidadesPertenecientes.Count > 0){
         <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
-    
-        @foreach(var item in ViewBag.ComunidadesPertenecientes){
-            <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
+       <div class="row"> 
+        @foreach(var item in ViewBag.ComunidadesPertenecientes)
+        {
+                <a class="ComuPer" href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
         }
+        </div>
     }
     else{
         <h1>Empezá a unirte a comunidades.</h1>
     }
-
 </div>
 
-<div class="contenedor-carrousel">
-    <h2><i>Más populares</i></h2>
-    @* carrousel *@
-</div>
+<div class="comunidades-recomendadas contenedor">
+    <div class="contenedor-titulo-controles">
+        <div>
+            <h2>Todo sobre</h2>
+        </div>
+        <div class="indicadores"></div>
+    </div>
 
-<div class="contenedor-carrousel">
-    <h2><i>Otras comunidades</i></h2>
-    @* carrousel *@
-    <div class="media-container">
-        <div class="media-scroller">
+    <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-            <!-- Pagina 1 -->
-            <div class="media-group" id="group-1">
-                @for(int i = 0; i < 4; i++){
-                    <div class="media-element">
-                        <p>@ViewBag.TodasComunidades[i].Nombre</p>
-                    </div>
-                    incrementador = i;
+        <div class="contenedor-carousel">
+            <div class="carousel">
+                @for(int i = 0; i < 5; i++) 
+                {
+                    <img src="@ViewBag.TodasComunidades[i].FotoPerfil" alt="imagen-comunidad">
+                    <h2>@ViewBag.TodasComunidades[i].Nombre</h2> 
                 }
-                <a class="next" href="#group-2" aria-label="next">
-                    <svg>
-                        <use href="#next"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Pagina 2   -->
-            <div class="media-group" id="group-2">
-                <a class="previous" href="#group-1">
-                    <svg>
-                        <use href="#previous"></use>
-                    </svg>
-                </a>
-                    @for(int i = 4; i < 8; i++){
-                        <div class="media-element">
-                            <p>@ViewBag.TodasComunidades[i].Nombre</p>
-                        </div>
-                        incrementador = i;
-                    }
-                <a class="next" href="#group-3" aria-label="next">
-                    <svg>
-                        <use href="#next"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Pagina 3   -->
-            <div class="media-group" id="group-3">
-                <a class="previous" href="#group-2">
-                    <svg>
-                        <use href="#previous"></use>
-                    </svg>
-                </a>
-                @for(int i = 8; i < 12; i++){
-                        <div class="media-element">
-                            <p>@ViewBag.TodasComunidades[i].Nombre</p>
-                        </div>
-                        incrementador = i;
-                }
-                <a class="next" href="#group-4" aria-label="next">
-                    <svg>
-                        <use href="#next"></use>
-                    </svg>
-                </a>
-            </div>
-
-            <!--  Pagina 4  -->
-            <div class="media-group" id="group-4">
-                <a class="previous" href="#group-3">
-                    <svg>
-                        <use href="#previous"></use>
-                    </svg>
-                </a>
-                @for(int i = 12; i < 16; i++){
-                    <div class="media-element">
-                        <p>@ViewBag.TodasComunidades[i].Nombre</p>
-                    </div>
-                    incrementador = i;
-                }
-            </div>
-
-            <!-- Pagination Indicators -->
-            <div class="navigation-indicators">
-                <!-- 4 Groups -->
-                @for(int i = 0; i < (ViewBag.TodasComunidades.Count / 4); i++){
-                    <div></div>
-                }
+                    <div class="tarjeta-comunidad">
+                        <a
             </div>
         </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
     </div>
 </div>
 
-<!-- Navigation Icons -->
+<div>
+
+
 <svg>
   <symbol id="next" viewBox="0 0 256 512">
     <path fill="white"
@@ -151,3 +88,4 @@
 
 
 <script src="~/js/menu.js" asp-append-version="true"></script>
+<script src="~/js/carousel.js" asp-append-version="true"></script>
