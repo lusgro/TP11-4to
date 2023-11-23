@@ -192,3 +192,10 @@ AS
 BEGIN
 	SELECT * FROM Canciones WHERE ID_Album = @pIdAlbum
 END
+
+-- Obtener las cantidad de usuarios de cada comunidad
+CREATE PROCEDURE sp_obtenerUsuariosXComunidad
+AS
+BEGIN
+	SELECT ID_Comunidad, COUNT(UC.ID_Comunidad) AS CantidadUsuarios FROM UsuariosXComunidades UC GROUP BY (ID_Comunidad) ORDER BY CantidadUsuarios DESC
+END
