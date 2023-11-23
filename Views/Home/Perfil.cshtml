@@ -41,13 +41,21 @@
     </div>
     <button type="submit" class="little-btn">Editar perfil</button>
 </div>
-@foreach (var item in ViewBag.ComunidadesPertenecientes)
-{
+
+
+
+<div class="perfil__comunidades-favs">
+    <h2>Mis Comunidades</h2>
+    <div class="perfil__comunidades-cards">
+        @foreach (var item in ViewBag.ComunidadesPertenecientes)
+        {
+            <div class="perfil__card">
+                <img class="perfil__card-foto" src="@item.FotoPerfil" alt="">
+                <span class="card-title">@item.Nombre</span>
+            </div>
+        }
     <div>
-        <img src="@item.FotoPerfil" alt="">
-        <h3>@item.Nombre</h3>
-    </div>
-}
+</div>
 
 <!-- Carrusel Favs -->
 
