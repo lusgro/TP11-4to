@@ -97,10 +97,12 @@
                 <div>
                     <p>@item.ID_Usuario</p>
                 </div>
-                <div>
-                    <span class="material-symbols-outlined lapiz">edit</span>
-                    <span class="material-symbols-outlined" style="margin-left: 5px; color: darkred;">delete</span>
-                </div>
+                @if(item.ID_Usuario == ViewBag.Usuario.ID_Usuario){
+                    <div>
+                        <span class="material-symbols-outlined lapiz">edit</span>
+                        <span class="material-symbols-outlined" style="margin-left: 5px; color: darkred;">delete</span>
+                    </div>
+                }
             </div>
             <div class="contenido">
                 <p>@item.Contenido</p>

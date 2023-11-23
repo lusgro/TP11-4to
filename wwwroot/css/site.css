@@ -443,10 +443,10 @@ h1 {
 .modal__container{
   margin: auto;
   width: 90%;
-  max-width: 600px;
-  max-height: 90%;
-  background-color: #fff;
-  border-radius: 6px;
+  max-width: 450px;
+  height: 500px;
+  background-color: var(--black);
+  border-radius: 15px;
   padding: 3em 2.5em;
   display: grid;
   gap: 1em;
@@ -519,4 +519,10 @@ h1 {
   .modal__title{
       font-size: 2rem;
   }
+}
+
+.mensaje-error{
+  color: rgb(155, 22, 22);
+  font-weight: bold;
+  font-size: 1.1rem;
 }

@@ -99,6 +99,7 @@ public class HomeController : Controller
     public IActionResult Login() {
         return View();
     }
+    
     public IActionResult Explorar(int id) {
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
