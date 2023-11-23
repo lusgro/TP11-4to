@@ -77,6 +77,7 @@ function VerCanciones(IDA) {
                     Temp += element.cantReproduccion + "<br>" + "<br>";
                     $("#Canciones").html(Temp);
                 });
+                console.log(response)
             }
         });
 }

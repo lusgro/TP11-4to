@@ -37,12 +37,12 @@ nav{
 }
 
 nav ul{
-    list-style: none;
-    justify-content: space-around;
-    margin-right: 2%;
-    align-items: center;
-    display: flex;
-    gap: 2.5rem;
+  list-style: none;
+  justify-content: space-around;
+  margin-right: 2%;
+  align-items: center;
+  display: flex;
+  gap: 2.5rem;
 }
 
 nav .efecto a{

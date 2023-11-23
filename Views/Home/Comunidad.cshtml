@@ -70,13 +70,25 @@
 
 <div class="albumes">
     @foreach(var item in ViewBag.Albumes){
-        <button class="album" data-bs-toggle="modal" data-bs-target="#ModalCanciones" onclick="VerCanciones(@item.ID_Album)">
+        <button class="album" id="hero__cta" onclick="VerCanciones(@item.ID_Album)">
             <img src="@item.FotoPortada" alt="">
             <p>@item.Nombre</p>
             <p style="font-weight: 400;">@item.Año</p>
         </button>
     }
 </div>
+
+<section class="modal">
+    <div class="modal__container">
+        <img src="images/modal.svg" class="modal__img">
+        <h2 class="modal__title"></h2>
+        <div class="modal__paragraph">
+            <div id="Canciones"></div>
+        </div>
+        <a href="#" class="modal__close">Cerrar Modal</a>
+    </div>
+</section>
+
 
 <div class="comentarios">
     @foreach(var item in ViewBag.Comentarios){
@@ -104,26 +116,8 @@
             <input type="submit">
         </div>
     </form>
-
-    <div class="modal fade" tabindex="-1" id="ModalCanciones" aria-labelledby="ModalCancionesTitle" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="NombreCancion">Modal title</h3>
-                    @* <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button> *@
-                </div>
-                <div class="modal-body">
-                    <div id="Canciones"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 @* <script src="~/js/carousel.js" asp-append-version="true"></script> *@
 <script src="~/js/menu.js" asp-append-version="true"></script>
+<script src="~/js/modal.js" asp-append-version="true"></script>
