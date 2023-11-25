@@ -27,8 +27,17 @@
     </div>
 </header>
 
+<div class="contenedor-unirse-salir">
+    @if(ViewBag.Conexion == 0){
+        <a class="boton-unirse" href='@Url.Action("UnirserAComunidad", new {idUsuario = ViewBag.Usuario.ID_Usuario, idComunidad = ViewBag.Comunidad.ID_Comunidad})'>Unirse a @ViewBag.Comunidad.Nombre</a>
+        }
+    else{
+        <a class="boton-salir" href='@Url.Action("SalirDeComunidad", new {idUsuario = ViewBag.Usuario.ID_Usuario, idComunidad = ViewBag.Comunidad.ID_Comunidad})'>Salir de @ViewBag.Comunidad.Nombre</a>
+    }
+</div>
 
-<h1>@ViewBag.Comunidad.Nombre</h1>
+<h1 style="margin-top: 25px; font-size: 3rem">@ViewBag.Comunidad.Nombre</h1>
+
 
 <div>
     <img src="@ViewBag.Comunidad.FotoPerfil" alt="fotocomunidad">
@@ -63,14 +72,14 @@
     </div>
 </div> *@
 
-<div>
-    <h2>Todo sobre</h2>
-    <h2><i>@ViewBag.Comunidad.Nombre</i></h2>
+<div style="width: 94%;margin-inline: 3%; font-size: 2.2rem; margin-bottom: 30px;">
+    <h4>Todo sobre</h4>
+    <h4><i>@ViewBag.Comunidad.Nombre</i></h4>
 </div>
 
 <div class="albumes">
     @foreach(var item in ViewBag.Albumes){
-        <button class="album" id="hero__cta" onclick="VerCanciones(@item.ID_Album)">
+        <button class="album" onclick="VerCanciones(@item.ID_Album)">
             <img src="@item.FotoPortada" alt="">
             <p>@item.Nombre</p>
             <p style="font-weight: 400;">@item.Año</p>
@@ -99,7 +108,7 @@
                 <div id="Duracion"></div>
             </div>
         </div>
-        <button href="#" class="modal__close" onclick="VaciarCanciones()">Cerrar Modal</button>
+        <button href="#" class="modal__close" onclick="VaciarCanciones()">Cerrar</button>
     </div>
 </section>
 
@@ -111,10 +120,12 @@
                 <div>
                     <p>@item.ID_Usuario</p>
                 </div>
+                <input type="hidden" class="comentario-input" data-id="@item.ID_Mensaje" value="@item.ID_Mensaje">
+
                 @if(item.ID_Usuario == ViewBag.Usuario.ID_Usuario){
                     <div>
-                        <span class="material-symbols-outlined lapiz">edit</span>
-                        <span class="material-symbols-outlined" style="margin-left: 5px; color: rgb(155, 22, 22);">delete</span>
+                        <button class="boton-comentario" onclick="editarComentario(@item.ID_Mensaje)"><span class="material-symbols-outlined">edit</span></button>
+                        <button class="boton-comentario2" onclick="eliminarComentario(@item.ID_Mensaje)" style="margin-left: 5px"><span class="material-symbols-outlined" style="color: rgb(155, 22, 22);">delete</span></button>
                     </div>
                 }
             </div>
@@ -124,15 +135,31 @@
         </div>
     }
 
-    <form action='@Url.Action("PublicarMensaje")' method="post">
-        <input type="text" name="contenido">
+    <form class="form-mensaje" action='@Url.Action("PublicarMensaje")' method="post">
+        <textarea type="text" name="contenido" class="contenido-mensaje"></textarea>
         <input type="hidden" name="id" value="@ViewBag.Usuario.ID_Usuario">
         <input type="hidden" name="idComunidad" value="@ViewBag.Comunidad.ID_Comunidad">
-        <div>
+        <div style="display: flex; justify-content: end;">
             <input type="submit">
         </div>
     </form>
 </div>
+
+<section class="modal2">
+    <div class="modal__container">
+        <div class="modal__upper">
+            <p style="font-weight: bold; margin-top: -10px; margin-bottom: 15px; font-size: 1.5rem;">Editar comentario</p>
+        </div>
+        <div class="modal__paragraph" style="margin-top: -110px; padding: 20px; margin-bottom: -100px;">
+            <textarea name="comentario" id="contenido-comentario" cols="30" rows="10"></textarea>
+            <input type="hidden" id="id-comentario">
+        </div>
+        <div>
+            <button href="#" class="modal__close2">Cerrar</button>
+            <button href="#" class="modal__enviar" onclick="ModificarComentario()">Modificar</button>
+        </div>
+    </div>
+</section>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>
 <script src="~/js/modal.js" asp-append-version="true"></script>

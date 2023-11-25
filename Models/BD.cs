@@ -5,7 +5,7 @@ namespace TP11.Models;
 
 public static class BD
 {
-    private static string _connectionString { get; set; } = @"Server=localhost;DataBase=BD_TP11;Trusted_Connection=True;";
+    private static string _connectionString { get; set; } = @"Server=DESKTOP-3DKDU00\SQLEXPRESS;DataBase=BD_TP11;Trusted_Connection=True;";
 
     public static Usuario Login(string usuario, string password)
     {
@@ -147,7 +147,7 @@ public static class BD
 
     public static void EliminarMensaje(int idMensaje)
     {
-        string sp = "sp_editarMensaje";
+        string sp = "sp_eliminarMensaje";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(sp, new { pIDMensaje = idMensaje},
@@ -212,6 +212,47 @@ public static class BD
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             return connection.QueryFirstOrDefault<Album>(sp, new { pIdAlbum = idA },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static Mensaje ObtenerMensaje(int idMensaje)
+    {
+        string sp = "sp_obtenerMensaje";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<Mensaje>(sp, new { pIdMensaje = idMensaje },
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void SalirComunidad(int idUsuario, int idComunidad)
+    {
+        string sp = "sp_salirComunidad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIdUsuario = idUsuario, pIdComunidad = idComunidad},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+    
+    public static int ObtenerUsuarioXComunidad(int idUsuario, int idComunidad)
+    {
+        string sp = "sp_obtenerUsuarioXComunidad";
+
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.QueryFirstOrDefault<int>(sp, new { pIdUsuario = idUsuario, pIdComunidad = idComunidad},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void UnirseComunidad(int idUsuario, int idComunidad)
+    {
+        string sp = "sp_unirseComunidad";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIdUsuario = idUsuario, pIdComunidad = idComunidad},
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }

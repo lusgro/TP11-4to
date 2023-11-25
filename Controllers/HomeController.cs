@@ -28,6 +28,7 @@ public class HomeController : Controller
         ViewBag.Comunidad = BD.ObtenerComunidad(idComunidad);
         ViewBag.Comentarios = BD.ObtenerMensajesComunidad(idComunidad);
         ViewBag.Albumes = BD.ObtenerAlbumes(ViewBag.Comunidad.ID_Artista);
+        ViewBag.Conexion = BD.ObtenerUsuarioXComunidad(id, idComunidad);
         return View();
     }
 
@@ -124,5 +125,28 @@ public class HomeController : Controller
     public Album VerDetalleAlbumAjax(int idA) {
         ViewBag.Album = BD.ObtenerAlbum(idA);
         return ViewBag.Album;
+    }
+
+    public Mensaje EditarComentarioAjax(int idMensaje) {
+        ViewBag.Mensaje = BD.ObtenerMensaje(idMensaje);
+        return ViewBag.Mensaje;
+    }
+
+    public void EliminarComentarioAjax(int idMensaje) {
+        BD.EliminarMensaje(idMensaje);
+    }
+
+    public void ModificarComentarioAjax(int idMensaje, string contenido) {
+        BD.EditarMensaje(idMensaje, contenido);
+    }
+
+    public IActionResult SalirDeComunidad(int idUsuario, int idComunidad){
+        BD.SalirComunidad(idUsuario, idComunidad);
+        return RedirectToAction("Comunidades", new { id = idUsuario });
+    }
+
+    public IActionResult UnirserAComunidad(int idUsuario, int idComunidad){
+        BD.UnirseComunidad(idUsuario, idComunidad);
+        return RedirectToAction("Comunidades", new { id = idUsuario });
     }
 }

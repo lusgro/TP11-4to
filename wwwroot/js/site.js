@@ -98,3 +98,53 @@ function VaciarCanciones() {
     $("#Fecha").empty();
     $("#Reproducciones").empty();
 }
+
+function editarComentario(IDM) {
+    $.ajax(
+        {
+            url: '/Home/EditarComentarioAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: { idMensaje: IDM},
+            success: function (response) {
+                if (response && response.contenido) {
+                    $("#contenido-comentario").val(response.contenido);
+                    $("#id-comentario").val(response.iD_Mensaje);
+                }
+            }
+        });
+}
+
+function eliminarComentario(IDM) {
+    $.ajax(
+        {
+            url: '/Home/EliminarComentarioAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: { idMensaje: IDM},
+            success: function (response) {
+                console.log(IDM);
+                $(".comentario .comentario-input[data-id='" + IDM + "']").parent().parent().remove();
+            }
+        });
+}
+
+function ModificarComentario() {
+    let comentario = $("#contenido-comentario").val();
+    let IDM = $("#id-comentario").val();
+
+
+    console.log(IDM);
+    
+    $.ajax(
+        {
+            url: '/Home/ModificarComentarioAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: { idMensaje: IDM, contenido: comentario},
+            success: function (response) {
+                console.log(comentario)
+                location.reload();
+            }
+        });
+}
