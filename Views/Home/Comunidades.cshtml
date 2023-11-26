@@ -3,8 +3,26 @@
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
-<link rel="stylesheet" href="~/css/comunidadesStyle.css">
-<link rel="stylesheet" href="~/css/carousel.css">
+<link rel="stylesheet" href="~/css/comunidadesStyle.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<style>
+    .swiper{
+        width: 100%;
+        padding: 50px 0 50px 0;
+    }
+
+    .swiper-slide{
+        width: 300px;
+        height: 300px;
+        background-color: #323232;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        padding: 40px;
+        text-align: center;
+    }
+</style>
+
 <!-- Comunidades -->
 
 <header>
@@ -31,25 +49,27 @@
 </header>
 
 <div class="mis-comunidades">
-    @if(ViewBag.ComunidadesPertenecientes.Count > 0){
-        <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
-       <div class="row"> 
-        @foreach(var item in ViewBag.ComunidadesPertenecientes)
-        {
-                <a class="ComuPer" href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
-        }
+    <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            @if(ViewBag.ComunidadesPertenecientes.Count > 0){
+                    @foreach(var item in ViewBag.ComunidadesPertenecientes)
+                    {
+                        <div class="swiper-slide">
+                            <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
+                        </div>
+                    }
+            }
+            else{
+                <h1>Empezá a unirte a comunidades.</h1>
+            }
         </div>
-    }
-    else{
-        <h1>Empezá a unirte a comunidades.</h1>
-    }
+    </div>
 </div>
 
-<div class="comunidades-recomendadas contenedor">
+
+<div class="canciones-recomendadas contenedor">
     <div class="contenedor-titulo-controles">
-        <div>
-            <h2>Todo sobre</h2>
-        </div>
         <div class="indicadores"></div>
     </div>
 
@@ -63,15 +83,12 @@
                     <img src="@ViewBag.TodasComunidades[i].FotoPerfil" alt="imagen-comunidad">
                     <h2>@ViewBag.TodasComunidades[i].Nombre</h2> 
                 }
-                    <div class="tarjeta-comunidad">
-                    </div>
+            </div>
         </div>
 
         <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
     </div>
 </div>
-
-<div>
 
 
 <svg>
@@ -88,3 +105,21 @@
 
 <script src="~/js/menu.js" asp-append-version="true"></script>
 <script src="~/js/carousel.js" asp-append-version="true"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "3",
+        loop: true,
+        coverFlowEffect: {
+            depth:500,
+            modifer: 1,
+            slidesShadows: true,
+            rotate: 0,
+            stretch: 0
+        }
+    })
+</script>

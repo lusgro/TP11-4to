@@ -135,14 +135,17 @@
         </div>
     }
 
-    <form class="form-mensaje" action='@Url.Action("PublicarMensaje")' method="post">
-        <textarea type="text" name="contenido" class="contenido-mensaje"></textarea>
-        <input type="hidden" name="id" value="@ViewBag.Usuario.ID_Usuario">
-        <input type="hidden" name="idComunidad" value="@ViewBag.Comunidad.ID_Comunidad">
-        <div style="display: flex; justify-content: end;">
-            <input type="submit">
-        </div>
-    </form>
+    @if(ViewBag.Conexion == 1){
+        <form class="form-mensaje" action='@Url.Action("PublicarMensaje")' method="post">
+            <textarea type="text" name="contenido" class="contenido-mensaje"></textarea>
+            <input type="hidden" name="id" value="@ViewBag.Usuario.ID_Usuario">
+            <input type="hidden" name="idComunidad" value="@ViewBag.Comunidad.ID_Comunidad">
+            <div style="display: flex; justify-content: end; margin-top: -10px; margin-right: 8px;">
+                <input type="submit">
+            </div>
+        </form>
+    }
+    
 </div>
 
 <section class="modal2">

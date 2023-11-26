@@ -680,7 +680,7 @@ textarea{
 }
 
 .contenido-mensaje{
-  padding: 20px;
+  padding: 25px;
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding-bottom: 60px;
 }
@@ -707,9 +707,7 @@ textarea{
   font-weight: bold;
   transition: background-color .5s;
   cursor: pointer;
-  position: absolute;
-  bottom: 110px;
-  right: 195px;
+  margin-top: -40px;
 }
 
 .form-mensaje input[type="submit"]:hover{
