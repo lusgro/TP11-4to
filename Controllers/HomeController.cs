@@ -145,7 +145,7 @@ public class HomeController : Controller
         return RedirectToAction("Comunidades", new { id = idUsuario });
     }
 
-    public IActionResult UnirserAComunidad(int idUsuario, int idComunidad){
+    public IActionResult UnirseAComunidad(int idUsuario, int idComunidad){
         BD.UnirseComunidad(idUsuario, idComunidad);
         return RedirectToAction("Comunidades", new { id = idUsuario });
     }
