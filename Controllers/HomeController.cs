@@ -27,6 +27,7 @@ public class HomeController : Controller
         ViewBag.Usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Comunidad = BD.ObtenerComunidad(idComunidad);
         ViewBag.Comentarios = BD.ObtenerMensajesComunidad(idComunidad);
+        ViewBag.UsuariosComentarios = BD.ObtenerUsuariosComentarios(idComunidad);
         ViewBag.Albumes = BD.ObtenerAlbumes(ViewBag.Comunidad.ID_Artista);
         ViewBag.Conexion = BD.ObtenerUsuarioXComunidad(id, idComunidad);
         return View();

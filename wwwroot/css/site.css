@@ -857,3 +857,17 @@ textarea{
 .btn.warning {
 	background: var(--warning);
 }
+
+.datos-perfil{
+  display: flex;
+  align-items: center;
+}
+
+.datos-perfil p{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.datos-perfil img{
+  width: 70px;
+}

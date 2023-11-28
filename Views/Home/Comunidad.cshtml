@@ -1,5 +1,6 @@
 @{
     ViewData["Title"] = ViewBag.Comunidad.Nombre;
+    int indice = 0;
 }
 
 <link rel="stylesheet" href="~/css/menuRegularStyle.css" asp-append-version="true"/>
@@ -117,8 +118,9 @@
     @foreach(var item in ViewBag.Comentarios){
         <div class="comentario">
             <div class="perfil">
-                <div>
-                    <p>@item.ID_Usuario</p>
+                <div class="datos-perfil">
+                    <img src="@ViewBag.UsuariosComentarios[indice].FotoPerfil" alt="foto-usuario" srcset="">
+                    <p>@ViewBag.UsuariosComentarios[indice].Username</p>
                 </div>
                 <input type="hidden" class="comentario-input" data-id="@item.ID_Mensaje" value="@item.ID_Mensaje">
 
@@ -133,6 +135,7 @@
                 <p data-id="@item.ID_Mensaje">@item.Contenido</p>
             </div>
         </div>
+        indice = indice + 1;
     }
 
     @if(ViewBag.Conexion == 1){

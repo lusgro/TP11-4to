@@ -208,3 +208,13 @@ AS
 BEGIN
 	SELECT ID_Comunidad, COUNT(UC.ID_Comunidad) AS CantidadUsuarios FROM UsuariosXComunidades UC GROUP BY (ID_Comunidad) ORDER BY CantidadUsuarios DESC
 END
+
+--Obtener usuarios de los comentarios
+create PROCEDURE sp_obtenerUsuariosComentarios
+	@pIDComunidad int
+AS
+BEGIN
+	SELECT U.ID_Usuario, U.Username, U.Contraseña, U.Email, U.FotoPerfil, U.RespuestaSeguridad FROM Mensajes M
+	inner join Usuarios U on M.ID_Usuario = U.ID_Usuario
+	WHERE M.ID_Comunidad = @pIDComunidad order by M.Fecha
+END

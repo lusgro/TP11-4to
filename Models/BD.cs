@@ -86,6 +86,16 @@ public static class BD
         }
     }
 
+    public static List<Usuario> ObtenerUsuariosComentarios(int id)
+    {
+        string sp = "sp_obtenerUsuariosComentarios";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Usuario>(sp, new { pIDComunidad = id },
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
+
     public static Usuario ObtenerUsuario(int id)
     {
         string sp = "sp_obtenerPerfil";
