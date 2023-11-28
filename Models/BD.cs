@@ -16,12 +16,12 @@ public static class BD
         }
     }
 
-    public static void RegistrarUsuario(string usuario, string password, string email)
+    public static void RegistrarUsuario(string usuario, string password, string email, int preguntaRecuperacion, string respuestaPregunta)
     {
         string sp = "sp_registroUsuario";
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
-            connection.Execute(sp, new { pUsuario = usuario, pContraseña = password, pEmail = email },
+            connection.Execute(sp, new { pUsuario = usuario, pContraseña = password, pEmail = email, pPreguntaRecuperacion = preguntaRecuperacion, pRespuestaPregunta = respuestaPregunta},
                 commandType: System.Data.CommandType.StoredProcedure);
         }
     }
@@ -263,6 +263,16 @@ public static class BD
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             connection.Execute(sp, new { pIdUsuario = idUsuario, pIdComunidad = idComunidad},
+            commandType: System.Data.CommandType.StoredProcedure);
+        }
+    }
+
+    public static void EditarPerfil(int idUsuario, string email, string ruta, string username)
+    {
+        string sp = "sp_editarPerfil";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Execute(sp, new { pIdUsuario = idUsuario, pUsername = username, pEmail = email, pFotoPerfil = ruta},
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }

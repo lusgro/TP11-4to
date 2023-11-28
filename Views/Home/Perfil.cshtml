@@ -39,7 +39,10 @@
             <span class="span-subtitle">@ViewBag.Usuario.Email</span>
         </div>
     </div>
-    <button type="submit" class="little-btn">Editar perfil</button>
+    <div class="contenedor-btn-perfil">
+        <a href='@Url.Action("Index")'>Cerrar sesión</a>
+        <button class="little-btn" id="btn-edit">Editar perfil</button>
+    </div>
 </div>
 
 
@@ -61,5 +64,60 @@
 
 
 
+<section class="modal2">
+    <div class="modal__container">
+        <div class="modal__upper">
+            <p style="font-weight: bold; margin-bottom: 10px; font-size: 1.5rem;">Editar Perfil</p>
+        </div>
+        <div class="modal__paragraph" style="padding: 20px; margin-top: -20px">
+            <div class="modal__campo">
+                <label for="nombre">Usuario</label>
+                <input type="text" id="campo-usuario" name="nombre" placeholder="Usuario">
+            </div>
+            
+            <div class="modal__campo">
+                <label for="email">Email</label>
+                <input type="text" id="campo-email" name="email" placeholder="Email">
+            </div>
+
+            <div class="modal__campo">
+                <label for="foto-perfil">Foto de Perfil</label>
+                <button class="contenedor-btn-file bordeado">
+                    <i class="fas fa-file"></i>
+                    Seleccionar foto
+                    <label for="fileInput"></label>
+                    <input type="file" id="fileInput" name="foto-perfil">
+                </button>
+
+                @* <input type="file" id="fileInput" name="foto-perfil" placeholder="Foto"> *@
+            </div>
+
+            <input type="hidden" id="id-comentario">
+        </div>
+        <div>
+            <button href="#" class="modal__close2">Cerrar</button>
+            <button href="#" class="modal__enviar" onclick="handleFile(@ViewBag.Usuario.ID_Usuario), designarToast('exito', 'Perfil editado!', 'Tu perfil se editó con exito!')">Modificar</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    const editButton = document.getElementById('btn-edit');
+    const modal2 = document.querySelector('.modal2');
+    const closeModal2 = document.querySelector('.modal__close2');
+
+    editButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        modal2.classList.add('modal--show');
+    });
+
+    closeModal2.addEventListener('click', (e)=>{
+        e.preventDefault();
+        modal2.classList.remove('modal--show');
+    });
+
+    document.getElementById('campo-usuario').value = "@ViewBag.Usuario.Username";
+    document.getElementById('campo-email').value = "@ViewBag.Usuario.Email";
+</script>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>

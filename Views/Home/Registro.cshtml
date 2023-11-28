@@ -37,15 +37,14 @@
 
             <div class="label-input" id="selector-pregunta">
                 <label for="contraseñaInput" class="form-label">Respondé una pregunta para recuperar tu cuenta en un futuro</label>
-                <select class="form-label" name="pregunta-recuperacion" id="pregunta-recuperacion" required>
+                <select class="form-label" name="preguntaRecuperacion" id="pregunta-recuperacion" required>
                     @foreach(PreguntasDeRecuperacion pregunta in ViewBag.PreguntasDeRecuperacion){
                         <option value="@pregunta.ID_Pregunta">@pregunta.Contenido</option>
                     }
                 </select>
                 <div id="respuesta-pregunta">
                     <i class="fa-solid fa-circle-info"></i>
-                    <input type="text" name="respuesta-pregunta" class="larger-inputs-signup" placeholder="Mi respuesta..." id="contraseñaInput2" required>
-                    
+                    <input type="text" name="respuestaPregunta" class="larger-inputs-signup" placeholder="Mi respuesta..." required>
                 </div>
             </div>
             <button type="submit" class="btn-1 btn-primary" id="botonEnviar" >Registrarse</button>  <!-- mandarlo a registrarse -->
@@ -55,3 +54,23 @@
 </main>
 
 <script src="~/js/registro.js"></script>
+
+<script>
+    function verificarPassword() {
+        const contraseñaInput = document.getElementById("contraseñaInput");
+        const contraseñaInput2 = document.getElementById("contraseñaInput2");
+        const valor1 = contraseñaInput.value;
+        const valor2 = contraseñaInput2.value;
+        console.log("hola");
+        console.log(valor1);
+        console.log(valor2);
+        if (valor1 == valor2) {
+            return true;
+        }
+        else {
+            console.log("hola")
+            designarToast('error', 'Error!', 'Las contraseñas no coinciden.');
+            return false;
+        }
+    }
+</script>

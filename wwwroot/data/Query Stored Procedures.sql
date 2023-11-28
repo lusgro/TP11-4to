@@ -11,10 +11,10 @@ end
 
 go
 create procedure sp_registroUsuario
-	@pUsuario varchar(max), @pContraseña varchar(max), @pEmail varchar(max)
+	@pUsuario varchar(max), @pContraseña varchar(max), @pEmail varchar(max), @pPreguntaRecuperacion int, @pRespuestaPregunta varchar(max)
 as
 begin
-	INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@pUsuario, @pContraseña, @pEmail)
+	INSERT INTO Usuarios (Username, Contraseña, Email, FotoPerfil, ID_Pregunta, RespuestaSeguridad) VALUES (@pUsuario, @pContraseña, @pEmail, '/img/Imagenes-Usuarios/perfil-default.png', @pPreguntaRecuperacion, @pRespuestaPregunta)
 end
 
 --Listar comunidades a las que el usuario pertenece
@@ -217,4 +217,16 @@ BEGIN
 	SELECT U.ID_Usuario, U.Username, U.Contraseña, U.Email, U.FotoPerfil, U.RespuestaSeguridad FROM Mensajes M
 	inner join Usuarios U on M.ID_Usuario = U.ID_Usuario
 	WHERE M.ID_Comunidad = @pIDComunidad order by M.Fecha
+END
+
+sp_obtenerUsuariosComentarios 8
+
+
+--Editar perfil de un usuario
+
+CREATE PROCEDURE sp_editarPerfil
+	@pIdUsuario INT, @pUsername varchar(max), @pEmail varchar(max), @pFotoPerfil varchar(max)
+AS
+BEGIN
+	Update Usuarios set Username = @pUsername, Email = @pEmail, FotoPerfil = @pFotoPerfil where ID_Usuario = @pIdUsuario;
 END

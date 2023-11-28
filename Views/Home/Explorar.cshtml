@@ -32,10 +32,26 @@
 
     <h1>Buscá comunidades</h1>
 
-    <form action="" class="search_bar">
+    @* <form action="" class="search_bar">
         <input type="text" placeholder="Encontrá comunidades... " name="search_bar">
-        <button type="submit"></button><i class="fa-solid fa-magnifying-glass search-icon"></i>
-    </form>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+    </form> *@
+
+    <section class="media-list">
+      <input type="search" placeholder="Buscar comunidad" id="buscador_amigo"/>
+      <ul style="">
+        @foreach(var item in ViewBag.Comunidades){
+            <li class="lista_amigo" data-search="{{ @item.Nombre }} {{ amigo.profesion }}">
+                <div class="media">
+                    <a href="#" class="media__img">
+                    @* <img src="/static/img_amigos/{{ amigo.imagen }}" alt="Octocat" /> *@
+                    </a>
+                    <p class="media__body">@item.Nombre</p>
+                </div>
+            </li>
+        }
+      </ul>
+    </section>
 </div>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>

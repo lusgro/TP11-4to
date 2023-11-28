@@ -157,13 +157,14 @@ const contenedorBotones = $('.contenedor-botones');
 const contenedorToast = document.getElementById('contenedor-toast');
 
 // Event listener para detectar click en los botones
-function designarToast(tipo){
+function designarToast(tipo, title, desc){
+    console.log(title);
 
 	if (tipo === 'exito') {
-		agregarToast({ tipo: 'exito', titulo: 'Comentario editado!', descripcion: 'Tu comentario se editó con exito!', autoCierre: true });
+		agregarToast({ tipo: 'exito', titulo: title, descripcion: desc, autoCierre: true });
 	}
 	if (tipo === 'error') {
-		agregarToast({ tipo: 'error', titulo: 'Comentario eliminado!', descripcion: 'Tu comentario se eliminó con exito!', autoCierre: true });
+		agregarToast({ tipo: 'error', titulo: title, descripcion: desc, autoCierre: true });
 	}
 	if (tipo === 'info') {
 		agregarToast({ tipo: 'info', titulo: 'Info', descripcion: 'Esta es una notificación de información.' });
@@ -272,3 +273,98 @@ const agregarToast = ({ tipo, titulo, descripcion, autoCierre }) => {
 	// Agregamos event listener para detectar cuando termine la animación
 	nuevoToast.addEventListener('animationend', handleAnimacionCierre);
 };
+
+// Explorar
+
+const searchInput = document.getElementById("buscador_amigo");
+// Agregando el evento listener al campo de entrada (searchInput) y
+// escucha el evento "input", cada vez que se modifique el contenido del campo.
+searchInput.addEventListener("input", function () {
+  /**
+   * Se obtiene el valor actual del campo de entrada searchInput y convierte a minúsculas utilizando toLowerCase(),
+   *  lo que significa que la búsqueda no será sensible a mayúsculas y minúsculas.
+   */
+  const searchText = searchInput.value.toLowerCase();
+  /**
+   * Obteniendo todos los elementos del DOM que tienen la clase "lista_amigo",
+   * cada elemento representan a los amigos en la lista que se desea buscar.
+   */
+  const contactList = document.getElementsByClassName("lista_amigo");
+  // Variable para rastrear si se encontró al menos un amigo
+  let amigo_encontrado = false;
+  // Un for para iterar sobre cada elemento en la lista de amigos:
+  for (let i = 0; i < contactList.length; i++) {
+    /**
+     * En cada iteración, se toma un elemento de la lista y se almacena en contact,
+     *  esto representa un amigo en particular
+     */
+    const contact = contactList[i];
+    //Almacenando información adicional sobre el amigo que se utilizará para la búsqueda
+    const searchData = contact.getAttribute("data-search").toLowerCase();
+    /**
+     * Se compara el texto de búsqueda searchText con el valor del atributo,"data-search" de cada amigo searchData
+     */
+    if (searchData.includes(searchText)) {
+      contact.style.display = "block";
+      amigo_encontrado = true; // Se encontró al menos un amigo
+    } else {
+      contact.style.display = "none";
+    }
+  }
+
+  let mensaje = document.querySelector(".mensaje");
+  if (!amigo_encontrado) {
+    if (!mensaje) {
+      mensaje = document.createElement("p");
+      mensaje.textContent = "Amigo no encontrado";
+      mensaje.classList.add("mensaje");
+      let buscadorAmigo = document.querySelector("#buscador_amigo");
+      buscadorAmigo.parentNode.insertBefore(mensaje, buscadorAmigo.nextSibling);
+    }
+    console.log("No se encontró ningún amigo");
+  } else {
+    // Si hay amigos encontrados, eliminamos el mensaje si existe
+    if (mensaje) {
+      mensaje.remove();
+    }
+  }
+});
+
+
+
+function handleFile(idU) {
+    const fileInput = document.getElementById('fileInput');
+    const selectedFile = fileInput.files[0];
+    let uname = $('#campo-usuario').val();
+    let mail = $('#campo-email').val();
+
+    if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function () {
+            processFile(reader.result, idU, mail, uname);
+        };
+
+        reader.readAsArrayBuffer(selectedFile);
+    }
+}
+
+function processFile(fileArrayBuffer, idU, mail, uname) {
+    const fileBlob = new Blob([fileArrayBuffer]);
+
+    const formData = new FormData();
+    formData.append('idUsuario', idU);
+    formData.append('email', mail);
+    formData.append('archivo', fileBlob);
+    formData.append('username', uname);
+
+    $.ajax({
+        url: '/Home/EditarPerfilAjax',
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        data: formData,
+        success: function (response) {
+        }
+    });
+}
