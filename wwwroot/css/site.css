@@ -320,14 +320,15 @@ h1 {
 
 .mis-comunidades{
   background-color: var(--darker-green);
-  padding-top:30px
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
-.card p
-{
+.card p{
   margin-top: 40px;
 }
+
 .contenedor-carrousel h2{
   font-size: 1.7rem;
 }
@@ -341,6 +342,7 @@ h1 {
 .comentario .perfil{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .comentario{
@@ -348,6 +350,14 @@ h1 {
   border: 2px solid var(--white);
   border-radius: 25px;
   margin-bottom: 22px;
+}
+
+.comentario img{
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .comentario .contenido{
@@ -363,10 +373,9 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 2rem 7rem;
-  background-color: var(--darker-green);
-  width: 30rem;
-  margin: 0 auto;
+  flex-direction: column;
 }
+
 .search_bar {
   display: flex;
   align-items: center;
@@ -576,20 +585,6 @@ h1 {
   margin-left: 17px;
 }
 
-.row
-{
-  display: flex;
-  justify-content: space-around;
-}
-
-.ComuPer
-{
-  margin-top: 1%;
-  font-size: 20px;
-  text-decoration:none; 
-}
-
-
 .imgCarrusel
 {
   width: 100%;
@@ -745,6 +740,7 @@ textarea{
 .toast.exito {
 	background: var(--green);
 }
+
 .toast.error {
 	background: rgb(155, 22, 22);
 }
@@ -868,6 +864,78 @@ textarea{
   font-size: 1.2rem;
 }
 
-.datos-perfil img{
-  width: 70px;
+/* Explorar */
+
+.media-list {
+  background-color: #333;
+  display: inline-block;
+  text-align: left;
+}
+
+.media-list ul {
+  padding: 20px 20px 0;
+  height: 600px;
+  overflow-y: auto;
+
+  list-style: none;
+}
+
+.media {
+  display: block;
+  padding: 10px 0px;
+  width: 100%;
+  border-bottom: 1px dotted #555;
+}
+
+.media:hover {
+  transform: scale(1.05);
+  transition: transform ease 0.3s;
+  cursor: pointer;
+}
+
+.media::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.media__img,
+.media__img-reverse {
+  float: left;
+  display: block;
+  margin-right: 10px;
+}
+
+.media__img > img,
+.media__img-reverse > img {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 60px;
+}
+
+.media__img-reverse {
+  float: right;
+}
+
+.media__body {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+#buscador_amigo {
+  background-color: #e5e5e5;
+  background-size: 24px;
+  width: 500px;
+  border: transparent;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+}
+
+.mensaje {
+  text-align: center;
+  color: #222;
+  background-color: #fff3cd;
+  padding: 7px;
+  font-weight: 700;
 }

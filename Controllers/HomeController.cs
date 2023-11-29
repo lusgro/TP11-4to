@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TP11.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace TP11.Controllers;
 
 public class HomeController : Controller
 {
+    private IWebHostEnvironment Enviroment;
+
+    public HomeController(IWebHostEnvironment enviroment){
+        Enviroment = enviroment;
+    }
+
     [HttpPost]
     public IActionResult VerificarLogin(string user, string password) {
         Usuario usuario = BD.Login(user, password);
@@ -49,6 +57,7 @@ public class HomeController : Controller
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
         ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(id);
+        ViewBag.Mensajes = BD.ObtenerMensajesDeUser(id);
         return View();
     }
 
@@ -97,9 +106,10 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult RegistrarUsuario(string usuario, string contraseña, string email) {
-        BD.RegistrarUsuario(usuario, contraseña, email);
-        return RedirectToAction("Comunidades", new { usuario = usuario });
+    public IActionResult RegistrarUsuario(string usuario, string contraseña, string email, int preguntaRecuperacion, string respuestaPregunta) {
+        BD.RegistrarUsuario(usuario, contraseña, email, preguntaRecuperacion, respuestaPregunta);
+        Usuario user = BD.ObtenerUsuarioByUser(usuario);
+        return RedirectToAction("Comunidades", new { id = user.ID_Usuario });
     }
 
     public IActionResult Login() {
@@ -109,6 +119,7 @@ public class HomeController : Controller
     public IActionResult Explorar(int id) {
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
+        ViewBag.Comunidades = BD.ObtenerTodasComunidades();
         return View();
     }
     public IActionResult PublicarMensaje(int id, int idComunidad, string contenido) {
@@ -149,5 +160,22 @@ public class HomeController : Controller
     public IActionResult UnirseAComunidad(int idUsuario, int idComunidad){
         BD.UnirseComunidad(idUsuario, idComunidad);
         return RedirectToAction("Comunidades", new { id = idUsuario });
+    }
+
+    public void EditarPerfilAjax(int idUsuario, string email, IFormFile archivo, string username){
+        string ruta= "";
+        if(archivo.Length>0){
+            string wwwRootLocal = this.Enviroment.ContentRootPath + @"/wwwroot/img/Imagenes-Usuarios/" + idUsuario + ".jpg";
+            ruta = @"/img/Imagenes-Usuarios/" + idUsuario + ".jpg";
+            using(var stream = System.IO.File.Create(wwwRootLocal)){
+                archivo.CopyToAsync(stream);
+            }
+        }
+        BD.EditarPerfil(idUsuario, email, ruta, username);
+    }
+
+    public List<Usuario> ObtenerUsuariosAjax(){
+        ViewBag.Usuarios = BD.ObtenerUsuarios();
+        return ViewBag.Usuarios;
     }
 }

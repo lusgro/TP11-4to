@@ -10,16 +10,28 @@
 <style>
     .swiper{
         width: 100%;
-        padding: 50px 0 50px 0;
+        padding: 30px 100px 30px 100px;
+    }
+
+    .swiper img{
+        width: 100%;
+        border-radius: 15px;
     }
 
     .swiper-slide{
+        border-radius: 15px;
         width: 300px;
-        height: 300px;
-        background-color: #323232;
+        height: 30%;
+        background-color: var(--black);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         padding: 40px;
         text-align: center;
+        overflow: hidden;
+    }
+
+    .swiper-slide p{
+        font-weight: bold;
+        margin-top: 15px
     }
 </style>
 
@@ -48,23 +60,24 @@
     </div>
 </header>
 
-<div class="mis-comunidades">
-    <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            @if(ViewBag.ComunidadesPertenecientes.Count > 0){
-                    @foreach(var item in ViewBag.ComunidadesPertenecientes)
-                    {
-                        <div class="swiper-slide">
-                            <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'>@item.Nombre</a>
-                        </div>
-                    }
-            }
-            else{
-                <h1>Empezá a unirte a comunidades.</h1>
-            }
+<div class="mis-comunidades"> 
+    @if(ViewBag.ComunidadesPertenecientes.Count > 0){
+        <h1>Tus comunidades, @ViewBag.Usuario.Username</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                @foreach(var item in ViewBag.ComunidadesPertenecientes)
+                {
+                    <div class="swiper-slide">
+                        <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})'><img src="@item.FotoPerfil" alt=""></a>
+                        <p>@item.Nombre</p>
+                    </div>
+                }
+            </div>
         </div>
-    </div>
+    }
+    else{
+        <h1>Empezá a unirte a comunidades.</h1>
+    }
 </div>
 
 
@@ -78,11 +91,11 @@
 
         <div class="contenedor-carousel">
             <div class="carousel">
-                @for(int i = 0; i < 5; i++) 
+                @* @for(int i = 0; i < 5; i++) 
                 {
                     <img src="@ViewBag.TodasComunidades[i].FotoPerfil" alt="imagen-comunidad">
                     <h2>@ViewBag.TodasComunidades[i].Nombre</h2> 
-                }
+                } *@
             </div>
         </div>
 
@@ -112,7 +125,7 @@
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: "3",
+        slidesPerView: "5",
         loop: true,
         coverFlowEffect: {
             depth:500,

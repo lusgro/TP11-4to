@@ -11,10 +11,10 @@ end
 
 go
 create procedure sp_registroUsuario
-	@pUsuario varchar(max), @pContraseña varchar(max), @pEmail varchar(max)
+	@pUsuario varchar(max), @pContraseña varchar(max), @pEmail varchar(max), @pPreguntaRecuperacion int, @pRespuestaPregunta varchar(max)
 as
 begin
-	INSERT INTO Usuarios (Username, Contraseña, Email) VALUES (@pUsuario, @pContraseña, @pEmail)
+	INSERT INTO Usuarios (Username, Contraseña, Email, FotoPerfil, ID_Pregunta, RespuestaSeguridad) VALUES (@pUsuario, @pContraseña, @pEmail, '/img/Imagenes-Usuarios/perfil-default.png', @pPreguntaRecuperacion, @pRespuestaPregunta)
 end
 
 --Listar comunidades a las que el usuario pertenece
@@ -218,3 +218,32 @@ BEGIN
 	inner join Usuarios U on M.ID_Usuario = U.ID_Usuario
 	WHERE M.ID_Comunidad = @pIDComunidad order by M.Fecha
 END
+
+sp_obtenerUsuariosComentarios 8
+
+
+--Editar perfil de un usuario
+
+CREATE PROCEDURE sp_editarPerfil
+	@pIdUsuario INT, @pUsername varchar(max), @pEmail varchar(max), @pFotoPerfil varchar(max)
+AS
+BEGIN
+	Update Usuarios set Username = @pUsername, Email = @pEmail, FotoPerfil = @pFotoPerfil where ID_Usuario = @pIdUsuario;
+END
+
+
+--Obtener todos los usuarios
+
+CREATE PROCEDURE sp_obtenerUsuarios
+AS
+BEGIN
+	select * from Usuarios;
+END
+
+--Trigger para insertar la comunidad cuando se inserta un artista
+create or alter trigger CrearComunidad
+on Artistas for insert
+as
+begin
+	insert into Comunidades(ID_Artista, Nombre, FotoPerfil) Values((select ID_Artista from Inserted), (select Nombre from inserted), (select FotoPerfil from Inserted));
+end;

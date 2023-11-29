@@ -40,8 +40,8 @@
 <h1 style="margin-top: 25px; font-size: 3rem">@ViewBag.Comunidad.Nombre</h1>
 
 
-<div>
-    <img src="@ViewBag.Comunidad.FotoPerfil" alt="fotocomunidad">
+<div style="display:flex;justify-content:center;">
+    <img style="border-radius: 20px; width: 300px; margin-top: 30px;" src="@ViewBag.Comunidad.FotoPerfil" alt="fotocomunidad">
 </div>
 
 @* Aca va el carousel de imagenes. Vamos a usar este: https://codepen.io/Raddy/pen/GRjYjKY *@
@@ -127,7 +127,7 @@
                 @if(item.ID_Usuario == ViewBag.Usuario.ID_Usuario){
                     <div>
                         <button class="boton-comentario" onclick="editarComentario(@item.ID_Mensaje)"><span class="material-symbols-outlined">edit</span></button>
-                        <button class="boton-comentario2" onclick="eliminarComentario(@item.ID_Mensaje), designarToast('error')" style="margin-left: 5px"><span class="material-symbols-outlined" style="color: rgb(155, 22, 22);">delete</span></button>
+                        <button class="boton-comentario2" onclick="eliminarComentario(@item.ID_Mensaje), designarToast('error', 'Comentario eliminado!', 'Tu comentario se eliminó con exito!')" style="margin-left: 5px"><span class="material-symbols-outlined" style="color: rgb(155, 22, 22);">delete</span></button>
                     </div>
                 }
             </div>
@@ -162,7 +162,7 @@
         </div>
         <div>
             <button href="#" class="modal__close2">Cerrar</button>
-            <button href="#" class="modal__enviar" onclick="ModificarComentario(), designarToast('exito')">Modificar</button>
+            <button href="#" class="modal__enviar" onclick="ModificarComentario(), designarToast('exito', 'Comentario editado!', 'Tu comentario se editó con exito!')">Modificar</button>
         </div>
     </div>
 </section>
