@@ -46,93 +46,93 @@ INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal]
 
 
 -- Album 1: Desde El Fin Del Mundo
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1, 'Pintao', 3, '2021-04-21', 5000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1, 'Chico Estrella', 2.47, '2021-04-21', 7000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1, 'Malbec', 2.55, '2021-04-21', 9000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1, 'Sol', 4.03, '2021-04-21', 11000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1, 'Rapido', 2.1, '2021-04-21', 9000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1004, 'Pintao', 3, '2021-04-21', 5000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1004, 'Chico Estrella', 2.47, '2021-04-21', 7000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1004, 'Malbec', 2.55, '2021-04-21', 9000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1004, 'Sol', 4.03, '2021-04-21', 11000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1004, 'Rapido', 2.1, '2021-04-21', 9000)
 
 
 -- Album 2: mp3
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (2, 'GTA.mp3', 2.31, '2023-11-03', 12000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (2, 'Exclusive.mp3', 2, '2023-11-03', 15000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (2, '24_Hs.mp3', 2,56, '2023-11-03', 13000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (2, 'No_Se_Ve.mp3', 4.1, '2023-11-03', 18000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (2, 'A_1000_KM.mp3', 2.35, '2023-11-03', 18000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1005, 'GTA.mp3', 2.31, '2023-11-03', 12000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1005, 'Exclusive.mp3', 2, '2023-11-03', 15000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1005, '24_Hs.mp3', 2.56, '2023-11-03', 13000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1005, 'No_Se_Ve.mp3', 4.1, '2023-11-03', 18000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1005, 'A_1000_KM.mp3', 2.35, '2023-11-03', 18000)
 
 -- Album 3: Porfiado
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (3, 'Cuando Sea Grande', 4.09, '2012-04-27', 22000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (3, 'Buen Dia Benito', 3.5, '2012-04-27', 25000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (3, 'Lo Malo De Ser Bueno', 4.02, '2012-04-27', 28000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (3, 'Solo Estoy Sobreviviendo', 4.3, '2012-04-27', 10000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (3, 'Buen Dia Benito', 4.1, '2012-04-27', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1006, 'Cuando Sea Grande', 4.09, '2012-04-27', 22000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1006, 'Buen Dia Benito', 3.5, '2012-04-27', 25000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1006, 'Lo Malo De Ser Bueno', 4.02, '2012-04-27', 28000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1006, 'Solo Estoy Sobreviviendo', 4.3, '2012-04-27', 10000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1006, 'Buen Dia Benito', 4.1, '2012-04-27', 100000)
 
 -- Album 4: illuminate
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (4, 'Ruin', 3.9, '2017-04-20', 30000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (4, 'Like This', 3.06, '2017-04-20', 35000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (4, 'No Promises', 2.46, '2017-04-20', 40000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (4, 'Honest', 2.45, '2017-04-20', 65000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (4, 'Patience', 3.4, '2017-04-20', 41200)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1007, 'Ruin', 3.9, '2017-04-20', 30000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1007, 'Like This', 3.06, '2017-04-20', 35000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1007, 'No Promises', 2.46, '2017-04-20', 40000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1007, 'Honest', 2.45, '2017-04-20', 65000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1007, 'Patience', 3.4, '2017-04-20', 41200)
 
 -- Album 5: Cancion Animal
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (5, 'El Septimo DIa', 4.23, '1990-09-09', 45000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (5, 'Un Milon De Años Luz', 3.09, '1990-09-09', 50000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (5, 'De Musica Ligera', 4.07, '1990-09-09', 53000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (5, '1990', 4.3, '1990-09-09', 125000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (5, 'Cae El Sol', 5.1, '1990-09-09', 45000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1008, 'El Septimo DIa', 4.23, '1990-09-09', 45000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1008, 'Un Milon De Años Luz', 3.09, '1990-09-09', 50000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1008, 'De Musica Ligera', 4.07, '1990-09-09', 53000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1008, '1990', 4.3, '1990-09-09', 125000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1008, 'Cae El Sol', 5.1, '1990-09-09', 45000)
 
 -- Album 6: 3MEN2 KBRN
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (6, 'Padre Tiempo', 3.39, '2023-03-17', 60000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (6, 'Coco Chanel', 3.28, '2023-03-17', 65000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (6, 'Si La Calle Llama', 4.1, '2023-03-17', 70000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (6, 'El Hokae', 3.5, '2023-03-17', 120000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (6, 'Mbappe - Remix ', 3.2, '2023-03-17', 900000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1009, 'Padre Tiempo', 3.39, '2023-03-17', 60000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1009, 'Coco Chanel', 3.28, '2023-03-17', 65000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1009, 'Si La Calle Llama', 4.1, '2023-03-17', 70000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1009, 'El Hokae', 3.5, '2023-03-17', 120000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1009, 'Mbappe - Remix ', 3.2, '2023-03-17', 900000)
 
 -- Album 7: Sueño Dorado
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (7, 'Quien Pudiera',3.27, '2012-07-01', 75000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (7, 'La LLave	', 4.20, '2012-07-01', 80000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (7, 'No Me Olvides', 3.32, '2012-07-01', 85000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (7, 'Sueño Dorado', 3.4, '2012-07-01', 856000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (7, 'El Beso/ Quisiera', 4,1, '2012-07-01', 123000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1010, 'Quien Pudiera',3.27, '2012-07-01', 75000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1010, 'La LLave	', 4.20, '2012-07-01', 80000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1010, 'No Me Olvides', 3.32, '2012-07-01', 85000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1010, 'Sueño Dorado', 3.4, '2012-07-01', 856000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1010, 'El Beso/ Quisiera', 4.1, '2012-07-01', 123000)
 
 -- Album 8: Antes De Ameri
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (8, 'Dont Lie', 3.8, '2023-08-01', 90000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (8, 'Troya', 4.0, '2023-08-01', 95000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (8, 'uNO dOs', 3.5, '2023-08-01', 100000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (8, 'Jefes Del Sudoeste', 2.4, '2023-08-01', 14000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (8, 'O1 dE ENEro', 3, '2023-08-01', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1011, 'Dont Lie', 3.8, '2023-08-01', 90000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1011, 'Troya', 4.0, '2023-08-01', 95000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1011, 'uNO dOs', 3.5, '2023-08-01', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1011, 'Jefes Del Sudoeste', 2.4, '2023-08-01', 14000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1011, 'O1 dE ENEro', 3, '2023-08-01', 100000)
 
 
 -- Album 9: Temporada De Reguetton
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (9, 'MidTown', 23.25, '2021-11-25', 15000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (9, 'En movimiento', 2.5, '2021-11-25', 12000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (9, 'Ley de Atracción', 3, '2021-11-25', 100000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (9, 'YIN YAN', 3.09, '2021-11-25', 14000)z
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (9, 'Unfollow', 3.16, '2021-11-25', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1012, 'MidTown', 23.25, '2021-11-25', 15000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1012, 'En movimiento', 2.5, '2021-11-25', 12000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1012, 'Ley de Atracción', 3, '2021-11-25', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1012, 'YIN YAN', 3.09, '2021-11-25', 14000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1012, 'Unfollow', 3.16, '2021-11-25', 100000)
 
 -- Album 10: Tu Crees En Mi?
 
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (10, 'Latin Girl',2.46, '2012-07-01', 75000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (10, 'Como Si No Importara', 2.53, '2012-07-02', 80000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (10, 'Cuatro Veinte', 2.13, '2012-07-03', 85000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (10, 'Intoxicao', 2.48, '2012-07-03', 856000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (10, 'Mi Otra Mitad', 2.46, '2012-07-03', 123000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1013, 'Latin Girl',2.46, '2012-07-01', 75000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1013, 'Como Si No Importara', 2.53, '2012-07-02', 80000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1013, 'Cuatro Veinte', 2.13, '2012-07-03', 85000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1013, 'Intoxicao', 2.48, '2012-07-03', 856000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1013, 'Mi Otra Mitad', 2.46, '2012-07-03', 123000)
 
 -- Album 11: Habla Tu Espejo
 
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (11, 'El Aprendiz', 3.57, '2015-06-03', 22000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (11, 'Como Pasa El Tíempo', 4.21, '2015-06-03', 25000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (11, 'Whisky En Uruguay', 3.09, '2015-06-03', 28000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (11, 'Roberto', 4.09, '2015-06-03', 10000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (11, 'Caminamos', 3.32, '2015-06-03', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1014, 'El Aprendiz', 3.57, '2015-06-03', 22000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1014, 'Como Pasa El Tíempo', 4.21, '2015-06-03', 25000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1014, 'Whisky En Uruguay', 3.09, '2015-06-03', 28000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1014, 'Roberto', 4.09, '2015-06-03', 10000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1014, 'Caminamos', 3.32, '2015-06-03', 100000)
 
 -- Album 12: Lamina Once
 
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (12, 'Flan', 3.56, '2023-06-08', 22000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (12, 'Frankestein Posmo', 4.07, '2023-06-08', 25000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (12, 'Chivo Expiatorio', 4.48, '2023-06-08', 28000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (12, 'El CInturon Gris', 3.45, '2023-06-08', 10000)
-INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (12, 'Rorschach', 3.57, '2023-06-08', 100000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'Flan', 3.56, '2023-06-08', 22000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'Frankestein Posmo', 4.07, '2023-06-08', 25000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'Chivo Expiatorio', 4.48, '2023-06-08', 28000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'El CInturon Gris', 3.45, '2023-06-08', 10000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'Rorschach', 3.57, '2023-06-08', 100000)
 
 --- Comunidades ---
 
