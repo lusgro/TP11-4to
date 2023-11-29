@@ -176,7 +176,6 @@ public class HomeController : Controller
     }
 
     public List<Usuario> ObtenerUsuariosAjax(){
-        ViewBag.Usuarios = BD.ObtenerUsuarios();
-        return ViewBag.Usuarios;
+        return BD.ObtenerUsuarios();
     }
 }

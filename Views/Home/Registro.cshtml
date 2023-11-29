@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Registrarse";
 }
+<script src="~/js/registro.js"></script>
 <!-- Registro -->
 <div>
     <a class="logo logo-alternativo" href='@Url.Action("Index")'>
@@ -34,8 +35,6 @@
                 <i class="fa-solid fa-circle-info"></i>
                 <input type="password" class="larger-inputs-signup" placeholder="••••••••••" id="contraseñaInput2" required>
             </div>
-
-            <input type="hidden" id="listaUsuarios" value="@ViewBag.Usuarios">
 
             <div class="label-input" id="selector-pregunta">
                 <label for="contraseñaInput" class="form-label">Respondé una pregunta para recuperar tu cuenta en un futuro</label>
