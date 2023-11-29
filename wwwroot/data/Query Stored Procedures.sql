@@ -230,3 +230,12 @@ AS
 BEGIN
 	Update Usuarios set Username = @pUsername, Email = @pEmail, FotoPerfil = @pFotoPerfil where ID_Usuario = @pIdUsuario;
 END
+
+
+--Obtener todos los usuarios
+
+CREATE PROCEDURE sp_obtenerUsuarios
+AS
+BEGIN
+	select * from Usuarios;
+END

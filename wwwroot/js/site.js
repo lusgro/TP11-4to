@@ -158,7 +158,6 @@ const contenedorToast = document.getElementById('contenedor-toast');
 
 // Event listener para detectar click en los botones
 function designarToast(tipo, title, desc){
-    console.log(title);
 
 	if (tipo === 'exito') {
 		agregarToast({ tipo: 'exito', titulo: title, descripcion: desc, autoCierre: true });
@@ -330,7 +329,7 @@ searchInput.addEventListener("input", function () {
   }
 });
 
-
+// Manejo de archivos en javascript
 
 function handleFile(idU) {
     const fileInput = document.getElementById('fileInput');

@@ -276,4 +276,14 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure);
         }
     }
+
+    public static List<Usuario> ObtenerUsuarios()
+    {
+        string sp = "sp_obtenerUsuarios";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Usuario>(sp,
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
 }

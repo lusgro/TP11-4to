@@ -16,6 +16,7 @@
 }
 
 .perfil__profile_picture {
+    height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
@@ -69,7 +70,7 @@
 .perfil__comunidades-favs {
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
+    margin-left: 5rem;
 }
 
 .perfil__comunidades-cards {

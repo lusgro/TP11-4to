@@ -1,17 +1,27 @@
-function verificarPassword() {
+function verificarRegistro() {
+    let devolver = false;
     const contraseñaInput = document.getElementById("contraseñaInput");
     const contraseñaInput2 = document.getElementById("contraseñaInput2");
+    const username = $('usuarioInput').val();
+    const listaUsuarios = $('listaUsuarios').attr("data-info");
+
+    console.log(listaUsuarios);
+
     const valor1 = contraseñaInput.value;
     const valor2 = contraseñaInput2.value;
-    console.log("hola");
-    console.log(valor1);
-    console.log(valor2);
     if (valor1 == valor2) {
-        return true;
+        devolver = true;
     }
     else {
-        console.log("hola")
         designarToast('error', 'Error!', 'Las contraseñas no coinciden.');
-        return false;
+        devolver = false;
     }
+    // if () {
+    //     designarToast('error', 'Error!', 'El usuario ya esta en uso.');
+    //     devolver = false;
+    // }
+    // else{
+    //     devolver = true;
+    // }
+    return devolver;
 }

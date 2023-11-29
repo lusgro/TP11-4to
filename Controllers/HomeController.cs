@@ -28,6 +28,7 @@ public class HomeController : Controller
 
     public IActionResult Registro() {
         ViewBag.PreguntasDeRecuperacion = BD.ObtenerPreguntasDeRecuperacion();
+        ViewBag.Usuarios = BD.ObtenerUsuarios();
         return View();
     }
 
@@ -57,6 +58,7 @@ public class HomeController : Controller
         Usuario usuario = BD.ObtenerUsuarioByID(id);
         ViewBag.Usuario = usuario;
         ViewBag.ComunidadesPertenecientes = BD.ObtenerComunidadesPertenecientes(id);
+        ViewBag.Mensajes = BD.ObtenerMensajesDeUser(id);
         return View();
     }
 
