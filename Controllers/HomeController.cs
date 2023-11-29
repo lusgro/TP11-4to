@@ -28,7 +28,6 @@ public class HomeController : Controller
 
     public IActionResult Registro() {
         ViewBag.PreguntasDeRecuperacion = BD.ObtenerPreguntasDeRecuperacion();
-        ViewBag.Usuarios = BD.ObtenerUsuarios();
         return View();
     }
 
@@ -173,5 +172,10 @@ public class HomeController : Controller
             }
         }
         BD.EditarPerfil(idUsuario, email, ruta, username);
+    }
+
+    public List<Usuario> ObtenerUsuariosAjax(){
+        ViewBag.Usuarios = BD.ObtenerUsuarios();
+        return ViewBag.Usuarios;
     }
 }

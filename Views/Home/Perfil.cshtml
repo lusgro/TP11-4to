@@ -52,10 +52,10 @@
     <div class="perfil__comunidades-cards">
         @foreach (var item in ViewBag.ComunidadesPertenecientes)
         {
-            <div class="perfil__card">
+            <a href='@Url.Action("Comunidad", new { id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})' class="perfil__card">
                 <img class="perfil__card-foto" src="@item.FotoPerfil" alt="">
                 <span class="card-title">@item.Nombre</span>
-            </div>
+            </a>
         }
     <div>
 </div>
@@ -85,7 +85,6 @@
                     <input type="file" id="fileInput" name="foto-perfil">
                 </button>
 
-                @* <input type="file" id="fileInput" name="foto-perfil" placeholder="Foto"> *@
             </div>
 
             <input type="hidden" id="id-comentario">

@@ -342,6 +342,7 @@ h1 {
 .comentario .perfil{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .comentario{
@@ -349,6 +350,14 @@ h1 {
   border: 2px solid var(--white);
   border-radius: 25px;
   margin-bottom: 22px;
+}
+
+.comentario img{
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .comentario .contenido{
@@ -855,10 +864,6 @@ textarea{
   font-size: 1.2rem;
 }
 
-.datos-perfil img{
-  width: 70px;
-}
-
 /* Explorar */
 
 .media-list {
@@ -926,6 +931,7 @@ textarea{
   padding: 10px 10px 10px 30px;
   outline: none;
 }
+
 .mensaje {
   text-align: center;
   color: #222;

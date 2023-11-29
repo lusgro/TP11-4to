@@ -76,21 +76,30 @@
 .perfil__comunidades-cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .perfil__card {
     display: flex;
     flex-direction: column;
-    margin-right: 1rem;
+    margin-right: 2rem;
     padding: 2rem;
-    border-radius: 20px;
-    border: 10px solid var(--darker-green);
+    border-radius: 15px;
+    border: 5px solid var(--dark-green);
     background-color: var(--lighter-black);
+    margin-bottom: 2rem;
+    transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.perfil__card:hover {
+    transform: scale(1.04);
 }
 
 .perfil__card-foto {
     width: 15rem;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .card-title {

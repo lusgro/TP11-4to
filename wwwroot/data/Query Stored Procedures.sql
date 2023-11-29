@@ -239,3 +239,11 @@ AS
 BEGIN
 	select * from Usuarios;
 END
+
+--Trigger para insertar la comunidad cuando se inserta un artista
+create or alter trigger CrearComunidad
+on Artistas for insert
+as
+begin
+	insert into Comunidades(ID_Artista, Nombre, FotoPerfil) Values((select ID_Artista from Inserted), (select Nombre from inserted), (select FotoPerfil from Inserted));
+end;

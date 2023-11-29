@@ -3,9 +3,18 @@ function verificarRegistro() {
     const contraseñaInput = document.getElementById("contraseñaInput");
     const contraseñaInput2 = document.getElementById("contraseñaInput2");
     const username = $('usuarioInput').val();
-    const listaUsuarios = $('listaUsuarios').attr("data-info");
+    const listaUsuarios = "";
 
-    console.log(listaUsuarios);
+    $.ajax(
+        {
+            url: '/Home/ObtenerUsuariosAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: 'none',
+            success: function (response) {
+                listaUsuarios = response;
+            }
+        });
 
     const valor1 = contraseñaInput.value;
     const valor2 = contraseñaInput2.value;
@@ -16,12 +25,20 @@ function verificarRegistro() {
         designarToast('error', 'Error!', 'Las contraseñas no coinciden.');
         devolver = false;
     }
-    // if () {
-    //     designarToast('error', 'Error!', 'El usuario ya esta en uso.');
-    //     devolver = false;
-    // }
-    // else{
-    //     devolver = true;
-    // }
-    return devolver;
+
+    console.log(listaUsuarios)
+
+    const usuarioEncontrado = listaUsuarios.find(item => item.Username === username);
+
+    if (usuarioEncontrado) {
+        designarToast('error', 'Error!', 'El usuario ya está en uso.');
+        devolver = false;
+    }
+    else{
+        console.log('hola');
+    }
+
+    console.log(devolver)
+
+    return false;
 }
