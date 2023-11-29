@@ -80,6 +80,7 @@
     }
 </div>
 
+<h2 style="margin-left: 28px; margin-top: 2rem"><i>Todas las comunidades</i></h2>
 
 <div class="canciones-recomendadas contenedor">
     <div class="contenedor-titulo-controles">
@@ -91,15 +92,41 @@
 
         <div class="contenedor-carousel">
             <div class="carousel">
-                @* @for(int i = 0; i < 5; i++) 
-                {
-                    <img src="@ViewBag.TodasComunidades[i].FotoPerfil" alt="imagen-comunidad">
-                    <h2>@ViewBag.TodasComunidades[i].Nombre</h2> 
-                } *@
+                @foreach(var item in ViewBag.TodasComunidades){
+                    <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})' class="carousel-comunidad">
+                        <img src="@item.FotoPerfil" alt="imagen-comunidad">
+                        <h2>@item.Nombre</h2>
+                    </a>
+                }
             </div>
         </div>
 
         <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+    </div>
+</div>
+
+<h2 style="margin-left: 28px; margin-top: 2rem"><i>Más populares</i></h2>
+
+<div class="canciones-recomendadas contenedor">
+    <div class="contenedor-titulo-controles">
+        <div class="indicadores2"></div>
+    </div>
+
+    <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda2" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+        <div class="contenedor-carousel2">
+            <div class="carousel">
+                @foreach(var item in ViewBag.ComunidadesPopulares){
+                    <a href='@Url.Action("Comunidad", new {id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})' class="carousel-comunidad2">
+                        <img src="@item.FotoPerfil" alt="imagen-comunidad">
+                        <h2>@item.Nombre</h2>
+                    </a>
+                }
+            </div>
+        </div>
+
+        <button role="button" id="flecha-derecha2" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
     </div>
 </div>
 

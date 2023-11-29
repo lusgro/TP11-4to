@@ -50,6 +50,7 @@ public class HomeController : Controller
         ViewBag.TodasComunidades = TodasComunidades
         .OrderByDescending(c => UsuariosXComunidad.ContainsKey(c.ID_Comunidad) ? UsuariosXComunidad[c.ID_Comunidad] : 0)
         .ToList();
+        ViewBag.ComunidadesPopulares = BD.ObtenerComunidadesPopulares();
         return View();
     }
 

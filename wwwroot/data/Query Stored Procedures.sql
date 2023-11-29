@@ -14,7 +14,7 @@ create procedure sp_registroUsuario
 	@pUsuario varchar(max), @pContraseña varchar(max), @pEmail varchar(max), @pPreguntaRecuperacion int, @pRespuestaPregunta varchar(max)
 as
 begin
-	INSERT INTO Usuarios (Username, Contraseña, Email, FotoPerfil, ID_Pregunta, RespuestaSeguridad) VALUES (@pUsuario, @pContraseña, @pEmail, '/img/Imagenes-Usuarios/perfil-default.png', @pPreguntaRecuperacion, @pRespuestaPregunta)
+	INSERT INTO Usuarios (Username, Contraseña, Email, FotoPerfil, ID_Pregunta, RespuestaSeguridad) VALUES (@pUsuario, @pContraseña, @pEmail, 'perfil-default.png', @pPreguntaRecuperacion, @pRespuestaPregunta)
 end
 
 --Listar comunidades a las que el usuario pertenece
@@ -247,3 +247,16 @@ as
 begin
 	insert into Comunidades(ID_Artista, Nombre, FotoPerfil) Values((select ID_Artista from Inserted), (select Nombre from inserted), (select FotoPerfil from Inserted));
 end;
+
+--Obtener comunidades mas populares
+
+create procedure sp_obtenerComunidadesPopulares
+as
+begin
+	select C.ID_Comunidad, C.ID_Artista, C.Nombre, C.FotoPerfil from Comunidades C
+	left join UsuariosXComunidades UC on C.ID_Comunidad = UC.ID_Comunidad
+	group by C.ID_Comunidad, C.ID_Artista, C.Nombre, C.FotoPerfil
+	order by count(UC.ID_Usuario) desc
+end
+
+exec sp_obtenerComunidadesPopulares

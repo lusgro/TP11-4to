@@ -10,7 +10,8 @@
 	font-size: 30px;
 }
 
-.contenedor-titulo-controles .indicadores button {
+.contenedor-titulo-controles .indicadores button,
+.indicadores2 button {
 	background: #fff;
 	height: 3px;
 	width: 10px;
@@ -20,7 +21,9 @@
 }
 
 .contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
+.contenedor-titulo-controles .indicadores button.activo,
+.indicadores2 button:hover,
+.indicadores2 button.activo {
 	background: #045022;
 }
 
@@ -43,7 +46,8 @@
 	border: none;
     background: none;
 	font-size: 40px;
-	height: 80%;
+	height: 70%;
+	margin-bottom: 3%;
 	line-height: 40px;
 	width: 50px;
 	color: #fff;
@@ -72,71 +76,35 @@
 
 
 /* ---- ----- ----- Carousel ----- ----- ----- */
-.canciones-recomendadas .contenedor-carousel {
+.canciones-recomendadas .contenedor-carousel,
+.contenedor-carousel2 {
 	width: 100%;
 	padding: 20px 0;
 	overflow: hidden;
 	scroll-behavior: smooth;
 }
 
-.canciones-recomendadas .contenedor-carousel .carousel {
+.canciones-recomendadas .contenedor-carousel .carousel,
+.contenedor-carousel2 .carousel {
 	display: flex;
 	flex-wrap: nowrap;
 }
 
-.canciones-recomendadas .contenedor-carousel .carousel .cancion {
-	transition: .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+.carousel-comunidad img,
+.carousel-comunidad2 img{
+	width: 300px;
+	border-radius: 15px;
 }
 
-.canciones-recomendadas .contenedor-carousel .carousel .cancion.hover {
-	transform: scale(1.1);
-	transform-origin: center;
+.carousel-comunidad,
+.carousel-comunidad2{
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	margin-right: 100px;
 }
 
-.canciones-recomendadas .contenedor-carousel .carousel .cancion img {
-	width: 100%;
-	vertical-align: top;
-}
-
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.cancion-principal {
-		font-size: 14px;
-	}
-
-	.cancion-principal .descripcion {
-		max-width: 100%;
-	}
-
-	.canciones-recomendadas .contenedor-carousel {
-		overflow: visible;
-	}
-
-	.canciones-recomendadas .contenedor-carousel .carousel {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-	}
-
-	.canciones-recomendadas .indicadores,
-	.canciones-recomendadas .flecha-izquierda,
-	.canciones-recomendadas .flecha-derecha {
-		display: none;
-	}
-}
-
-.cancion button{
-    width: 100%;
-    cursor: pointer;
+.carousel-comunidad h2,
+.carousel-comunidad2 h2{
+	font-size: 1.5rem;
 }

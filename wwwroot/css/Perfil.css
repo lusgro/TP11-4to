@@ -70,7 +70,8 @@
 .perfil__comunidades-favs {
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
+    width: 94%;
+    margin-left: 6%;
 }
 
 .perfil__comunidades-cards {

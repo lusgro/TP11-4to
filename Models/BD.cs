@@ -286,4 +286,14 @@ public static class BD
             commandType: System.Data.CommandType.StoredProcedure).ToList();
         }
     }
+
+    public static List<Comunidad> ObtenerComunidadesPopulares()
+    {
+        string sp = "sp_obtenerComunidadesPopulares";
+        using(SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            return connection.Query<Comunidad>(sp,
+            commandType: System.Data.CommandType.StoredProcedure).ToList();
+        }
+    }
 }

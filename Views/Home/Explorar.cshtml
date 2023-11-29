@@ -38,15 +38,15 @@
     </form> *@
 
     <section class="media-list">
-      <input type="search" placeholder="Buscar comunidad" id="buscador_amigo"/>
-      <ul style="">
+      <input type="search" placeholder="Buscar comunidad" id="buscador_comunidades"/>
+      <ul id="lista-comunidad">
         @foreach(var item in ViewBag.Comunidades){
-            <li class="lista_amigo" data-search="{{ @item.Nombre }} {{ amigo.profesion }}">
+            <li class="lista_comunidad" data-search="@item.Nombre">
                 <div class="media">
-                    <a href="#" class="media__img">
-                    @* <img src="/static/img_amigos/{{ amigo.imagen }}" alt="Octocat" /> *@
+                    <a href='@Url.Action("Comunidad", new { id = ViewBag.Usuario.ID_Usuario, idComunidad = item.ID_Comunidad})' class="media__img">
+                        <img src="@item.FotoPerfil" alt=""/> 
+                        <p class="media__body">@item.Nombre</p>
                     </a>
-                    <p class="media__body">@item.Nombre</p>
                 </div>
             </li>
         }
@@ -55,3 +55,4 @@
 </div>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>
+<script src="~/js/explorar.js" asp-append-version="true"></script>

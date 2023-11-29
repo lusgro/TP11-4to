@@ -390,7 +390,7 @@ h1 {
 
 .album img{
   width: 100%;
-  size: cover;
+  object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -406,6 +406,7 @@ h1 {
   transition: .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   margin-inline: 20px;
+  width: 17%;
 }
 
 .album p{
@@ -428,7 +429,8 @@ h1 {
 /* Modal */
 
 .modal,
-.modal2{
+.modal2,
+.modal3{
   position: fixed;
   top: 0;
   left: 0;
@@ -452,9 +454,9 @@ h1 {
 }
 
 .modal__container{
+  width: 50%;
+  min-width: 550px;
   margin: auto;
-  width: 90%;
-  max-width: 450px;
   height: 500px;
   background-color: var(--black);
   border-radius: 15px;
@@ -463,14 +465,18 @@ h1 {
   place-items: center;
   grid-auto-columns: 100%;
   transform: var(--transform);
-  transition:var(--transition);
+  transition: var(--transition);
 }
 
 .modal__title{
-  font-size: 2.5rem;
-  margin-left: 30px;
+  font-size: 1.8rem;
+  margin-left: 20px;
   margin-bottom: 20px;
   margin-top: 0;
+}
+
+.modal .modal__paragraph{
+  padding: 10px;
 }
 
 .modal__paragraph{
@@ -485,7 +491,8 @@ h1 {
 }
 
 .modal__close,
-.modal__close2{
+.modal__close2,
+.modal__close3{
   text-decoration: none;
   color: #fff;
   background-color: rgb(155, 22, 22);
@@ -499,7 +506,8 @@ h1 {
 }
 
 .modal__close:hover,
-.modal__close2:hover{
+.modal__close2:hover,
+.modal__close3:hover{
   color: rgb(155, 22, 22);
   background-color: #fff;
 }
@@ -519,7 +527,7 @@ h1 {
   }
 
   .modal__title{
-      font-size: 2rem;
+      font-size: 1.5rem;
   }
 }
 
@@ -527,6 +535,10 @@ h1 {
   color: rgb(155, 22, 22);
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.modal .modal__upper{
+  padding-inline: 15px;
 }
 
 .modal__upper{
@@ -544,7 +556,7 @@ h1 {
 }
 
 .nombres-columnas{
-  margin-top: -120px;
+  margin-top: -75px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -554,6 +566,7 @@ h1 {
   border-bottom: 2px solid grey;
   text-align: center;
   align-items: center;
+  padding-inline: 10px;
 }
 
 .nombres-columnas span{
@@ -575,6 +588,7 @@ h1 {
   grid-row-gap: 0px;
   text-align: center;
   align-items: center;
+  margin-top: 80px;
 }
 
 #Canciones p{
@@ -867,29 +881,32 @@ textarea{
 /* Explorar */
 
 .media-list {
-  background-color: #333;
-  display: inline-block;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .media-list ul {
-  padding: 20px 20px 0;
-  height: 600px;
-  overflow-y: auto;
-
+  padding: 20px;
+  width: 60%;
+  height: 50%;
   list-style: none;
+  display: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .media {
   display: block;
   padding: 10px 0px;
   width: 100%;
-  border-bottom: 1px dotted #555;
+  border-bottom: 2px solid var(--darker-green);
+  transition: .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .media:hover {
-  transform: scale(1.05);
-  transition: transform ease 0.3s;
+  transform: scale(1.01);
   cursor: pointer;
 }
 
@@ -901,9 +918,14 @@ textarea{
 
 .media__img,
 .media__img-reverse {
-  float: left;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-right: 10px;
+  text-decoration: none;
+}
+
+.media__img p{
+  margin-left: 10px;
 }
 
 .media__img > img,
@@ -922,14 +944,18 @@ textarea{
   margin-bottom: 0;
 }
 
-#buscador_amigo {
-  background-color: #e5e5e5;
+#buscador_comunidades {
+  margin-top: 20px;
   background-size: 24px;
-  width: 500px;
+  width: 60%;
   border: transparent;
-  border-bottom: solid 1px #ccc;
+  transition: .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 10px 10px 10px 30px;
   outline: none;
+}
+
+#buscador_comunidades:focus{
+  border: solid 2px var(--green);
 }
 
 .mensaje {
