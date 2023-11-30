@@ -143,12 +143,12 @@ INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal]
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Monarca', 14, 42,'/img/Imagenes-Albumes/1022.jpg',123000, 2022)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, '11', 11, 33,'/img/Imagenes-Albumes/1023.jpg',14200, 2016)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, 'Único', 16, 64,'/img/Imagenes-Albumes/1024.jpg',19000, 2014)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Súper sangre joven', 10, 31.9,'/img/Imagenes-Albumes/1025.jpg',100000, 2019)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Súper Sangre Joven', 10, 31.9,'/img/Imagenes-Albumes/1025.jpg',100000, 2019)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'El Plan', 1, ,'/img/Imagenes-Albumes/1026.jpg',24300, 2012)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Bipolar', 9, 36,'/img/Imagenes-Albumes/1027.jpg',20000, 2009)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'MTV Unplugged', 11, 49,'/img/Imagenes-Albumes/1028.jpg',86300, 2017)
 
-
+-- Album 13: Monster
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Monster', 2.41, '2023-01-23', 8800)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Wonder', 2.36, '2023-01-23', 82000)
@@ -156,6 +156,7 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, '24 Hours', 2.4, '2023-01-23', 21000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Higher', 4, '2023-01-23', 52000)
 
+-- Album 14: Handwritten
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1018, 'Air', 3, '2015-06-08', 8800)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1018, 'Crazy', 3.12, '2015-06-08', 82000)
@@ -163,6 +164,7 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1018, 'Stitiches', 2.43, '2015-06-08', 21000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1018, 'Aftertaste', 2, '2015-06-08', 52000)
 
+-- Album 14: Nada Personal
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1019, 'Si No Fuera Por...', 3.28, '1985-11-15', 10000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1019, 'Estoy Azulado', 5.2, '1985-11-15', 84000)
@@ -170,11 +172,15 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1019, 'Ecos',4.2, '1985-11-15', 112000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1019, 'Danza Rota', 4.2, '1985-11-15', 52000)
 
+-- Album 15: Signos
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1020, 'Profugos.', 5.2, '1986-11-10', 170000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1020, 'Persiana Americana', 4.53, '1986-11-10', 13000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1020, 'Signos', 5.16, '1986-11-10', 56550)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1020, 'En Camino',4.3, '1986-11-10', 994000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1020, 'No Existes', 4.3, '1986-11-10', 322000)
+
+-- Album 16: Sauce Boyz
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1021, 'Hennesy.', 3.05, '2022-01-31', 14200)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1021, 'Actriz ', 3.05, '2022-01-31', 15000)
@@ -182,11 +188,15 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1021, 'Rapido',5.06, '2022-01-31', 994000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1021, '3 AM', 3.28, '2022-01-31', 322000)
 
+-- Album 17: Monarca
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Tata.', 2.46, '2022-01-8', 13200)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, '4 AM ', 2.42, '2022-01-8', 16000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Intro', 2.58, '2022-01-8', 100000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Toretto',3.03, '2022-01-8', 44000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Adios', 2.41, '2022-01-8', 542000)
+
+-- Album 18: 11
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Alguien', 2.44, '2016-07-07', 14200)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, '3', 4.08, '2016-07-07', 167000)
@@ -194,11 +204,15 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Caceria',3.3, '2016-07-07', 99000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Primavera', 3.58, '2016-07-07', 74000)
 
+-- Album 19: Unico
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Aventura', 3.55, '2014-01-10', 19200)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Lo Que Soy', 3.5, '2014-01-10', 10000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Ya Estuve Aqui', 3.33, '2014-01-10', 1243000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Motivos',3.17, '2014-01-10', 66000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Juntos', 3.25, '2014-01-10', 753000)
+
+-- Album 20: SSJ
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Hitboy', 2.58, '2019-11-01', 10200)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'A Punta De Espada', 3.23, '2019-11-01', 1420000)
@@ -206,13 +220,19 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Señorita',2.42, '2019-11-01', 120000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Me Gusta Lo Simple', 3.17, '2019-11-01', 730000)
 
+-- Album 21: El Plan
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1026, 'El Plan', 3.55, '2022-04-20', 120000)
+
+-- Album 22: Bipolar
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Bipolar', 4.07, '2009-07-20', 16000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Razones', 3.39, '2009-07-20', 1420000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Mirenme', 3.29, '2009-07-20', 452000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Miguel Gritar',4.07, '2009-07-20', 120000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Primavera', 3.33, '2009-07-20', 730000)
+
+-- Album 23: MTV Unplugged
 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Patience', 3.14, '2017-08-14', 154000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Roses', 4.14, '2017-08-14', 176000)
