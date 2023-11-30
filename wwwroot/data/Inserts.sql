@@ -39,12 +39,6 @@ INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal]
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Tu Crees En Mi?', 8, 22,'Tu Crees En Mi.WEBP',960000, 2022)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Habla Tu Espejo', 9, 33.2,'Habla Tu Espejo.jpeg',530000, 2015)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Lamina Once', 8, 33.56,'Lamina Once.jpg',545000, 2014)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Wonder', 14, 42,'/img/Imagenes-Albumes/1016.jpg',234000, 2020)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Handwritten', 17, 55,'/img/Imagenes-Albumes/1018.webp',11000, 2015)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Nada personal', 10, 40,'/img/Imagenes-Albumes/1019.jpeg',120000, 1985)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Signos', 8, 36,'/img/Imagenes-Albumes/1020.jpeg',120000, 1986)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Sauce Boyz', 16, 51,'/img/Imagenes-Albumes/1021.jpg',530000, 2022)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Monarca', 14, 42,'/img/Imagenes-Albumes/1022.jpg',123000, 2022)
 
 --- Canciones ---
 
@@ -141,6 +135,17 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 
 --- Nuevo Insertar ---
 
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Wonder', 14, 42,'/img/Imagenes-Albumes/1016.jpg',234000, 2020)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Handwritten', 17, 55,'/img/Imagenes-Albumes/1018.webp',11000, 2015)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Nada personal', 10, 40,'/img/Imagenes-Albumes/1019.jpeg',120000, 1985)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Signos', 8, 36,'/img/Imagenes-Albumes/1020.jpeg',120000, 1986)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Sauce Boyz', 16, 51,'/img/Imagenes-Albumes/1021.jpg',530000, 2022)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Monarca', 14, 42,'/img/Imagenes-Albumes/1022.jpg',123000, 2022)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, '11', 11, 33,'/img/Imagenes-Albumes/1023.jpg',14200, 2016)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, 'Único', 16, 64,'/img/Imagenes-Albumes/1024.jpg',19000, 2014)
+
+
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Monster', 2.41, '2023-01-23', 8800)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Wonder', 2.36, '2023-01-23', 82000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Intro', 2.56, '2023-01-23', 34000)
@@ -178,6 +183,22 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Intro', 2.58, '2022-01-8', 100000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Toretto',3.03, '2022-01-8', 44000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1022, 'Adios', 2.41, '2022-01-8', 542000)
+
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Alguien', 2.44, '2016-07-07', 14200)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, '3', 4.08, '2016-07-07', 167000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Mariposa', 3.35, '2016-07-07', 1310000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Caceria',3.3, '2016-07-07', 99000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1023, 'Primavera', 3.58, '2016-07-07', 74000)
+
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Aventura', 3.55, '2014-01-10', 19200)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Lo Que Soy', 3.5, '2014-01-10', 10000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Ya Estuve Aqui', 3.33, '2014-01-10', 1243000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Motivos',3.17, '2014-01-10', 66000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Juntos', 3.25, '2014-01-10', 753000)
+
+
+
+
 
 --- Comunidades ---
 
