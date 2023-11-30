@@ -138,6 +138,8 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1015, 'Rorschach', 3.57, '2023-06-08', 100000)
 
 
+--- Nuevo Insertar ---
+
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Monster', 2.41, '2023-01-23', 8800)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Wonder', 2.36, '2023-01-23', 82000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1016, 'Intro', 2.56, '2023-01-23', 34000)
