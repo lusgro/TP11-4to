@@ -163,13 +163,13 @@ public class HomeController : Controller
         return RedirectToAction("Comunidades", new { id = idUsuario });
     }
 
-    public void EditarPerfilAjax(int idUsuario, string email, IFormFile archivo, string username){
-        string ruta= "";
-        if(archivo.Length>0){
+    public async Task EditarPerfilAjax(int idUsuario, string email = null, IFormFile archivo = null, string username = null){
+        string ruta = "";
+        if(archivo != null && archivo.Length>0){
             string wwwRootLocal = this.Enviroment.ContentRootPath + @"/wwwroot/img/Imagenes-Usuarios/" + idUsuario + ".jpg";
             ruta = @"/img/Imagenes-Usuarios/" + idUsuario + ".jpg";
             using(var stream = System.IO.File.Create(wwwRootLocal)){
-                archivo.CopyToAsync(stream);
+                await archivo.CopyToAsync(stream);
             }
         }
         BD.EditarPerfil(idUsuario, email, ruta, username);

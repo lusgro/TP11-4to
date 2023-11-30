@@ -1,36 +1,21 @@
-let ListaUsuarios = []; // Variable global para almacenar los usuarios
-
-document.addEventListener("DOMContentLoaded", function() {
-    $.ajax({
-        url: '/Home/ObtenerUsuariosAjax',
-            type: 'POST',
-            dataType: 'JSON',
-            data: 'none',
-            success: function (response) {
-                ListaUsuarios = response;
-            },
-  });
-});
-
 function verificarRegistro() {
     const usuario = verificarUsuario(ListaUsuarios);
     const email = verificarEmail(ListaUsuarios);
     const password = verificarPassword();
-    const error = document.getElementById("4");
     if (usuario && email && password) {
         return true;
     }
     else {
         if (!usuario) {
-            error.innerHTML = "El usuario ya existe";
+            designarToast('error', 'Error!', 'El usuario ya existe.')
             return false;
         }
         if (!email) {
-            error.innerHTML = "El email ya existe";
+            designarToast('error', 'Error!', 'El email ya existe.')
             return false;
         }
         if (!password) {
-            error.innerHTML = "Las contraseñas no coinciden";
+            designarToast('error', 'Error!', 'Las contraseñas no coinciden.')
             return false;
         }
     }

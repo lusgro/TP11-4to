@@ -273,34 +273,78 @@ const agregarToast = ({ tipo, titulo, descripcion, autoCierre }) => {
 	nuevoToast.addEventListener('animationend', handleAnimacionCierre);
 };
 
+let ListaUsuarios = [];
+
+document.addEventListener("DOMContentLoaded", function() {
+    $.ajax({
+        url: '/Home/ObtenerUsuariosAjax',
+            type: 'POST',
+            dataType: 'JSON',
+            data: 'none',
+            success: function (response) {
+                ListaUsuarios = response;
+            },
+  });
+});
+
+
 // Manejo de archivos en javascript
 
 function handleFile(idU) {
     const fileInput = document.getElementById('fileInput');
     const selectedFile = fileInput.files[0];
+    let existe = false;
     let uname = $('#campo-usuario').val();
     let mail = $('#campo-email').val();
+
+    const formData = new FormData();
+    formData.append('idUsuario', idU);
+
+    const userInicial = localStorage.getItem('username');
+
+    if(userInicial != uname){
+        for (let i = 0; i < ListaUsuarios.length; i++) {
+            if (ListaUsuarios[i].username.toLowerCase() == uname) {
+                designarToast('error', 'Error!', 'El usuario ya existe.')
+                return;
+            }
+        }
+    }
+
+    if(uname){
+        formData.append('username', uname);
+    }
+
+    if (mail) {
+        formData.append('email', mail);
+    }
 
     if (selectedFile) {
         const reader = new FileReader();
 
         reader.onload = function () {
-            processFile(reader.result, idU, mail, uname);
+            processFile(reader.result, idU, formData);
         };
 
         reader.readAsArrayBuffer(selectedFile);
+    } else {
+        // No hay archivo seleccionado, solo actualizar datos de texto
+        updateProfile(formData);
+        designarToast('exito', 'Perfil editado!', 'Tu perfil se editó con exito!');
+        $('.span-title').html(uname);
+        $('.span-subtitle').html(mail);
+        const modal3 = document.querySelector('.modal3');
+        modal3.classList.remove('modal--show');
     }
 }
 
-function processFile(fileArrayBuffer, idU, mail, uname) {
+function processFile(fileArrayBuffer, idU, formData) {
     const fileBlob = new Blob([fileArrayBuffer]);
-
-    const formData = new FormData();
-    formData.append('idUsuario', idU);
-    formData.append('email', mail);
     formData.append('archivo', fileBlob);
-    formData.append('username', uname);
+    updateProfile(formData);
+}
 
+function updateProfile(formData) {
     $.ajax({
         url: '/Home/EditarPerfilAjax',
         type: 'POST',

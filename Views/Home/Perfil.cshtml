@@ -144,7 +144,7 @@
         </div>
         <div>
             <button href="#" class="modal__close3">Cerrar</button>
-            <button href="#" class="modal__enviar" onclick="handleFile(@ViewBag.Usuario.ID_Usuario), designarToast('exito', 'Perfil editado!', 'Tu perfil se editó con exito!')">Modificar</button>
+            <button href="#" class="modal__enviar" onclick="handleFile(@ViewBag.Usuario.ID_Usuario)">Modificar</button>
         </div>
     </div>
 </section>
@@ -200,6 +200,8 @@
 
     document.getElementById('campo-usuario').value = "@ViewBag.Usuario.Username";
     document.getElementById('campo-email').value = "@ViewBag.Usuario.Email";
+
+    localStorage.setItem('username', "@ViewBag.Usuario.Username")
 </script>
 
 <script src="~/js/menu.js" asp-append-version="true"></script>

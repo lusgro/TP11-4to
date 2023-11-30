@@ -224,13 +224,21 @@ sp_obtenerUsuariosComentarios 8
 
 --Editar perfil de un usuario
 
-CREATE PROCEDURE sp_editarPerfil
-	@pIdUsuario INT, @pUsername varchar(max), @pEmail varchar(max), @pFotoPerfil varchar(max)
+create PROCEDURE sp_editarPerfil
+	@pIdUsuario INT, @pUsername NVARCHAR(MAX) = NULL, @pEmail NVARCHAR(MAX) = NULL, @pFotoPerfil NVARCHAR(MAX)
 AS
 BEGIN
-	Update Usuarios set Username = @pUsername, Email = @pEmail, FotoPerfil = @pFotoPerfil where ID_Usuario = @pIdUsuario;
-END
+	if(@pFotoPerfil like '')
+	begin
+		set @pFotoPerfil = Null
+	end
 
+    Update Usuarios
+    set Username = ISNULL(@pUsername, Username),
+        Email = isnull(@pEmail, Email),
+        FotoPerfil = isnull(@pFotoPerfil, FotoPerfil)
+    where ID_Usuario = @pIdUsuario;
+END
 
 --Obtener todos los usuarios
 
