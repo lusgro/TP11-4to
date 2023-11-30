@@ -341,6 +341,10 @@ function handleFile(idU) {
 function processFile(fileArrayBuffer, idU, formData) {
     const fileBlob = new Blob([fileArrayBuffer]);
     formData.append('archivo', fileBlob);
+    designarToast('exito', 'Perfil editado!', 'Tu perfil se editó con exito!');
+    $('.perfil__profile_picture').attr('src', '/img/Imagenes-Usuarios/' + idU + '.jpg');
+    const modal3 = document.querySelector('.modal3');
+    modal3.classList.remove('modal--show');
     updateProfile(formData);
 }
 
