@@ -41,7 +41,7 @@ INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal]
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Lamina Once', 8, 33.56,'Lamina Once.jpg',545000, 2014)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Wonder', 14, 42,'/img/Imagenes-Albumes/1016.jpg',234000, 2020)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Handwritten', 17, 55,'/img/Imagenes-Albumes/1018.webp',11000, 2015)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Nada personal', 10, 40,'/img/Imagenes-Albumes/1019.webp',120000, 1985)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Nada personal', 10, 40,'/img/Imagenes-Albumes/1019.jpeg',120000, 1985)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, 'Signos', 8, 36,'/img/Imagenes-Albumes/1020.jpeg',120000, 1986)
 
 
