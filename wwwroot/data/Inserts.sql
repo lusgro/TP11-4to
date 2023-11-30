@@ -22,23 +22,23 @@ INSERT [dbo].[Artistas] ([Nombre], [Descripcion], [Oyentes], [FotoPerfil], [Gene
 INSERT [dbo].[Artistas] ([Nombre], [Descripcion], [Oyentes], [FotoPerfil], [GeneroMusical]) VALUES ('Soda Stereo','Soda Stereo fue una influyente banda de rock en español formada en Buenos Aires, Argentina, en 1982. Compuesta por Gustavo Cerati, Zeta Bosio y Charly Alberti, la banda se convirtió en una de las más destacadas del rock latinoamericano. Su música fusiona elementos de rock, new wave y pop, creando un sonido distintivo y vanguardista.', 156000, 'https://indiehoy.com/wp-content/uploads/2020/11/soda-stereo-1985-1200x900.jpg','Rock')
 INSERT [dbo].[Artistas] ([Nombre], [Descripcion], [Oyentes], [FotoPerfil], [GeneroMusical]) VALUES ('Eladio Carreon','Eladio Carrion es un reconocido cantante y compositor de música urbana, específicamente dentro del género de reguetón y trap. Nació el 6 de febrero de 1994 en Fajardo, Puerto Rico. Carrion ha ganado prominencia en la escena musical latina por sus colaboraciones con otros artistas destacados y por su estilo versátil.', 130000, 'https://efe.com/wp-content/uploads/2021/12/eladio-carrion.jpg','Trap')
 INSERT [dbo].[Artistas] ([Nombre], [Descripcion], [Oyentes], [FotoPerfil], [GeneroMusical]) VALUES ('Abel Pintos','Abel Pintos es un reconocido cantante y compositor argentino, nacido el 11 de mayo de 1984 en Bahía Blanca, Buenos Aires. Es una figura destacada en la escena musical de América Latina, especialmente en el género de la música folklórica y pop.',34000, 'https://storage.lacapitalmdp.com/2022/07/Abel-Pintos-prensa-feb-20225517.jpg','Pop')
-
+--- INSERT [dbo].[Artistas] ([Nombre], [Descripcion], [Oyentes], [FotoPerfil], [GeneroMusical]) VALUES ('Bad Bunny','Benito Antonio Martínez Ocasio,conocido artísticamente como Bad Bunny o El Conejo Malo, es un cantante, compositor, productor musical, luchador profesional y actor puertorriqueño',1000000, 'https://media.revistavanityfair.es/photos/641c6381130ff665e534b26e/1:1/w_3000,h_3000,c_limit/GettyImages-1412405003.jpg','Trap')
 
 --- Albumes --
 
 
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Desde El Fin Del Mundo', 18, 57.9, 'FinDelMundo.jpg', 100000, 2021)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'mp3', 13, 35.5,'MP3.jpg',230000, 2023)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Porfiado', 8, 49.2, 'Porfiado.jpg',230000, 2012)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 4,'illuminate', 13, 44.4, 'Illuminate.jpg', 80000, 2017)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Cancion Animal', 10, 41,'Cancion Animal.jpg', 100000, 1990)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, '3MEN2 KBRN', 18, 54, '3MEN2 KABRON.jpg', 100000, 2023)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Sueño Dorado', 12, 44,'Sueño Dorado.jpg', 93000, 2012)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Antes De Ameri', 16, 40,'Antes De Ameri.jpg', 13000, 2023)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Temporada De Reguetton', 7, 22.14,'Temporada De Reggueton.WEBP', 1320000, 2021)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Tu Crees En Mi?', 8, 22,'Tu Crees En Mi.WEBP',960000, 2022)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Habla Tu Espejo', 9, 33.2,'Habla Tu Espejo.jpeg',530000, 2015)
-INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Lamina Once', 8, 33.56,'Lamina Once.jpg',545000, 2014)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Desde El Fin Del Mundo', 18, 57.9, '1004.jpg', 100000, 2021)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'mp3', 13, 35.5,'/img/Imagenes-Artistas/1005.jpg',230000, 2023)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Porfiado', 8, 49.2, '/img/Imagenes-Artistas/1006.jpg',230000, 2012)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 4,'illuminate', 13, 44.4, '/img/Imagenes-Artistas/1007.jpg', 80000, 2017)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'Cancion Animal', 10, 41,'/img/Imagenes-Artistas/1008.jpg', 100000, 1990)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 6, '3MEN2 KBRN', 18, 54, '/img/Imagenes-Artistas/1009.jpg', 100000, 2023)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Sueño Dorado', 12, 44,'/img/Imagenes-Artistas/1010.jpg', 93000, 2012)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Antes De Ameri', 16, 40,'/img/Imagenes-Artistas/1011.jpg', 13000, 2023)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 1, 'Temporada De Reguetton', 7, 22.14,'/img/Imagenes-Artistas/1012.jpg', 1320000, 2021)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Tu Crees En Mi?', 8, 22,'/img/Imagenes-Artistas/1013.jpg',960000, 2022)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Habla Tu Espejo', 9, 33.2,'/img/Imagenes-Artistas/1014.jpg',530000, 2015)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Lamina Once', 8, 33.56,'/img/Imagenes-Artistas/1015.jpg',545000, 2014)
 
 --- Canciones ---
 
@@ -241,10 +241,9 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Mercy', 3.48, '2017-08-14', 730000)
 
 
+
+
 --- Comunidades ---
-
-
-
 
 INSERT [dbo].[Comunidades] ( [ID_Artista], [Nombre], [FotoPerfil]) VALUES (1, 1, N'Comunidad Ejemplo 1', N'perfilcomunidad1.jpg')
 INSERT [dbo].[Comunidades] ([ID_Artista], [Nombre], [FotoPerfil]) VALUES (2, 2, N'Comunidad Ejemplo 2', N'perfilcomunidad2.jpg')
