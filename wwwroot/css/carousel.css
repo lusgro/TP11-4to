@@ -1,5 +1,6 @@
 /* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
 .contenedor-titulo-controles {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: end;
