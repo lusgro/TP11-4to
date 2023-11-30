@@ -143,6 +143,10 @@ INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal]
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 7, 'Monarca', 14, 42,'/img/Imagenes-Albumes/1022.jpg',123000, 2022)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, '11', 11, 33,'/img/Imagenes-Albumes/1023.jpg',14200, 2016)
 INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 8, 'Único', 16, 64,'/img/Imagenes-Albumes/1024.jpg',19000, 2014)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 2, 'Súper sangre joven', 10, 31.9,'/img/Imagenes-Albumes/1025.jpg',100000, 2019)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'El Plan', 1, ,'/img/Imagenes-Albumes/1026.jpg',24300, 2012)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 3, 'Bipolar', 9, 36,'/img/Imagenes-Albumes/1027.jpg',20000, 2009)
+INSERT [dbo].[Albumes] ([ID_Artista], [Nombre], [CantCanciones], [DuracionTotal], [FotoPortada], [CantReproducciones], [Año]) VALUES ( 5, 'MTV Unplugged', 11, 49,'/img/Imagenes-Albumes/1028.jpg',86300, 2017)
 
 
 
@@ -196,8 +200,25 @@ INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], 
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Motivos',3.17, '2014-01-10', 66000)
 INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1024, 'Juntos', 3.25, '2014-01-10', 753000)
 
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Hitboy', 2.58, '2019-11-01', 10200)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'A Punta De Espada', 3.23, '2019-11-01', 1420000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Perdon', 3.39, '2019-11-01', 452000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Señorita',2.42, '2019-11-01', 120000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1025, 'Me Gusta Lo Simple', 3.17, '2019-11-01', 730000)
 
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1026, 'El Plan', 3.55, '2022-04-20', 120000)
 
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Bipolar', 4.07, '2009-07-20', 16000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Razones', 3.39, '2009-07-20', 1420000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Mirenme', 3.29, '2009-07-20', 452000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Miguel Gritar',4.07, '2009-07-20', 120000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1027, 'Primavera', 3.33, '2009-07-20', 730000)
+
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Patience', 3.14, '2017-08-14', 154000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Roses', 4.14, '2017-08-14', 176000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Ruin', 6.21, '2017-08-14', 78000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Stitches',4.24, '2017-08-14', 632000)
+INSERT [dbo].[Canciones] ([ID_Album], [Nombre], [Duracion], [FechaPublicacion], [CantReproducciones]) VALUES (1028, 'Mercy', 3.48, '2017-08-14', 730000)
 
 
 --- Comunidades ---
